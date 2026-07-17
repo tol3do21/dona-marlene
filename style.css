@@ -1,0 +1,519 @@
+/* ================================================================
+   La Cocina de la Familia Cejas — style.css
+   Brand Kit: Bolivian Identity + Premium Travel Experience
+   ================================================================ */
+
+/* === CSS Custom Properties (Brand + Bolivia Tokens) === */
+:root {
+    /* --- Brand Colors --- */
+    --color-adobe:      #F7F5F0;
+    --color-aji:        #8C3A3A;
+    --color-aji-dark:   #6B2B2B;
+    --color-aji-light:  #F0E6E6;
+    --color-andino:     #4A7C8C;
+    --color-maiz:       #D99B29;
+    --color-tierra:     #2D2D2D;
+
+    /* --- Bolivia Flag Colors --- */
+    --bolivia-red:      #D52B1E;
+    --bolivia-yellow:   #F4E400;
+    --bolivia-green:    #007934;
+
+    /* --- Chuquisaca Colors --- */
+    --chuquisaca-red:   #C41E3A;
+    --chuquisaca-white: #FFFFFF;
+
+    /* --- Wiphala Colors --- */
+    --wiphala-red:      #D52B1E;
+    --wiphala-orange:   #F77F00;
+    --wiphala-yellow:   #F4E400;
+    --wiphala-white:    #FFFFFF;
+    --wiphala-green:    #007934;
+    --wiphala-blue:     #0038A8;
+    --wiphala-violet:   #6A0DAD;
+
+    /* --- Typography --- */
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-body:    "Open Sans", system-ui, sans-serif;
+
+    /* --- Spacing & Shape --- */
+    --radius-pill:  9999px;
+    --radius-card:  1.25rem;
+    --shadow-card:  0 4px 24px rgba(0,0,0,0.09);
+    --shadow-hover: 0 16px 48px rgba(0,0,0,0.16);
+    --transition:   all 0.35s ease;
+}
+
+/* ================================================================
+   BASE RESET
+   ================================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    background-color: var(--color-adobe);
+    color: var(--color-tierra);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    margin: 0; padding: 0;
+}
+
+img { display: block; max-width: 100%; }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-adobe); }
+::-webkit-scrollbar-thumb { background: var(--color-aji); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-aji-dark); }
+
+::selection { background: var(--color-maiz); color: var(--color-tierra); }
+
+/* ================================================================
+   BOLIVIAN DESIGN ELEMENTS
+   ================================================================ */
+
+/* --- Tricolor Bolivia Stripe (top of every page) --- */
+.bolivia-stripe {
+    display: flex;
+    height: 6px;
+    width: 100%;
+}
+.bolivia-stripe span {
+    flex: 1;
+}
+.bolivia-stripe .stripe-red    { background: var(--bolivia-red); }
+.bolivia-stripe .stripe-yellow { background: var(--bolivia-yellow); }
+.bolivia-stripe .stripe-green  { background: var(--bolivia-green); }
+
+/* --- Chuquisaca Divider (between sections) --- */
+.chuquisaca-divider {
+    display: flex;
+    height: 4px;
+    width: 100%;
+    overflow: hidden;
+}
+.chuquisaca-divider span:nth-child(odd)  { flex: 1; background: var(--chuquisaca-red); }
+.chuquisaca-divider span:nth-child(even) { flex: 1; background: var(--chuquisaca-white); }
+
+/* Narrow centered decorative version */
+.andean-rule {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto 1.5rem;
+    width: fit-content;
+}
+.andean-rule__line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--bolivia-red), var(--bolivia-yellow), var(--bolivia-green));
+    border-radius: 2px;
+}
+
+/* --- Andean Diamond Pattern — Bolivia flag colors only (red, yellow, green) --- */
+/* Inspired by traditional Bolivian textiles (aguayo). NOT rainbow. */
+.wiphala-bg {
+    position: relative;
+}
+.wiphala-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Diagonal stripe pattern: only Bolivia Red, Yellow, Green — like an aguayo textile */
+    background-image:
+        repeating-linear-gradient(
+            -45deg,
+            var(--bolivia-red)    0px 3px,
+            transparent           3px 18px,
+            var(--bolivia-yellow) 18px 21px,
+            transparent           21px 36px,
+            var(--bolivia-green)  36px 39px,
+            transparent           39px 54px
+        );
+    background-size: 54px 54px;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+}
+.wiphala-bg > * { position: relative; z-index: 1; }
+
+/* --- Andean Diamond Border (decorative SVG line) --- */
+.andean-border-top {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.andean-border-top svg {
+    display: block;
+    width: 100%;
+}
+
+/* --- Andean Geometric Card Accent --- */
+.andean-card-accent {
+    position: absolute;
+    top: 0; right: 0;
+    width: 80px;
+    height: 80px;
+    opacity: 0.12;
+    background-image:
+        repeating-linear-gradient(45deg,
+            var(--bolivia-red)    0 8px,
+            var(--bolivia-yellow) 8px 16px,
+            var(--bolivia-green)  16px 24px,
+            transparent           24px 32px
+        );
+    border-radius: 0 var(--radius-card) 0 0;
+}
+
+/* ================================================================
+   NAVBAR — Transparent on hero → Solid on scroll
+   ================================================================ */
+#navbar {
+    background: transparent;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+#navbar.scrolled {
+    background: rgba(247, 245, 240, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 1px 24px rgba(0,0,0,0.09);
+}
+
+/* Link colors: transparent vs. scrolled */
+#navbar:not(.scrolled) .nav-anchor { color: rgba(255,255,255,0.85); }
+#navbar:not(.scrolled) .nav-anchor:hover { color: #fff; }
+#navbar.scrolled       .nav-anchor { color: var(--color-tierra); }
+#navbar.scrolled       .nav-anchor:hover { color: var(--color-aji); }
+
+#navbar:not(.scrolled) #logo-name { color: var(--color-maiz); }
+#navbar.scrolled       #logo-name { color: var(--color-aji); }
+
+/* Active nav link indicator */
+.nav-anchor.active-page {
+    color: var(--color-maiz) !important;
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-maiz);
+    padding-bottom: 2px;
+}
+
+/* Hamburger bars */
+#navbar:not(.scrolled) .hamburger-bar { background: white; }
+#navbar.scrolled       .hamburger-bar { background: var(--color-aji); }
+
+/* Hamburger open state */
+#hamburger-btn.open .hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+#hamburger-btn.open .hamburger-bar:nth-child(2) {
+    opacity: 0; transform: scaleX(0);
+}
+#hamburger-btn.open .hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    width: 1.5rem;
+}
+
+/* ================================================================
+   SCROLL-REVEAL ANIMATIONS
+   ================================================================ */
+.reveal-element {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal-element.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================================================================
+   TYPOGRAPHY HELPERS
+   ================================================================ */
+.section-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--color-aji);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* ================================================================
+   POLAROID FRAMES
+   ================================================================ */
+.polaroid-frame {
+    background: white;
+    padding: 10px 10px 36px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+}
+.polaroid-frame:hover {
+    transform: rotate(0deg) scale(1.04) !important;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+}
+
+/* ================================================================
+   VALUE CHIPS
+   ================================================================ */
+.value-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--color-adobe);
+    border: 1px solid rgba(140,58,58,0.12);
+    border-radius: var(--radius-card);
+    padding: 0.875rem 1rem;
+    transition: var(--transition);
+}
+.value-chip:hover {
+    border-color: var(--color-aji);
+    background: var(--color-aji-light);
+    transform: translateX(4px);
+}
+
+/* ================================================================
+   CLASS / SERVICE CARDS
+   ================================================================ */
+.service-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+}
+.service-card:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 56px rgba(0,0,0,0.3);
+}
+.service-card--featured {
+    border-color: var(--color-maiz);
+    box-shadow: 0 0 0 1px var(--color-maiz), 0 8px 32px rgba(217,155,41,0.2);
+}
+.service-card-img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 210px;
+}
+.service-card-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+.service-card:hover .service-card-img {
+    transform: scale(1.06);
+}
+.service-card-badge {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: rgba(45,45,45,0.75);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+}
+.service-card-body {
+    padding: 1.6rem;
+}
+.card-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--radius-pill);
+    transition: var(--transition);
+    text-decoration: none;
+    cursor: pointer;
+}
+.card-cta:hover { background: white; color: var(--color-aji); border-color: white; }
+.card-cta--featured { background: var(--color-maiz); border-color: var(--color-maiz); color: var(--color-tierra); }
+.card-cta--featured:hover { background: #c68c22; border-color: #c68c22; color: var(--color-tierra); }
+
+/* ================================================================
+   GALLERY (Masonry style)
+   ================================================================ */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+@media (max-width: 768px) {
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-item--tall { grid-row: span 1; }
+    .gallery-item--wide { grid-column: span 2; }
+}
+@media (max-width: 480px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item--wide { grid-column: span 1; }
+}
+.gallery-item {
+    position: relative; overflow: hidden;
+    border-radius: var(--radius-card); cursor: pointer;
+}
+.gallery-item--tall { grid-row: span 2; }
+.gallery-item--wide { grid-column: span 2; }
+.gallery-img {
+    width: 100%; height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.gallery-item:hover .gallery-img { transform: scale(1.07); }
+.gallery-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(45,45,45,0.7) 0%, transparent 60%);
+    display: flex; align-items: flex-end; padding: 1.2rem;
+    opacity: 0; transition: opacity 0.4s ease;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-overlay span {
+    font-family: var(--font-display);
+    font-size: 1.1rem; font-weight: 600; font-style: italic;
+    color: white; letter-spacing: 0.02em;
+}
+
+/* ================================================================
+   TESTIMONIAL CARDS
+   ================================================================ */
+.testimonial-card {
+    background: white;
+    border-radius: var(--radius-card);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    border-top: 3px solid var(--color-maiz);
+}
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* ================================================================
+   LIGHT CARDS (for accommodation & spanish pages)
+   ================================================================ */
+.feature-card {
+    background: white;
+    border-radius: var(--radius-card);
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    border-left: 4px solid var(--color-aji);
+    position: relative;
+    overflow: hidden;
+}
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* ================================================================
+   PAGE HERO (for inner pages)
+   ================================================================ */
+.page-hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.page-hero-bg {
+    position: absolute; inset: 0;
+}
+.page-hero-bg img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+.page-hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(45,45,45,0.65), rgba(45,45,45,0.80));
+}
+.page-hero-content {
+    position: relative; z-index: 10;
+    text-align: center; color: white;
+    padding: 6rem 1.25rem 3rem;
+    max-width: 800px; margin: 0 auto;
+}
+
+/* ================================================================
+   STEP PROCESS (How It Works)
+   ================================================================ */
+.step-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+.step-connector-line {
+    width: 2px;
+    height: 2rem;
+    background: linear-gradient(to bottom, var(--bolivia-red), var(--bolivia-green));
+}
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+.footer-link {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+.footer-link:hover { color: white; }
+
+/* ================================================================
+   HERO SCROLL LINE
+   ================================================================ */
+.scroll-line {
+    animation: scroll-pulse 2s ease-in-out infinite;
+}
+@keyframes scroll-pulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50%       { opacity: 0.8; transform: scaleY(1.15); }
+}
+
+/* ================================================================
+   CROSS-PAGE PROMO BANNER
+   ================================================================ */
+.promo-banner {
+    background: linear-gradient(135deg, var(--color-tierra) 0%, #3d2020 100%);
+    border-top: 3px solid var(--color-maiz);
+    border-bottom: 3px solid var(--color-maiz);
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 640px) {
+    .polaroid-frame.secondary { display: none; }
+}
+
+/* ================================================================
+   REDUCED MOTION ACCESSIBILITY
+   ================================================================ */
+@media (prefers-reduced-motion: reduce) {
+    .reveal-element { opacity: 1; transform: none; transition: none; }
+    .gallery-img, .service-card, .feature-card,
+    .testimonial-card, .value-chip, .polaroid-frame,
+    .card-cta { transition: none; }
+    .scroll-line { animation: none; }
+}

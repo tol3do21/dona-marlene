@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Book | La Cocina de la Familia Cejas — Sucre, Bolivia</title>
+    <meta name="description" content="Contact the Cejas family to book a cooking class, arrange your homestay or reserve Spanish lessons in Sucre, Bolivia. We reply via WhatsApp within a few hours.">
+    <meta name="keywords" content="contact familia cejas, book cooking class sucre, book homestay bolivia, book spanish class sucre, familia cejas whatsapp">
+    <meta property="og:title" content="Contact & Book | Familia Cejas — Sucre, Bolivia">
+    <meta property="og:description" content="Book your cooking class, Spanish lessons or homestay in Sucre. We reply on WhatsApp within hours.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: {
+                    adobe:'#F7F5F0', aji:'#8C3A3A', ajidark:'#6B2B2B', ajilight:'#F0E6E6',
+                    andino:'#4A7C8C', maiz:'#D99B29', tierra:'#2D2D2D',
+                    bolvred:'#D52B1E', bolvyellow:'#F4E400', bolvgreen:'#007934'
+                },
+                fontFamily: { display:['"Playfair Display"','serif'], body:['"Open Sans"','sans-serif'] }
+            }}
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-adobe font-body text-tierra">
+
+<!-- Bolivia Stripe -->
+<div class="bolivia-stripe" aria-hidden="true">
+    <span class="stripe-red"></span><span class="stripe-yellow"></span><span class="stripe-green"></span>
+</div>
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-6 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2.5" aria-label="Familia Cejas — Home">
+                <img src="logo_cejas.png" alt="Logo Familia Cejas" class="w-12 h-12 object-contain flex-shrink-0">
+                <div id="logo-name" class="flex flex-col justify-center transition-colors">
+                    <span class="font-display font-bold text-xl text-maiz leading-none">Familia Cejas</span>
+                    <span class="font-body text-[0.55rem] tracking-[0.2em] uppercase text-gray-500 mt-1">Experiencia Culinaria</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+                <a href="index.html"         class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Cooking Classes</a>
+                <a href="accommodation.html" class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Accommodation</a>
+                <a href="spanish.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Spanish Classes</a>
+                <a href="contact.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Contact</a>
+                <a href="contact.html" class="ml-2 bg-aji text-white text-xs font-bold tracking-widest uppercase px-5 py-2.5 rounded-full hover:bg-ajidark transition-all shadow-lg">Book Now</a>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
+                <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
+                <span class="hamburger-bar block w-4 h-0.5 rounded transition-all duration-300"></span>
+            </button>
+        </div>
+    </div>
+    <nav id="mobile-menu" class="hidden md:hidden bg-adobe border-t-2 border-aji/10 shadow-xl" aria-label="Mobile navigation">
+        <div class="flex flex-col px-5 py-5 gap-0.5">
+            <a href="index.html"         class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🍲 Cooking Classes</a>
+            <a href="accommodation.html" class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🛏️ Accommodation</a>
+            <a href="spanish.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🗣️ Spanish Classes</a>
+            <a href="contact.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">📍 Contact</a>
+            <a href="contact.html"       class="mobile-nav-link mt-4 text-center bg-aji text-white font-bold py-3.5 rounded-full hover:bg-ajidark transition-colors shadow-md">Book Now →</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<!-- CONTACT HERO -->
+<section class="relative min-h-[55vh] flex items-center justify-center overflow-hidden bg-tierra">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+             alt="A welcoming table with Bolivian food and warm candlelight in Sucre Bolivia"
+             class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-b from-tierra/80 to-tierra/90"></div>
+    </div>
+    <!-- Andean diamond overlay -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+         style="background-image:repeating-linear-gradient(45deg,rgba(244,228,0,0.06) 0 2px,transparent 2px 30px),repeating-linear-gradient(-45deg,rgba(213,43,30,0.05) 0 2px,transparent 2px 30px);background-size:30px 30px;"></div>
+    <!-- Bolivia tricolor accent -->
+    <div class="absolute bottom-0 left-0 right-0 flex z-10" aria-hidden="true">
+        <div class="flex-1 h-1 bg-bolvred opacity-70"></div>
+        <div class="flex-1 h-1 bg-bolvyellow opacity-70"></div>
+        <div class="flex-1 h-1 bg-bolvgreen opacity-70"></div>
+    </div>
+    <div class="relative z-10 text-center text-white max-w-3xl mx-auto px-5 pt-24 pb-16">
+        <p class="text-maiz text-xs font-bold tracking-[0.3em] uppercase mb-5 flex items-center justify-center gap-3">
+            <span class="w-8 h-px bg-bolvred inline-block"></span>
+            <span class="w-2 h-2 bg-bolvyellow inline-block rotate-45"></span>
+            We're Open — Sucre, Bolivia
+            <span class="w-2 h-2 bg-bolvgreen inline-block rotate-45"></span>
+            <span class="w-8 h-px bg-bolvred inline-block"></span>
+        </p>
+        <h1 class="font-display font-bold text-5xl sm:text-6xl text-white leading-tight mb-5">
+            Join Us at<br><em class="text-maiz font-semibold italic">Our Table</em>
+        </h1>
+        <p class="text-white/80 text-xl max-w-xl mx-auto">Whether you want to cook, learn Spanish or stay with us — our doors are open. Write to us and we'll make it happen.</p>
+    </div>
+</section>
+
+<!-- MAIN CTA (WhatsApp) -->
+<section class="py-24 bg-adobe wiphala-bg">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+        <div class="reveal-element">
+            <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
+            <p class="section-eyebrow">Get in Touch</p>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-tierra mb-6 leading-tight">
+                The Easiest Way to<br><em class="text-aji italic">Reach Us</em>
+            </h2>
+            <p class="text-gray-600 text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+                Send us a message on WhatsApp! Tell us what experience interests you (cooking, Spanish, accommodation or all three) and your travel dates, and we will get back to you within a few hours.
+            </p>
+            <a href="https://wa.me/59170000000?text=Hi%20Familia%20Cejas!%20I'm%20interested%20in%20booking%20a%20cooking%20class%20%2F%20accommodation%20%2F%20Spanish%20lessons%20in%20Sucre.%20My%20dates%20are%3A%20..."
+               target="_blank"
+               rel="noopener noreferrer"
+               id="whatsapp-cta"
+               class="inline-flex items-center justify-center gap-4 bg-[#25D366] text-white font-bold text-xl px-12 py-5 rounded-full hover:bg-[#1aab52] transition-all shadow-2xl hover:shadow-[0_0_50px_rgba(37,211,102,0.35)] transform hover:-translate-y-1">
+                <svg class="w-8 h-8 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                </svg>
+                Message Us on WhatsApp
+            </a>
+            <p class="mt-6 text-gray-400 text-sm">We reply within a few hours · Available in English & Spanish</p>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT TO INCLUDE IN YOUR MESSAGE -->
+<section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-12 reveal-element">
+            <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
+            <p class="section-eyebrow">Make It Easy</p>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-tierra">What to Tell Us</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-ajilight rounded-2xl p-6 text-center reveal-element">
+                <div class="text-4xl mb-3" aria-hidden="true">📅</div>
+                <h3 class="font-display text-lg font-bold text-tierra mb-2">Your Travel Dates</h3>
+                <p class="text-gray-600 text-sm">When are you arriving and leaving Sucre? This helps us check availability.</p>
+            </div>
+            <div class="bg-ajilight rounded-2xl p-6 text-center reveal-element" data-delay="0.1">
+                <div class="text-4xl mb-3" aria-hidden="true">🎯</div>
+                <h3 class="font-display text-lg font-bold text-tierra mb-2">Your Interests</h3>
+                <p class="text-gray-600 text-sm">Cooking class? Spanish lessons? Homestay? Or the full immersion package?</p>
+            </div>
+            <div class="bg-ajilight rounded-2xl p-6 text-center reveal-element" data-delay="0.2">
+                <div class="text-4xl mb-3" aria-hidden="true">👥</div>
+                <h3 class="font-display text-lg font-bold text-tierra mb-2">Your Group Size</h3>
+                <p class="text-gray-600 text-sm">Solo traveler, couple, or a small group? We accommodate all — max 6 per class.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bolivia tricolor section divider -->
+<div class="bolivia-stripe" aria-hidden="true">
+    <span class="stripe-red"></span>
+    <span class="stripe-yellow"></span>
+    <span class="stripe-green"></span>
+</div>
+
+<!-- FAQ -->
+<section class="py-24 bg-adobe">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-14 reveal-element">
+            <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
+            <p class="section-eyebrow">FAQ</p>
+            <h2 class="font-display text-4xl font-bold text-tierra">
+                Common Questions
+            </h2>
+        </div>
+        <div class="space-y-6">
+            <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-aji reveal-element">
+                <h3 class="font-display text-lg font-bold text-tierra mb-3">Do I need to speak Spanish to join the cooking class?</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Not at all! The Cejas daughters are fluent in English and will guide you through every step. Doña Marlene will add the flavor (and the Spanish vocabulary) as you go.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-maiz reveal-element" data-delay="0.1">
+                <h3 class="font-display text-lg font-bold text-tierra mb-3">Can I book a cooking class even if I'm not staying for accommodation?</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Absolutely. All our classes and services are available independently. You can come for just a cooking class, or just Spanish lessons — no package required. We're flexible!</p>
+            </div>
+            <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-bolvgreen reveal-element" data-delay="0.2">
+                <h3 class="font-display text-lg font-bold text-tierra mb-3">How far in advance should I book?</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">We recommend at least 48 hours in advance to guarantee your spot, especially for the popular salteña class. However, if you're already in Sucre and just decided — message us anyway! We'll do our best.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-andino reveal-element" data-delay="0.3">
+                <h3 class="font-display text-lg font-bold text-tierra mb-3">Are dietary restrictions accommodated?</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Yes. Please let us know about any allergies, dietary restrictions or food preferences when you write to us, and we will adapt the menu accordingly.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LOCATION MAP / IMAGE -->
+<section class="relative h-72 sm:h-96 overflow-hidden" aria-label="Our location in Sucre, Bolivia">
+    <img src="https://images.unsplash.com/photo-1582297607736-474bd66be747?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+         alt="Panoramic view of Sucre, Bolivia — the white city with colonial architecture and the Andes in the background"
+         loading="lazy"
+         class="w-full h-full object-cover brightness-75">
+    <div class="absolute inset-0 bg-gradient-to-t from-tierra/85 via-tierra/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 z-10 text-center pb-10 text-white">
+        <p class="font-display text-3xl font-bold mb-2">Sucre, Bolivia 🇧🇴</p>
+        <p class="font-body text-white/75 text-sm">📍 A 10 minute walk from Plaza 25 de Mayo · La ciudad blanca de América</p>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-tierra text-white pt-16 pb-8">
+    <div class="bolivia-stripe mb-12 opacity-60" aria-hidden="true">
+        <span class="stripe-red"></span><span class="stripe-yellow"></span><span class="stripe-green"></span>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid md:grid-cols-4 gap-10 mb-12">
+            <div class="md:col-span-2">
+                <div class="font-display font-bold text-2xl text-aji mb-1">Familia <span class="font-light italic text-maiz">Cejas</span></div>
+                <p class="text-white/55 text-sm leading-relaxed mb-4 max-w-xs">Sharing Bolivia's culinary heritage and warmth with travelers from around the world.</p>
+                <a href="https://wa.me/59170000000?text=Hi%20Familia%20Cejas!" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 bg-[#25D366] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-[#1aab52] transition-all shadow-md">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    WhatsApp Us
+                </a>
+            </div>
+            <div>
+                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-maiz mb-4">Explore</h3>
+                <ul class="space-y-2.5">
+                    <li><a href="index.html"         class="footer-link">Cooking Classes</a></li>
+                    <li><a href="accommodation.html" class="footer-link">Accommodation</a></li>
+                    <li><a href="spanish.html"       class="footer-link">Spanish Classes</a></li>
+                    <li><a href="contact.html"       class="footer-link">Contact & Book</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-maiz mb-4">Find Us</h3>
+                <address class="not-italic space-y-2.5 text-white/55 text-sm">
+                    <p>📍 A 10 min walk from<br>Plaza 25 de Mayo,<br>Sucre, Bolivia</p>
+                    <p>💬 +591 70 000 000</p>
+                </address>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/35 text-xs">
+            <p>© 2025 La Cocina de la Familia Cejas · Sucre, Bolivia</p>
+            <p>Hecho con ❤️ y ají en Sucre, Bolivia 🇧🇴</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

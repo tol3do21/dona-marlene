@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentic Bolivian Cooking Classes in Sucre | Familia Cejas</title>
+    <meta name="description" content="Cook traditional Bolivian recipes with Doña Marlene and the Cejas Family in Sucre. Market tours, salteñas, sopa de maní and more. Small groups, guided in English. Book now!">
+    <meta name="keywords" content="bolivian cooking class, cooking class sucre bolivia, salteña recipe, sopa de mani, bolivian food, cultural experience sucre, familia cejas">
+    <meta property="og:title" content="Authentic Bolivian Cooking Classes | La Cocina de la Familia Cejas">
+    <meta property="og:description" content="Cook traditional Bolivian dishes with a real family in Sucre. An unforgettable cultural experience.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=80">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: {
+                    adobe:'#F7F5F0', aji:'#8C3A3A', ajidark:'#6B2B2B', ajilight:'#F0E6E6',
+                    andino:'#4A7C8C', maiz:'#D99B29', tierra:'#2D2D2D',
+                    bolvred:'#D52B1E', bolvyellow:'#F4E400', bolvgreen:'#007934'
+                },
+                fontFamily: { display:['"Playfair Display"','serif'], body:['"Open Sans"','sans-serif'] }
+            }}
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-adobe font-body text-tierra">
+
+<!-- ══════════════════════════════════════
+     BOLIVIA TRICOLOR STRIPE
+════════════════════════════════════════ -->
+<div class="bolivia-stripe" aria-hidden="true">
+    <span class="stripe-red"></span>
+    <span class="stripe-yellow"></span>
+    <span class="stripe-green"></span>
+</div>
+
+<!-- ══════════════════════════════════════
+     GLOBAL STICKY NAVBAR
+════════════════════════════════════════ -->
+<header id="navbar" class="fixed top-6 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex items-center justify-between h-16">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2.5" aria-label="Familia Cejas — Home">
+                <!-- Logotipo e Isotipo -->
+                <img src="logo_cejas.png" alt="Logo Familia Cejas" class="w-12 h-12 object-contain flex-shrink-0">
+                <div id="logo-name" class="flex flex-col justify-center transition-colors">
+                    <span class="font-display font-bold text-xl text-maiz leading-none">Familia Cejas</span>
+                    <span class="font-body text-[0.55rem] tracking-[0.2em] uppercase text-gray-500 mt-1">Experiencia Culinaria</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+                <a href="index.html"         class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Cooking Classes</a>
+                <a href="accommodation.html" class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Accommodation</a>
+                <a href="spanish.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Spanish Classes</a>
+                <a href="contact.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Contact</a>
+                <a href="contact.html" class="ml-2 bg-aji text-white text-xs font-bold tracking-widest uppercase px-5 py-2.5 rounded-full hover:bg-ajidark transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-px">
+                    Book Now
+                </a>
+            </nav>
+
+            <!-- Mobile hamburger -->
+            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
+                <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
+                <span class="hamburger-bar block w-4 h-0.5 rounded transition-all duration-300"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-adobe border-t-2 border-aji/10 shadow-xl" aria-label="Mobile navigation">
+        <div class="flex flex-col px-5 py-5 gap-0.5">
+            <a href="index.html"         class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🍲 Cooking Classes</a>
+            <a href="accommodation.html" class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🛏️ Accommodation</a>
+            <a href="spanish.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🗣️ Spanish Classes</a>
+            <a href="contact.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">📍 Contact</a>
+            <a href="contact.html"       class="mobile-nav-link mt-4 text-center bg-aji text-white font-bold py-3.5 rounded-full hover:bg-ajidark transition-colors shadow-md">Book a Class →</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<!-- ══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=85"
+             alt="Traditional Bolivian kitchen with spices, herbs and fresh ingredients" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-tierra/75 via-tierra/55 to-tierra/85"></div>
+    </div>
+
+    <!-- Andean diamond pattern overlay -->
+    <div class="absolute inset-0 z-1 pointer-events-none" aria-hidden="true"
+         style="background-image: repeating-linear-gradient(45deg,rgba(244,228,0,0.06) 0 2px,transparent 2px 30px),repeating-linear-gradient(-45deg,rgba(213,43,30,0.05) 0 2px,transparent 2px 30px); background-size:30px 30px;"></div>
+
+    <!-- Bolivia tricolor accent lines -->
+    <div class="absolute bottom-0 left-0 right-0 flex z-10" aria-hidden="true">
+        <div class="flex-1 h-1 bg-bolvred opacity-70"></div>
+        <div class="flex-1 h-1 bg-bolvyellow opacity-70"></div>
+        <div class="flex-1 h-1 bg-bolvgreen opacity-70"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-5 text-center text-white pt-24">
+        <div class="reveal-element">
+            <p class="text-maiz font-body text-xs font-bold tracking-[0.3em] uppercase mb-6 flex items-center justify-center gap-3">
+                <span class="w-8 h-px bg-bolvred inline-block"></span>
+                <span class="w-2 h-2 bg-bolvyellow inline-block rotate-45"></span>
+                Sucre, Bolivia · Traditional Cuisine
+                <span class="w-2 h-2 bg-bolvgreen inline-block rotate-45"></span>
+                <span class="w-8 h-px bg-bolvred inline-block"></span>
+            </p>
+        </div>
+
+        <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6 reveal-element" data-delay="0.15">
+            Authentic Bolivian<br>
+            <em class="text-maiz font-semibold">Cooking Classes</em><br>
+            <span class="text-4xl sm:text-5xl font-normal">with a Real Family</span>
+        </h1>
+
+        <p class="font-body text-lg sm:text-xl text-white/85 max-w-2xl mx-auto leading-relaxed mb-10 reveal-element" data-delay="0.3">
+            Step into Doña Marlene's kitchen in the white city of Sucre. Market visits, stone-ground spices, and recipes passed down through generations — cooked in a real Bolivian home.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center reveal-element" data-delay="0.45">
+            <a href="#classes" class="bg-aji text-white font-bold px-8 py-4 rounded-full hover:bg-ajidark transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                See Our Classes ↓
+            </a>
+            <a href="contact.html" class="bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all">
+                Book Directly
+            </a>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-3 text-white/65 text-sm reveal-element" data-delay="0.6">
+            <div class="flex items-center gap-2"><span class="text-maiz">★★★★★</span> 5-star rated experience</div>
+            <div class="flex items-center gap-2"><span class="text-bolvred">■</span> Max 6 people per class</div>
+            <div class="flex items-center gap-2"><span class="text-bolvgreen">■</span> All skill levels welcome</div>
+            <div class="flex items-center gap-2"><span class="text-bolvyellow">■</span> Guided in English</div>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50 text-xs">
+        <span class="scroll-line block w-px h-10 bg-gradient-to-b from-white/50 to-transparent"></span>
+        scroll
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     OUR STORY
+════════════════════════════════════════ -->
+<section id="story" class="py-28 bg-adobe wiphala-bg">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+            <!-- Polaroid photo stack -->
+            <div class="relative flex items-center justify-center min-h-[420px]" aria-hidden="false">
+                <div class="absolute w-64 h-64 rounded-full bg-maiz/15 blur-3xl"></div>
+                <div class="polaroid-frame rotate-2 z-10">
+                    <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                         alt="Doña Marlene cooking traditional Bolivian food in her home kitchen in Sucre"
+                         loading="lazy" class="w-64 sm:w-72 h-72 sm:h-80 object-cover">
+                </div>
+                <div class="polaroid-frame secondary absolute -bottom-4 -right-2 sm:-right-6 z-20 -rotate-3 reveal-element" data-delay="0.2">
+                    <img src="https://images.unsplash.com/photo-1595295333158-4742f28fbd85?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                         alt="Colorful Bolivian spices and fresh ingredients for the cooking class"
+                         loading="lazy" class="w-36 sm:w-44 h-40 sm:h-48 object-cover">
+                </div>
+                <!-- Bolivia flag badge -->
+                <div class="absolute -top-4 -left-2 z-30 shadow-lg rotate-12 reveal-element" data-delay="0.1">
+                    <div class="bg-tierra text-white rounded-full w-20 h-20 flex flex-col items-center justify-center text-center overflow-hidden">
+                        <div class="w-full flex flex-col">
+                            <div class="h-2 bg-bolvred w-full"></div>
+                            <div class="h-2 bg-bolvyellow w-full flex items-center justify-center">
+                                <span class="font-display font-bold text-tierra text-xs leading-none">30+</span>
+                            </div>
+                            <div class="h-2 bg-bolvgreen w-full"></div>
+                        </div>
+                        <span class="font-body text-xs leading-tight mt-1">yrs of<br>tradition</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story text -->
+            <div class="reveal-element" data-delay="0.1">
+                <div class="andean-rule" aria-hidden="true">
+                    <div class="andean-rule__line"></div>
+                </div>
+                <p class="section-eyebrow">About Us</p>
+                <h2 class="font-display text-4xl sm:text-5xl font-bold text-tierra mb-6 leading-tight">
+                    Meet Doña Marlene<br>
+                    <em class="text-aji italic font-semibold">& the Cejas Family</em>
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-5">
+                    We grew up in the fragrant clouds of <em>llajwa</em> and <em>sopa de maní</em>. Our kitchen in Sucre is not a restaurant — it is our home, and you are our guest.
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed mb-10">
+                    Doña Marlene has been cooking these recipes her whole life. Her daughters guide you through each step in English, while Mamá reveals the secrets only a <em>batán</em> (stone grinder) can unlock.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="value-chip"><span class="text-2xl">🏡</span><span class="font-semibold text-sm">Cook in our real home</span></div>
+                    <div class="value-chip"><span class="text-2xl">🌿</span><span class="font-semibold text-sm">Seasonal local ingredients</span></div>
+                    <div class="value-chip"><span class="text-2xl">📖</span><span class="font-semibold text-sm">Recipe booklet to take home</span></div>
+                    <div class="value-chip"><span class="text-2xl">🗣️</span><span class="font-semibold text-sm">English & Spanish guidance</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bolivia tricolor section divider -->
+<div class="bolivia-stripe" aria-hidden="true">
+    <span class="stripe-red"></span>
+    <span class="stripe-yellow"></span>
+    <span class="stripe-green"></span>
+</div>
+
+<!-- ══════════════════════════════════════
+     COOKING CLASSES
+════════════════════════════════════════ -->
+<section id="classes" class="py-28 bg-tierra relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true"
+         style="background-image:repeating-linear-gradient(45deg,#D99B29 0,#D99B29 1px,transparent 0,transparent 50%);background-size:18px 18px;"></div>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-20 reveal-element">
+            <div class="andean-rule justify-center" aria-hidden="true">
+                <div class="andean-rule__line"></div>
+            </div>
+            <p class="section-eyebrow text-maiz/80">What We Cook</p>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-white mb-5 leading-tight">
+                Choose Your<br><em class="text-maiz italic">Experience</em>
+            </h2>
+            <p class="text-white/70 text-lg leading-relaxed">Each class is a full sensory journey through Bolivian culinary culture. Small, personal groups so you truly connect with the food and family.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <article class="service-card reveal-element" data-delay="0" aria-label="Cooking class: El Clásico Chuquisaqueño">
+                <div class="andean-card-accent" aria-hidden="true"></div>
+                <div class="service-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"
+                         alt="Bolivian sopa de mani and colorful market ingredients in Sucre, Bolivia"
+                         loading="lazy" class="service-card-img">
+                    <div class="service-card-badge">4 Hours</div>
+                </div>
+                <div class="service-card-body">
+                    <h3 class="font-display text-xl font-bold text-white mb-1">El Clásico Chuquisaqueño</h3>
+                    <p class="text-white/55 text-xs font-bold uppercase tracking-wider mb-4">The Flagship Class</p>
+                    <ul class="space-y-2 text-white/75 text-sm mb-6">
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Morning visit to Mercado Central</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Cook Sopa de Maní or Mondongo</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Stone-grind your own Llajwa</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Sit down & eat what you cooked</li>
+                    </ul>
+                    <a href="contact.html" class="card-cta">Book This Class →</a>
+                </div>
+            </article>
+
+            <!-- Card 2 (featured) -->
+            <article class="service-card service-card--featured reveal-element" data-delay="0.15" aria-label="Cooking class: Tarde de Salteñas">
+                <div class="service-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"
+                         alt="Hands folding and shaping traditional Bolivian salteña dough"
+                         loading="lazy" class="service-card-img">
+                    <div class="service-card-badge bg-maiz text-tierra">⭐ Most Popular</div>
+                </div>
+                <div class="service-card-body">
+                    <h3 class="font-display text-xl font-bold text-white mb-1">Tarde de Salteñas</h3>
+                    <p class="text-maiz text-xs font-bold uppercase tracking-wider mb-4">Afternoon Workshop · 3 Hours</p>
+                    <ul class="space-y-2 text-white/75 text-sm mb-6">
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Mix the dough by hand</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Prepare the jigote filling</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Master the repulgue technique</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Coffee & fresh-baked salteñas</li>
+                    </ul>
+                    <a href="contact.html" class="card-cta card-cta--featured">Book This Class →</a>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="service-card reveal-element" data-delay="0.3" aria-label="Cooking class: Private Family Experience">
+                <div class="andean-card-accent" aria-hidden="true"></div>
+                <div class="service-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"
+                         alt="Group of travelers enjoying a cooking class in a Bolivian family kitchen"
+                         loading="lazy" class="service-card-img">
+                    <div class="service-card-badge">3–5 Hours</div>
+                </div>
+                <div class="service-card-body">
+                    <h3 class="font-display text-xl font-bold text-white mb-1">Private Family Experience</h3>
+                    <p class="text-white/55 text-xs font-bold uppercase tracking-wider mb-4">Custom & Flexible</p>
+                    <ul class="space-y-2 text-white/75 text-sm mb-6">
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Tailored menu of your choice</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Ideal for couples & families</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Spanish practice included</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Flexible schedule</li>
+                    </ul>
+                    <a href="contact.html" class="card-cta">Request This Class →</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Stats bar -->
+        <div class="mt-14 border border-white/10 rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center reveal-element" data-delay="0.2">
+            <div><div class="text-maiz text-3xl font-display font-bold">All</div><div class="text-white/55 text-sm mt-1">ingredients included</div></div>
+            <div><div class="text-maiz text-3xl font-display font-bold">≤6</div><div class="text-white/55 text-sm mt-1">people per class</div></div>
+            <div><div class="text-maiz text-3xl font-display font-bold">EN</div><div class="text-white/55 text-sm mt-1">guided in English</div></div>
+            <div><div class="text-maiz text-3xl font-display font-bold">📖</div><div class="text-white/55 text-sm mt-1">recipes to keep</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     GALLERY
+════════════════════════════════════════ -->
+<section id="gallery" class="py-28 bg-adobe">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-16 reveal-element">
+            <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
+            <p class="section-eyebrow">Inside the Kitchen</p>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-tierra leading-tight">
+                A Taste of What<br><em class="text-aji italic">Awaits You</em>
+            </h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-item--tall reveal-element">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                     alt="Beautifully plated Bolivian dishes after a cooking class in Sucre" loading="lazy" class="gallery-img">
+                <div class="gallery-overlay"><span>The Feast</span></div>
+            </div>
+            <div class="gallery-item reveal-element" data-delay="0.1">
+                <img src="https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                     alt="Fresh colorful spices and dried chilies in Sucre's Mercado Central" loading="lazy" class="gallery-img">
+                <div class="gallery-overlay"><span>The Market</span></div>
+            </div>
+            <div class="gallery-item reveal-element" data-delay="0.2">
+                <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                     alt="Travelers laughing and enjoying a Bolivian cooking class" loading="lazy" class="gallery-img">
+                <div class="gallery-overlay"><span>The Laughter</span></div>
+            </div>
+            <div class="gallery-item gallery-item--wide reveal-element" data-delay="0.3">
+                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                     alt="Traditional Bolivian ingredients: herbs, potatoes and chili on a rustic wooden table" loading="lazy" class="gallery-img">
+                <div class="gallery-overlay"><span>The Ingredients</span></div>
+            </div>
+            <div class="gallery-item reveal-element" data-delay="0.4">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                     alt="A traditional Bolivian soup dish beautifully presented and ready to eat" loading="lazy" class="gallery-img">
+                <div class="gallery-overlay"><span>The Result</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bolivia tricolor section divider -->
+<div class="bolivia-stripe" aria-hidden="true">
+    <span class="stripe-red"></span>
+    <span class="stripe-yellow"></span>
+    <span class="stripe-green"></span>
+</div>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════ -->
+<section id="testimonials" class="py-28 bg-ajilight">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-16 reveal-element">
+            <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
+            <p class="section-eyebrow">Traveler Reviews</p>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-tierra leading-tight">
+                Words from Our<br><em class="text-aji italic">Guests</em>
+            </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <blockquote class="testimonial-card reveal-element">
+                <div class="text-maiz text-4xl font-display leading-none mb-3" aria-hidden="true">"</div>
+                <p class="text-gray-700 text-base leading-relaxed mb-5 italic">Cooking with Doña Marlene was the highlight of my three months in South America. I came for a class and left feeling like part of the family. The salteñas were life-changing!</p>
+                <footer class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-aji/20 flex items-center justify-center text-aji font-bold font-display text-sm">S</div>
+                    <div><div class="font-semibold text-tierra text-sm">Sarah M.</div><div class="text-gray-500 text-xs">🇬🇧 London, UK</div></div>
+                    <div class="ml-auto text-maiz text-xs font-bold">★★★★★</div>
+                </footer>
+            </blockquote>
+            <blockquote class="testimonial-card reveal-element" data-delay="0.15">
+                <div class="text-maiz text-4xl font-display leading-none mb-3" aria-hidden="true">"</div>
+                <p class="text-gray-700 text-base leading-relaxed mb-5 italic">Not a touristy class — a real, intimate experience in a real Bolivian home. We went to the market, we ground the spices by hand, we ate together. Pure magic.</p>
+                <footer class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-andino/20 flex items-center justify-center text-andino font-bold font-display text-sm">T</div>
+                    <div><div class="font-semibold text-tierra text-sm">Thomas W.</div><div class="text-gray-500 text-xs">🇩🇪 Berlin, Germany</div></div>
+                    <div class="ml-auto text-maiz text-xs font-bold">★★★★★</div>
+                </footer>
+            </blockquote>
+            <blockquote class="testimonial-card reveal-element" data-delay="0.3">
+                <div class="text-maiz text-4xl font-display leading-none mb-3" aria-hidden="true">"</div>
+                <p class="text-gray-700 text-base leading-relaxed mb-5 italic">I booked the private experience for my partner and me. They made us feel so welcome. Full stomachs, recipes to take home, and new friends. 10/10!</p>
+                <footer class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-maiz/30 flex items-center justify-center text-aji font-bold font-display text-sm">A</div>
+                    <div><div class="font-semibold text-tierra text-sm">Akiko R.</div><div class="text-gray-500 text-xs">🇯🇵 Osaka, Japan</div></div>
+                    <div class="ml-auto text-maiz text-xs font-bold">★★★★★</div>
+                </footer>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CROSS-PAGE PROMO BANNER
+════════════════════════════════════════ -->
+<section class="promo-banner py-16" aria-label="Other services">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+        <p class="text-maiz text-xs font-bold tracking-widest uppercase mb-4 reveal-element">Complete the Experience</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8 reveal-element" data-delay="0.1">
+            Stay with us. <em class="text-maiz italic">Learn Spanish.</em> Cook together.
+        </h2>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 reveal-element" data-delay="0.2">
+            <a href="accommodation.html" class="bg-white/10 border border-white/20 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/20 transition-all">🛏️ Our Accommodation</a>
+            <a href="spanish.html"       class="bg-white/10 border border-white/20 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/20 transition-all">🗣️ Spanish Classes</a>
+            <a href="contact.html"       class="bg-maiz text-tierra font-bold px-7 py-3 rounded-full hover:bg-yellow-500 transition-all shadow-lg">Book Everything →</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════
+     GLOBAL FOOTER
+════════════════════════════════════════ -->
+<footer class="bg-tierra text-white pt-16 pb-8">
+    <!-- Bolivia stripe footer top -->
+    <div class="bolivia-stripe mb-12 opacity-60" aria-hidden="true">
+        <span class="stripe-red"></span>
+        <span class="stripe-yellow"></span>
+        <span class="stripe-green"></span>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid md:grid-cols-4 gap-10 mb-12">
+            <div class="md:col-span-2">
+                <div class="font-display font-bold text-2xl text-aji mb-1">Familia <span class="font-light italic text-maiz">Cejas</span></div>
+                <p class="text-white/55 text-sm leading-relaxed mb-4 max-w-xs">Sharing Bolivia's culinary heritage with travelers from around the world — one recipe, one story at a time.</p>
+                <a href="https://wa.me/59170000000?text=Hi%20Familia%20Cejas!" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 bg-[#25D366] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-[#1aab52] transition-all shadow-md">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    WhatsApp Us
+                </a>
+            </div>
+            <div>
+                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-maiz mb-4">Explore</h3>
+                <ul class="space-y-2.5">
+                    <li><a href="index.html"         class="footer-link">Cooking Classes</a></li>
+                    <li><a href="accommodation.html" class="footer-link">Accommodation</a></li>
+                    <li><a href="spanish.html"       class="footer-link">Spanish Classes</a></li>
+                    <li><a href="contact.html"       class="footer-link">Contact & Book</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-maiz mb-4">Find Us</h3>
+                <address class="not-italic space-y-2.5 text-white/55 text-sm">
+                    <p>📍 A 10 min walk from<br>Plaza 25 de Mayo,<br>Sucre, Bolivia</p>
+                    <p>💬 +591 70 000 000</p>
+                </address>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/35 text-xs">
+            <p>© 2025 La Cocina de la Familia Cejas · Sucre, Bolivia</p>
+            <p>Hecho con ❤️ y ají en Sucre, Bolivia 🇧🇴</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

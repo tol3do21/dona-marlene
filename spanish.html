@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Language Classes in Sucre Bolivia | Familia Cejas</title>
+    <meta name="description" content="Learn Spanish in Sucre, Bolivia — Latin America's capital of neutral Spanish. Structured classes and conversational immersion with certified native teachers from the Cejas family.">
+    <meta name="keywords" content="spanish classes sucre bolivia, learn spanish sucre, spanish immersion bolivia, conversational spanish sucre, language school sucre">
+    <meta property="og:title" content="Spanish Language Classes in Sucre | Familia Cejas">
+    <meta property="og:description" content="Learn Spanish in the best city in Latin America for it. Structured and conversational classes with a real Bolivian family.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1577563908411-50cb98976fea?w=1200&q=80">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: {
+                    adobe:'#F7F5F0', aji:'#8C3A3A', ajidark:'#6B2B2B', ajilight:'#F0E6E6',
+                    andino:'#4A7C8C', maiz:'#D99B29', tierra:'#2D2D2D',
+                    bolvred:'#D52B1E', bolvyellow:'#F4E400', bolvgreen:'#007934'
+                },
+                fontFamily: { display:['"Playfair Display"','serif'], body:['"Open Sans"','sans-serif'] }
+            }}
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-adobe font-body text-tierra">
+
+<!-- Bolivia Stripe -->
+<div class="bolivia-stripe" aria-hidden="true">
+    <span class="stripe-red"></span><span class="stripe-yellow"></span><span class="stripe-green"></span>
+</div>
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-6 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2.5" aria-label="Familia Cejas — Home">
+                <img src="logo_cejas.png" alt="Logo Familia Cejas" class="w-12 h-12 object-contain flex-shrink-0">
+                <div id="logo-name" class="flex flex-col justify-center transition-colors">
+                    <span class="font-display font-bold text-xl text-maiz leading-none">Familia Cejas</span>
+                    <span class="font-body text-[0.55rem] tracking-[0.2em] uppercase text-gray-500 mt-1">Experiencia Culinaria</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+                <a href="index.html"         class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Cooking Classes</a>
+                <a href="accommodation.html" class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Accommodation</a>
+                <a href="spanish.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Spanish Classes</a>
+                <a href="contact.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Contact</a>
+                <a href="contact.html" class="ml-2 bg-aji text-white text-xs font-bold tracking-widest uppercase px-5 py-2.5 rounded-full hover:bg-ajidark transition-all shadow-lg">Book Now</a>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
+                <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
+                <span class="hamburger-bar block w-4 h-0.5 rounded transition-all duration-300"></span>
+            </button>
+        </div>
+    </div>
+    <nav id="mobile-menu" class="hidden md:hidden bg-adobe border-t-2 border-aji/10 shadow-xl" aria-label="Mobile navigation">
+        <div class="flex flex-col px-5 py-5 gap-0.5">
+            <a href="index.html"         class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🍲 Cooking Classes</a>
+            <a href="accommodation.html" class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🛏️ Accommodation</a>
+            <a href="spanish.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🗣️ Spanish Classes</a>
+            <a href="contact.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">📍 Contact</a>
+            <a href="contact.html"       class="mobile-nav-link mt-4 text-center bg-aji text-white font-bold py-3.5 rounded-full hover:bg-ajidark transition-colors shadow-md">Book Now →</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1577563908411-50cb98976fea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=85"
+             alt="A student and a teacher smiling and talking with notebooks in a sunny outdoor setting"
+             class="w-full h-full object-cover">
+        <div class="page-hero-overlay"></div>
+    </div>
+    <!-- Bolivia tricolor accent lines -->
+    <div class="absolute bottom-0 left-0 right-0 flex z-10" aria-hidden="true">
+        <div class="flex-1 h-1 bg-bolvred opacity-70"></div>
+        <div class="flex-1 h-1 bg-bolvyellow opacity-70"></div>
+        <div class="flex-1 h-1 bg-bolvgreen opacity-70"></div>
+    </div>
+    <!-- Andean diamond overlay -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+         style="background-image:repeating-linear-gradient(45deg,rgba(244,228,0,0.05) 0 2px,transparent 2px 30px),repeating-linear-gradient(-45deg,rgba(213,43,30,0.04) 0 2px,transparent 2px 30px);background-size:30px 30px;"></div>
+    <div class="page-hero-content">
+        <p class="text-maiz text-xs font-bold tracking-[0.3em] uppercase mb-5 flex items-center justify-center gap-3">
+            <span class="w-8 h-px bg-bolvred inline-block"></span>
+            <span class="w-2 h-2 bg-bolvyellow inline-block rotate-45"></span>
+            Sucre, Bolivia · Language Immersion
+            <span class="w-2 h-2 bg-bolvgreen inline-block rotate-45"></span>
+            <span class="w-8 h-px bg-bolvred inline-block"></span>
+        </p>
+        <h1 class="font-display font-bold text-5xl sm:text-6xl text-white leading-tight mb-5">
+            Learn Spanish<br>
+            <em class="text-maiz font-semibold italic">en Familia</em>
+        </h1>
+        <p class="text-white/80 text-xl max-w-xl mx-auto">Speak Spanish where it sounds its clearest — with a real Bolivian family, in the most beautiful city in the Andes.</p>
+    </div>
+</section>
+
+<!-- WHY SUCRE -->
+<section class="py-24 bg-adobe">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal-element">
+                <div class="andean-rule" aria-hidden="true"><div class="andean-rule__line"></div></div>
+                <p class="section-eyebrow">Why Sucre?</p>
+                <h2 class="font-display text-4xl sm:text-5xl font-bold text-tierra mb-6 leading-tight">
+                    South America's<br>
+                    <em class="text-aji italic">Spanish Capital</em>
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-5">
+                    Sucre is widely considered the best city in Latin America to learn Spanish. Bolivians speak a clear, neutral, and friendly Spanish — no strong accents, no confusing local slang — just beautiful, standard Spanish you can use anywhere in the world.
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                    And what better way to practice than in the kitchen, at the market, or in the sunny courtyard of your host family? With the Cejas family, Spanish is not a subject — it is the language of your daily life.
+                </p>
+                <!-- Bolivia stats bar -->
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-white rounded-2xl p-4 shadow-sm border border-aji/10">
+                        <div class="font-display font-bold text-2xl text-aji">Neutral</div>
+                        <div class="text-xs text-gray-500 mt-1">accent-free Spanish</div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-4 shadow-sm border border-aji/10">
+                        <div class="font-display font-bold text-2xl text-aji">24/7</div>
+                        <div class="text-xs text-gray-500 mt-1">immersive practice</div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-4 shadow-sm border border-aji/10">
+                        <div class="font-display font-bold text-2xl text-aji">A1–C1</div>
+                        <div class="text-xs text-gray-500 mt-1">all levels welcome</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex justify-center items-center min-h-[400px] reveal-element" data-delay="0.15">
+                <!-- Bolivia flag color accent border -->
+                <div class="absolute inset-0 rounded-3xl opacity-20 pointer-events-none" aria-hidden="true"
+                     style="background: linear-gradient(135deg, #D52B1E 0%, #F4E400 50%, #007934 100%);"></div>
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                     alt="A student smiling while studying Spanish at an outdoor table in a sunny courtyard"
+                     loading="lazy"
+                     class="relative rounded-3xl shadow-2xl w-full h-96 object-cover border-8 border-white z-10">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bolivia tricolor section divider -->
+<div class="bolivia-stripe" aria-hidden="true">
+    <span class="stripe-red"></span>
+    <span class="stripe-yellow"></span>
+    <span class="stripe-green"></span>
+</div>
+
+<!-- CLASS OPTIONS -->
+<section class="py-24 bg-tierra relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true"
+         style="background-image:repeating-linear-gradient(45deg,#D99B29 0,#D99B29 1px,transparent 0,transparent 50%);background-size:18px 18px;"></div>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-20 reveal-element">
+            <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
+            <p class="section-eyebrow text-maiz/80">Our Methods</p>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-white mb-5 leading-tight">
+                Two Ways to<br><em class="text-maiz italic">Learn</em>
+            </h2>
+            <p class="text-white/70 text-lg leading-relaxed">Choose the style that fits your personality — or combine both for total immersion.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            <!-- Structured -->
+            <article class="service-card service-card--featured reveal-element" data-delay="0" aria-label="Spanish class: Structured Classes">
+                <div class="service-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"
+                         alt="A student with a notebook and textbook studying Spanish in a comfortable outdoor setting"
+                         loading="lazy" class="service-card-img">
+                    <div class="service-card-badge bg-andino text-white">Structured</div>
+                </div>
+                <div class="service-card-body">
+                    <h3 class="font-display text-2xl font-bold text-white mb-2">Clases Estructuradas</h3>
+                    <p class="text-white/60 text-xs font-bold uppercase tracking-wider mb-4">Formal Spanish Lessons</p>
+                    <ul class="space-y-2 text-white/75 text-sm mb-6">
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Formal sessions in our patio</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Taught by native, certified teachers</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Grammar, vocabulary & reading</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Adapted to your exact level (A1–C1)</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Flexible schedule — morning or afternoon</li>
+                    </ul>
+                    <a href="contact.html" class="card-cta">Book Structured Classes →</a>
+                </div>
+            </article>
+
+            <!-- Conversational -->
+            <article class="service-card reveal-element" data-delay="0.15" aria-label="Spanish class: Conversational Immersion">
+                <div class="service-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"
+                         alt="Two people laughing and having a lively Spanish conversation over food in Sucre Bolivia"
+                         loading="lazy" class="service-card-img">
+                    <div class="service-card-badge bg-maiz text-tierra">Most Natural</div>
+                </div>
+                <div class="service-card-body">
+                    <h3 class="font-display text-2xl font-bold text-white mb-2">Inmersión Conversacional</h3>
+                    <p class="text-maiz text-xs font-bold uppercase tracking-wider mb-4">Everyday Spanish</p>
+                    <ul class="space-y-2 text-white/75 text-sm mb-6">
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Learn vocabulary while cooking</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Chat at the market with Doña Marlene</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Real-life phrases you'll use immediately</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> No textbooks — just conversation</li>
+                        <li class="flex gap-2"><span class="text-maiz">✓</span> Build confidence fast and naturally</li>
+                    </ul>
+                    <a href="contact.html" class="card-cta card-cta--featured">Book Immersion →</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Level guide -->
+        <div class="mt-14 border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto reveal-element" data-delay="0.3">
+            <h3 class="font-display text-xl font-bold text-white text-center mb-8">Which Level Are You?</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-bolvgreen/30 border border-bolvgreen flex items-center justify-center mx-auto mb-2 text-white font-bold">A1</div>
+                    <div class="text-white/55 text-xs">Beginner</div>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-bolvgreen/40 border border-bolvgreen flex items-center justify-center mx-auto mb-2 text-white font-bold">A2</div>
+                    <div class="text-white/55 text-xs">Elementary</div>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-maiz/40 border border-maiz flex items-center justify-center mx-auto mb-2 text-white font-bold">B1</div>
+                    <div class="text-white/55 text-xs">Intermediate</div>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-maiz/60 border border-maiz flex items-center justify-center mx-auto mb-2 text-white font-bold">B2</div>
+                    <div class="text-white/55 text-xs">Upper-Inter.</div>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-aji/60 border border-aji flex items-center justify-center mx-auto mb-2 text-white font-bold">C1</div>
+                    <div class="text-white/55 text-xs">Advanced</div>
+                </div>
+            </div>
+            <p class="text-center text-white/50 text-sm mt-6">Not sure of your level? <a href="contact.html" class="text-maiz hover:underline font-semibold">Send us a message</a> and we'll do a quick free assessment.</p>
+        </div>
+    </div>
+</section>
+
+<!-- COMBINE THE EXPERIENCE -->
+<section class="py-24 bg-ajilight wiphala-bg">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-14 reveal-element">
+            <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
+            <p class="section-eyebrow">The Full Immersion</p>
+            <h2 class="font-display text-4xl font-bold text-tierra leading-tight">
+                Combine Everything for<br><em class="text-aji italic">Total Immersion</em>
+            </h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto mt-4">The ultimate Sucre experience: learn Spanish, cook traditional food, and live with a real Bolivian family — all in one place.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl p-6 shadow-md text-center border-t-4 border-aji reveal-element">
+                <div class="text-5xl mb-4" aria-hidden="true">🗣️</div>
+                <h3 class="font-display text-xl font-bold text-tierra mb-2">Spanish Classes</h3>
+                <p class="text-gray-500 text-sm">Formal or conversational — or both! 1-on-1 or small groups.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-md text-center border-t-4 border-maiz reveal-element" data-delay="0.1">
+                <div class="text-5xl mb-4" aria-hidden="true">🍲</div>
+                <h3 class="font-display text-xl font-bold text-tierra mb-2">Cooking Classes</h3>
+                <p class="text-gray-500 text-sm">Practice Spanish while you grind spices and repulgar salteñas.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-md text-center border-t-4 border-bolvgreen reveal-element" data-delay="0.2">
+                <div class="text-5xl mb-4" aria-hidden="true">🛏️</div>
+                <h3 class="font-display text-xl font-bold text-tierra mb-2">Homestay</h3>
+                <p class="text-gray-500 text-sm">Stay with us and never stop learning — even over breakfast.</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 reveal-element" data-delay="0.3">
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-aji text-white font-bold px-10 py-4 rounded-full hover:bg-ajidark transition-all shadow-xl transform hover:-translate-y-1 text-lg">
+                Design My Immersion Package →
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="py-24 bg-adobe">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+        <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
+        <p class="section-eyebrow">Student Story</p>
+        <blockquote class="testimonial-card max-w-2xl mx-auto mt-8 reveal-element">
+            <div class="text-maiz text-5xl font-display leading-none mb-4 text-left" aria-hidden="true">"</div>
+            <p class="text-gray-700 text-xl italic leading-relaxed mb-6">
+                I came to Sucre speaking almost zero Spanish. After two weeks of classes with the Cejas daughters and cooking with Doña Marlene every day, I left able to hold full conversations. The immersion method works incredibly fast because you never leave the language — you live in it.
+            </p>
+            <footer class="flex items-center gap-4 justify-center">
+                <div class="w-12 h-12 rounded-full bg-andino/20 flex items-center justify-center text-andino font-bold font-display">M</div>
+                <div class="text-left">
+                    <div class="font-semibold text-tierra">Marco V.</div>
+                    <div class="text-gray-500 text-sm">🇮🇹 Rome, Italy · 3 weeks in Sucre</div>
+                </div>
+                <div class="ml-auto text-maiz font-bold text-sm">★★★★★</div>
+            </footer>
+        </blockquote>
+    </div>
+</section>
+
+<!-- CROSS-LINKS -->
+<section class="promo-banner py-16" aria-label="More services">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+        <p class="text-maiz text-xs font-bold tracking-widest uppercase mb-4 reveal-element">Complete your experience</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8 reveal-element" data-delay="0.1">
+            <em class="text-maiz italic">Habla.</em> Cook. Stay.
+        </h2>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 reveal-element" data-delay="0.2">
+            <a href="index.html"        class="bg-white/10 border border-white/20 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/20 transition-all">🍲 Cooking Classes</a>
+            <a href="accommodation.html" class="bg-white/10 border border-white/20 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/20 transition-all">🛏️ Accommodation</a>
+            <a href="contact.html"       class="bg-maiz text-tierra font-bold px-7 py-3 rounded-full hover:bg-yellow-500 transition-all shadow-lg">Reserve Your First Class →</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-tierra text-white pt-16 pb-8">
+    <div class="bolivia-stripe mb-12 opacity-60" aria-hidden="true">
+        <span class="stripe-red"></span><span class="stripe-yellow"></span><span class="stripe-green"></span>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid md:grid-cols-4 gap-10 mb-12">
+            <div class="md:col-span-2">
+                <div class="font-display font-bold text-2xl text-aji mb-1">Familia <span class="font-light italic text-maiz">Cejas</span></div>
+                <p class="text-white/55 text-sm leading-relaxed mb-4 max-w-xs">Sharing Bolivia's culinary heritage and language with travelers from around the world.</p>
+                <a href="https://wa.me/59170000000?text=Hi%20Familia%20Cejas!" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 bg-[#25D366] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-[#1aab52] transition-all shadow-md">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    WhatsApp Us
+                </a>
+            </div>
+            <div>
+                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-maiz mb-4">Explore</h3>
+                <ul class="space-y-2.5">
+                    <li><a href="index.html"         class="footer-link">Cooking Classes</a></li>
+                    <li><a href="accommodation.html" class="footer-link">Accommodation</a></li>
+                    <li><a href="spanish.html"       class="footer-link">Spanish Classes</a></li>
+                    <li><a href="contact.html"       class="footer-link">Contact & Book</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-maiz mb-4">Find Us</h3>
+                <address class="not-italic space-y-2.5 text-white/55 text-sm">
+                    <p>📍 A 10 min walk from<br>Plaza 25 de Mayo,<br>Sucre, Bolivia</p>
+                    <p>💬 +591 70 000 000</p>
+                </address>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/35 text-xs">
+            <p>© 2025 La Cocina de la Familia Cejas · Sucre, Bolivia</p>
+            <p>Hecho con ❤️ y ají en Sucre, Bolivia 🇧🇴</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

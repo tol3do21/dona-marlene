@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Isotipos con Historia - Familia Cejas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { adobe:'#F7F5F0', aji:'#8C3A3A', maiz:'#D99B29' },
+                fontFamily: { display:['Playfair Display','serif'], body:['Open Sans','sans-serif'] }
+            }}
+        }
+    </script>
+</head>
+<body class="bg-adobe text-gray-800 p-12">
+    <div class="max-w-5xl mx-auto">
+        <h1 class="text-3xl font-display font-bold text-aji mb-4">El Símbolo de las 3 Mujeres</h1>
+        <p class="font-body text-gray-600 mb-12">Me encanta esta historia. Es un concepto hermoso y profundo. Para representar a la madre como el pilar central y a sus dos hijas como el soporte, todo esto envuelto en el mundo de la cocina, he diseñado 3 opciones 100% conceptuales y minimalistas.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Opción A -->
+            <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
+                <p class="text-[0.65rem] font-bold tracking-widest text-maiz mb-6 uppercase">Concepto 1: El Fuego Unido</p>
+                <!-- Isotipo: 3 Llamas -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="mb-4">
+                    <!-- Hija 1 (Izquierda, apoyando al centro) -->
+                    <path d="M8 12C6 14 5 16 5 18C5 19.65 6.35 21 8 21C9.65 21 11 19.65 11 18C11 16 9 14 8 12Z" stroke="#D99B29" stroke-width="1.5" stroke-linejoin="round"/>
+                    <!-- Hija 2 (Derecha, apoyando al centro) -->
+                    <path d="M16 12C14 14 13 16 13 18C13 19.65 14.35 21 16 21C17.65 21 19 19.65 19 18C19 16 17 14 16 12Z" stroke="#D99B29" stroke-width="1.5" stroke-linejoin="round"/>
+                    <!-- Madre (Centro, la llama más alta y fuerte, sostenida por las dos bases) -->
+                    <path d="M12 3C10 7 9 10 9 13C9 14.65 10.35 16 12 16C13.65 16 15 14.65 15 13C15 10 14 7 12 3Z" stroke="#8C3A3A" stroke-width="1.5" fill="#8C3A3A" fill-opacity="0.1" stroke-linejoin="round"/>
+                </svg>
+                <div class="font-display font-bold text-2xl text-aji leading-none mb-1">Familia Cejas</div>
+                <div class="font-body text-[0.55rem] tracking-[0.3em] uppercase text-gray-400 mt-1">Experiencia Culinaria</div>
+                <p class="text-xs text-gray-500 mt-6 leading-relaxed">
+                    <b>El fuego de la cocina.</b> La llama central (roja, alta y fuerte) es Doña Marlene. Las dos llamas doradas a los lados son sus hijas. Si las hijas no estuvieran en la base, el fuego no ardería con tanta fuerza.
+                </p>
+            </div>
+
+            <!-- Opción B -->
+            <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
+                <p class="text-[0.65rem] font-bold tracking-widest text-maiz mb-6 uppercase">Concepto 2: Tres Cucharas / Un Vínculo</p>
+                <!-- Isotipo: 3 Cucharas entrelazadas -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
+                    <!-- Hija izquierda -->
+                    <path d="M6 18C4 16 4 13 5.5 11.5C7 10 10 10 12 12" stroke="#D99B29"/>
+                    <line x1="5.5" y1="11.5" x2="3" y2="9" stroke="#D99B29"/>
+                    <!-- Hija derecha -->
+                    <path d="M18 18C20 16 20 13 18.5 11.5C17 10 14 10 12 12" stroke="#D99B29"/>
+                    <line x1="18.5" y1="11.5" x2="21" y2="9" stroke="#D99B29"/>
+                    <!-- Madre centro -->
+                    <path d="M12 12C12 9 10.5 7 12 4C13.5 7 12 9 12 12Z" stroke="#8C3A3A" fill="#8C3A3A" fill-opacity="0.1"/>
+                    <line x1="12" y1="12" x2="12" y2="21" stroke="#8C3A3A"/>
+                </svg>
+                <div class="font-display font-bold text-2xl text-aji leading-none mb-1">Familia Cejas</div>
+                <div class="font-body text-[0.55rem] tracking-[0.3em] uppercase text-gray-400 mt-1">Experiencia Culinaria</div>
+                <p class="text-xs text-gray-500 mt-6 leading-relaxed">
+                    <b>Tres utensilios/hojas entrelazadas.</b> La línea central vertical es el pilar fuerte (Marlene). Las dos laterales convergen hacia el centro, dándole soporte y creando un nudo familiar irrompible.
+                </p>
+            </div>
+
+            <!-- Opción C -->
+            <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
+                <p class="text-[0.65rem] font-bold tracking-widest text-maiz mb-6 uppercase">Concepto 3: La Olla y sus Soportes</p>
+                <!-- Isotipo: Olla soportada por dos pilares/manijas -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
+                    <!-- Olla Central (Madre) -->
+                    <path d="M6 10C6 15 8.5 18 12 18C15.5 18 18 15 18 10C18 7 15 5 12 5C9 5 6 7 6 10Z" stroke="#8C3A3A" stroke-width="1.5" fill="#8C3A3A" fill-opacity="0.05"/>
+                    <path d="M7 10L17 10" stroke="#8C3A3A" stroke-width="1.5" stroke-opacity="0.3"/>
+                    <!-- Soporte Izquierdo (Hija 1) -->
+                    <path d="M6 14C4 14 3 13 3 11C3 9 4 8 6 8" stroke="#D99B29" stroke-width="1.5"/>
+                    <circle cx="3" cy="11" r="1" fill="#D99B29" stroke="none"/>
+                    <!-- Soporte Derecho (Hija 2) -->
+                    <path d="M18 14C20 14 21 13 21 11C21 9 20 8 18 8" stroke="#D99B29" stroke-width="1.5"/>
+                    <circle cx="21" cy="11" r="1" fill="#D99B29" stroke="none"/>
+                </svg>
+                <div class="font-display font-bold text-2xl text-aji leading-none mb-1">Familia Cejas</div>
+                <div class="font-body text-[0.55rem] tracking-[0.3em] uppercase text-gray-400 mt-1">Experiencia Culinaria</div>
+                <p class="text-xs text-gray-500 mt-6 leading-relaxed">
+                    <b>El caldero familiar.</b> La vasija central, fuerte e inquebrantable, representa a la madre. Las dos asas laterales son las hijas, permitiendo sostener, mover y elevar todo ese amor.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

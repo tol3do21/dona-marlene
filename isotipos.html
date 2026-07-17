@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Propuestas de Isotipos - Familia Cejas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { adobe:'#F7F5F0', aji:'#8C3A3A', maiz:'#D99B29' },
+                fontFamily: { display:['Playfair Display','serif'], body:['Open Sans','sans-serif'] }
+            }}
+        }
+    </script>
+</head>
+<body class="bg-adobe text-gray-800 p-12">
+    <div class="max-w-5xl mx-auto">
+        <h1 class="text-3xl font-display font-bold text-aji mb-4">Diseño del Isotipo Minimalista</h1>
+        <p class="font-body text-gray-600 mb-12">Como te gustó el estilo minimalista enfocado en la tipografía, la mejor forma de diseñarlo es crearlo directamente en <b>código vectorial (SVG)</b>. De esta forma, el texto y el ícono serán nítidos y elegantes. Aquí te presento 4 opciones de íconos (isotipos) para acompañar la tipografía.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Opción 1 -->
+            <div class="bg-white p-12 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
+                <p class="text-xs font-bold tracking-widest text-maiz mb-6 uppercase">Opción 1: Fuego de Hogar</p>
+                <!-- Isotipo: Fuego minimalista -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8C3A3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
+                    <path d="M12 2c0 0-5 5-5 10a5 5 0 0 0 10 0c0-5-5-10-5-10z"></path>
+                    <path d="M12 12c-1.5 1.5-1.5 3 0 4.5"></path>
+                </svg>
+                <div class="font-display font-bold text-3xl text-aji leading-none mb-1">Familia Cejas</div>
+                <div class="font-body text-[0.6rem] tracking-[0.3em] uppercase text-gray-400 mt-1">Experiencia Culinaria</div>
+                <p class="text-xs text-gray-400 mt-6 max-w-xs">Representa el calor de la cocina, la olla hirviendo y el hogar.</p>
+            </div>
+
+            <!-- Opción 2 -->
+            <div class="bg-white p-12 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
+                <p class="text-xs font-bold tracking-widest text-maiz mb-6 uppercase">Opción 2: Rombo Andino Elegante</p>
+                <!-- Isotipo: Rombo andino minimalista -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="mb-4">
+                    <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="#8C3A3A" stroke-width="1.5"/>
+                    <circle cx="12" cy="12" r="2" fill="#D99B29"/>
+                </svg>
+                <div class="font-display font-bold text-3xl text-aji leading-none mb-1">Familia Cejas</div>
+                <div class="font-body text-[0.6rem] tracking-[0.3em] uppercase text-gray-400 mt-1">Experiencia Culinaria</div>
+                <p class="text-xs text-gray-400 mt-6 max-w-xs">Un guiño muy sutil y elegante a los textiles bolivianos y la cultura andina.</p>
+            </div>
+
+            <!-- Opción 3 -->
+            <div class="bg-white p-12 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
+                <p class="text-xs font-bold tracking-widest text-maiz mb-6 uppercase">Opción 3: Cuchara y Hoja</p>
+                <!-- Isotipo: Cuchara y hoja -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8C3A3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
+                    <path d="M7 11V11C5.895 11 5 10.105 5 9V5C5 3.895 5.895 3 7 3V3C8.105 3 9 3.895 9 5V9C9 10.105 8.105 11 7 11Z"/>
+                    <path d="M7 11V21"/>
+                    <path d="M15 4C13.5 4 12 5.5 12 7C12 8.5 13.5 10 15 10C16.5 10 18 8.5 18 7C18 5.5 16.5 4 15 4Z"/>
+                    <path d="M15 10V21"/>
+                </svg>
+                <div class="font-display font-bold text-3xl text-aji leading-none mb-1">Familia Cejas</div>
+                <div class="font-body text-[0.6rem] tracking-[0.3em] uppercase text-gray-400 mt-1">Experiencia Culinaria</div>
+                <p class="text-xs text-gray-400 mt-6 max-w-xs">Un enfoque puramente culinario, combinando ingredientes frescos con la cocina.</p>
+            </div>
+
+            <!-- Opción 4 -->
+            <div class="bg-white p-12 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
+                <p class="text-xs font-bold tracking-widest text-maiz mb-6 uppercase">Opción 4: Casa Abierta</p>
+                <!-- Isotipo: Casa simple -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8C3A3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <div class="font-display font-bold text-3xl text-aji leading-none mb-1">Familia Cejas</div>
+                <div class="font-body text-[0.6rem] tracking-[0.3em] uppercase text-gray-400 mt-1">Experiencia Culinaria</div>
+                <p class="text-xs text-gray-400 mt-6 max-w-xs">Transmite la idea central: una familia abriendo las puertas de su hogar.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

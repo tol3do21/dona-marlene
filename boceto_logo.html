@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Boceto de Logo - Familia Cejas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { adobe:'#F7F5F0', aji:'#8C3A3A', maiz:'#D99B29' },
+                fontFamily: { display:['Playfair Display','serif'], body:['Open Sans','sans-serif'] }
+            }}
+        }
+    </script>
+</head>
+<body class="bg-adobe text-gray-800 p-12 min-h-screen flex items-center justify-center">
+    <div class="max-w-4xl w-full">
+        <h1 class="text-3xl font-display font-bold text-aji mb-4 text-center">Tu Boceto Hecho Realidad</h1>
+        <p class="font-body text-gray-600 mb-12 text-center max-w-2xl mx-auto">He tomado tu dibujo exacto y lo he vectorizado directamente en código SVG. Tenemos las tres ollas (la central más grande para la mamá), la hoguera cruzada en la base, el fuego que las une, y las franjas con los colores rojo, amarillo y verde de la bandera.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Versión Minimalista / Líneas -->
+            <div class="bg-white p-12 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
+                <p class="text-[0.65rem] font-bold tracking-widest text-maiz mb-8 uppercase">Opción 1: Líneas Elegantes</p>
+                
+                <!-- SVG Logo basado en el boceto -->
+                <svg width="150" height="150" viewBox="0 0 100 100" fill="none" class="mb-6">
+                    <!-- Fuego envolvente -->
+                    <path d="M 50 10 C 65 25 80 40 80 60 C 80 75 65 85 50 85 C 35 85 20 75 20 60 C 20 40 35 25 50 10 Z" stroke="#D99B29" stroke-width="2" fill="#D99B29" fill-opacity="0.1" stroke-linejoin="round"/>
+                    <path d="M 50 25 C 60 35 70 45 70 60 C 70 70 60 75 50 75 C 40 75 30 70 30 60 C 30 45 40 35 50 25 Z" stroke="#D99B29" stroke-width="1.5" stroke-opacity="0.5"/>
+                    
+                    <!-- Leña (Hoguera) cruzada -->
+                    <line x1="30" y1="80" x2="70" y2="92" stroke="#8C3A3A" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="70" y1="80" x2="30" y2="92" stroke="#8C3A3A" stroke-width="3" stroke-linecap="round"/>
+
+                    <!-- Olla Izquierda (Hija 1) -->
+                    <path d="M 25 55 L 28 45 L 42 45 L 45 55 C 45 65 40 70 35 70 C 30 70 25 65 25 55 Z" fill="#F7F5F0" stroke="#8C3A3A" stroke-width="2"/>
+                    <!-- Franja Roja -->
+                    <path d="M 26.5 50 L 43.5 50" stroke="#DA291C" stroke-width="3"/>
+
+                    <!-- Olla Derecha (Hija 2) -->
+                    <path d="M 55 55 L 58 45 L 72 45 L 75 55 C 75 65 70 70 65 70 C 60 70 55 65 55 55 Z" fill="#F7F5F0" stroke="#8C3A3A" stroke-width="2"/>
+                    <!-- Franja Verde -->
+                    <path d="M 56.5 50 L 73.5 50" stroke="#007A33" stroke-width="3"/>
+
+                    <!-- Olla Central (Madre - Más grande) -->
+                    <path d="M 38 52 L 42 38 L 58 38 L 62 52 C 62 65 56 72 50 72 C 44 72 38 65 38 52 Z" fill="#F7F5F0" stroke="#8C3A3A" stroke-width="2.5"/>
+                    <!-- Franja Amarilla -->
+                    <path d="M 39.5 45 L 60.5 45" stroke="#F4E400" stroke-width="3.5"/>
+                </svg>
+                
+                <div class="font-display font-bold text-3xl text-aji leading-none mb-1 mt-2">Familia Cejas</div>
+                <div class="font-body text-[0.65rem] tracking-[0.3em] uppercase text-gray-400 mt-2">Experiencia Culinaria</div>
+            </div>
+
+            <!-- Versión Rellena / Sólida -->
+            <div class="bg-white p-12 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
+                <p class="text-[0.65rem] font-bold tracking-widest text-maiz mb-8 uppercase">Opción 2: Rústico Sólido</p>
+                
+                <!-- SVG Logo basado en el boceto -->
+                <svg width="150" height="150" viewBox="0 0 100 100" fill="none" class="mb-6">
+                    <!-- Fuego envolvente -->
+                    <path d="M 50 10 C 65 25 80 40 80 60 C 80 75 65 85 50 85 C 35 85 20 75 20 60 C 20 40 35 25 50 10 Z" fill="#D99B29" fill-opacity="0.15"/>
+                    <path d="M 50 25 C 60 35 70 45 70 60 C 70 70 60 75 50 75 C 40 75 30 70 30 60 C 30 45 40 35 50 25 Z" fill="#D99B29" fill-opacity="0.25"/>
+                    
+                    <!-- Leña (Hoguera) cruzada -->
+                    <line x1="32" y1="78" x2="68" y2="90" stroke="#5C3A21" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="68" y1="78" x2="32" y2="90" stroke="#5C3A21" stroke-width="4" stroke-linecap="round"/>
+
+                    <!-- Olla Izquierda (Hija 1) -->
+                    <path d="M 25 55 L 28 45 L 42 45 L 45 55 C 45 65 40 70 35 70 C 30 70 25 65 25 55 Z" fill="#8C3A3A"/>
+                    <!-- Franja Roja -->
+                    <path d="M 25 50 L 45 50" stroke="#DA291C" stroke-width="3.5"/>
+
+                    <!-- Olla Derecha (Hija 2) -->
+                    <path d="M 55 55 L 58 45 L 72 45 L 75 55 C 75 65 70 70 65 70 C 60 70 55 65 55 55 Z" fill="#8C3A3A"/>
+                    <!-- Franja Verde -->
+                    <path d="M 55 50 L 75 50" stroke="#007A33" stroke-width="3.5"/>
+
+                    <!-- Olla Central (Madre - Más grande) -->
+                    <path d="M 38 52 L 42 38 L 58 38 L 62 52 C 62 65 56 72 50 72 C 44 72 38 65 38 52 Z" fill="#8C3A3A"/>
+                    <!-- Franja Amarilla -->
+                    <path d="M 38 45 L 62 45" stroke="#F4E400" stroke-width="4"/>
+                </svg>
+                
+                <div class="font-display font-bold text-3xl text-aji leading-none mb-1 mt-2">Familia Cejas</div>
+                <div class="font-body text-[0.65rem] tracking-[0.3em] uppercase text-gray-400 mt-2">Experiencia Culinaria</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
