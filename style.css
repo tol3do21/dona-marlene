@@ -5,14 +5,16 @@
 
 /* === CSS Custom Properties (Brand + Bolivia Tokens) === */
 :root {
-    /* --- Brand Colors --- */
-    --color-adobe:      #F7F5F0;
-    --color-aji:        #8C3A3A;
-    --color-aji-dark:   #6B2B2B;
-    --color-aji-light:  #F0E6E6;
-    --color-andino:     #4A7C8C;
-    --color-maiz:       #D99B29;
-    --color-tierra:     #2D2D2D;
+    /* --- New Brand Colors --- */
+    --color-guindo:      #6B1D2B;
+    --color-guindo-dark: #4A1320;
+    --color-guindo-bright:#8B2438;
+    --color-acento:      #855E40;
+    --color-acento-light:#E6D6C8;
+    --color-verde:       #3D6B45;
+    --color-verde-light: #E4EFE6;
+    --color-negro:       #141010;
+    --color-blanco:      #FFFFFF;
 
     /* --- Bolivia Flag Colors --- */
     --bolivia-red:      #D52B1E;
@@ -55,8 +57,8 @@ html {
 }
 
 body {
-    background-color: var(--color-adobe);
-    color: var(--color-tierra);
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -67,11 +69,11 @@ body {
 img { display: block; max-width: 100%; }
 
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--color-adobe); }
-::-webkit-scrollbar-thumb { background: var(--color-aji); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-aji-dark); }
+::-webkit-scrollbar-track { background: var(--color-blanco); }
+::-webkit-scrollbar-thumb { background: var(--color-guindo); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-guindo-dark); }
 
-::selection { background: var(--color-maiz); color: var(--color-tierra); }
+::selection { background: var(--color-acento); color: var(--color-blanco); }
 
 /* ================================================================
    BOLIVIAN DESIGN ELEMENTS
@@ -188,23 +190,23 @@ img { display: block; max-width: 100%; }
 /* Link colors: transparent vs. scrolled */
 #navbar:not(.scrolled) .nav-anchor { color: rgba(255,255,255,0.85); }
 #navbar:not(.scrolled) .nav-anchor:hover { color: #fff; }
-#navbar.scrolled       .nav-anchor { color: var(--color-tierra); }
-#navbar.scrolled       .nav-anchor:hover { color: var(--color-aji); }
+#navbar.scrolled       .nav-anchor { color: var(--color-negro); }
+#navbar.scrolled       .nav-anchor:hover { color: var(--color-guindo); }
 
-#navbar:not(.scrolled) #logo-name { color: var(--color-maiz); }
-#navbar.scrolled       #logo-name { color: var(--color-aji); }
+#navbar:not(.scrolled) #logo-name { color: var(--color-acento); }
+#navbar.scrolled       #logo-name { color: var(--color-guindo); }
 
 /* Active nav link indicator */
 .nav-anchor.active-page {
-    color: var(--color-maiz) !important;
+    color: var(--color-acento) !important;
     font-weight: 700;
-    border-bottom: 2px solid var(--color-maiz);
+    border-bottom: 2px solid var(--color-acento);
     padding-bottom: 2px;
 }
 
 /* Hamburger bars */
 #navbar:not(.scrolled) .hamburger-bar { background: white; }
-#navbar.scrolled       .hamburger-bar { background: var(--color-aji); }
+#navbar.scrolled       .hamburger-bar { background: var(--color-guindo); }
 
 /* Hamburger open state */
 #hamburger-btn.open .hamburger-bar:nth-child(1) {
@@ -240,7 +242,7 @@ img { display: block; max-width: 100%; }
     font-weight: 700;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: var(--color-aji);
+    color: var(--color-guindo);
     display: block;
     margin-bottom: 0.5rem;
 }
@@ -269,15 +271,15 @@ img { display: block; max-width: 100%; }
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background: var(--color-adobe);
-    border: 1px solid rgba(140,58,58,0.12);
+    background: var(--color-blanco);
+    border: 1px solid rgba(107,29,43,0.12);
     border-radius: var(--radius-card);
     padding: 0.875rem 1rem;
     transition: var(--transition);
 }
 .value-chip:hover {
-    border-color: var(--color-aji);
-    background: var(--color-aji-light);
+    border-color: var(--color-guindo);
+    background: var(--color-acento-light);
     transform: translateX(4px);
 }
 
@@ -298,8 +300,8 @@ img { display: block; max-width: 100%; }
     box-shadow: 0 24px 56px rgba(0,0,0,0.3);
 }
 .service-card--featured {
-    border-color: var(--color-maiz);
-    box-shadow: 0 0 0 1px var(--color-maiz), 0 8px 32px rgba(217,155,41,0.2);
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 1px var(--color-acento), 0 8px 32px rgba(133,94,64,0.2);
 }
 .service-card-img-wrap {
     position: relative;
@@ -345,51 +347,86 @@ img { display: block; max-width: 100%; }
     text-decoration: none;
     cursor: pointer;
 }
-.card-cta:hover { background: white; color: var(--color-aji); border-color: white; }
-.card-cta--featured { background: var(--color-maiz); border-color: var(--color-maiz); color: var(--color-tierra); }
-.card-cta--featured:hover { background: #c68c22; border-color: #c68c22; color: var(--color-tierra); }
+.card-cta:hover { background: white; color: var(--color-guindo); border-color: white; }
+.card-cta--featured { background: var(--color-acento); border-color: var(--color-acento); color: white; }
+.card-cta--featured:hover { background: #684830; border-color: #684830; color: white; }
 
 /* ================================================================
-   GALLERY (Masonry style)
+   GALLERY (Interactive Accordion)
    ================================================================ */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1rem;
+.gallery-accordion {
+    display: flex;
+    gap: 0.5rem;
+    height: 480px; /* Base height for desktop */
+    width: 100%;
 }
-@media (max-width: 768px) {
-    .gallery-grid { grid-template-columns: 1fr 1fr; }
-    .gallery-item--tall { grid-row: span 1; }
-    .gallery-item--wide { grid-column: span 2; }
-}
-@media (max-width: 480px) {
-    .gallery-grid { grid-template-columns: 1fr; }
-    .gallery-item--wide { grid-column: span 1; }
-}
+
 .gallery-item {
-    position: relative; overflow: hidden;
-    border-radius: var(--radius-card); cursor: pointer;
+    position: relative;
+    flex: 1; /* All items start with equal narrow width */
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s ease;
 }
-.gallery-item--tall { grid-row: span 2; }
-.gallery-item--wide { grid-column: span 2; }
+
+/* Expand the hovered item, shrink the others */
+.gallery-accordion:hover .gallery-item {
+    flex: 0.7; /* Don't shrink the others as much */
+}
+.gallery-accordion .gallery-item:hover {
+    flex: 2.5; /* Don't expand as much (prevents extreme cropping of vertical photos) */
+}
+
+/* Mobile: change flex direction so they accordion vertically */
+@media (max-width: 768px) {
+    .gallery-accordion { 
+        height: 70vh; 
+        flex-direction: column; 
+    }
+    .gallery-accordion:hover .gallery-item { flex: 0.8; }
+    .gallery-accordion .gallery-item:hover { flex: 2; }
+}
+
 .gallery-img {
-    width: 100%; height: 100%;
-    min-height: 200px;
+    width: 100%; 
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 0.8s ease;
 }
-.gallery-item:hover .gallery-img { transform: scale(1.07); }
+.gallery-item:hover .gallery-img { 
+    transform: scale(1.02); /* Much softer zoom */
+}
+
 .gallery-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(45,45,45,0.7) 0%, transparent 60%);
-    display: flex; align-items: flex-end; padding: 1.2rem;
-    opacity: 0; transition: opacity 0.4s ease;
+    position: absolute; 
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 40%);
+    display: flex; 
+    align-items: flex-end; 
+    padding: 1.5rem;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
 }
-.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-item:hover .gallery-overlay { 
+    opacity: 1; 
+}
+
 .gallery-overlay span {
     font-family: var(--font-display);
-    font-size: 1.1rem; font-weight: 600; font-style: italic;
-    color: white; letter-spacing: 0.02em;
+    font-size: 1.4rem; 
+    font-weight: 600; 
+    font-style: italic;
+    color: white; 
+    letter-spacing: 0.02em;
+    white-space: nowrap; /* Keep text on one line */
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s;
+}
+.gallery-item:hover .gallery-overlay span {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ================================================================
@@ -401,7 +438,7 @@ img { display: block; max-width: 100%; }
     padding: 1.75rem;
     box-shadow: var(--shadow-card);
     transition: var(--transition);
-    border-top: 3px solid var(--color-maiz);
+    border-top: 3px solid var(--color-guindo);
 }
 .testimonial-card:hover {
     transform: translateY(-4px);
@@ -417,7 +454,7 @@ img { display: block; max-width: 100%; }
     padding: 2rem;
     box-shadow: var(--shadow-card);
     transition: var(--transition);
-    border-left: 4px solid var(--color-aji);
+    border-left: 4px solid var(--color-guindo);
     position: relative;
     overflow: hidden;
 }
@@ -495,9 +532,9 @@ img { display: block; max-width: 100%; }
    CROSS-PAGE PROMO BANNER
    ================================================================ */
 .promo-banner {
-    background: linear-gradient(135deg, var(--color-tierra) 0%, #3d2020 100%);
-    border-top: 3px solid var(--color-maiz);
-    border-bottom: 3px solid var(--color-maiz);
+    background: linear-gradient(135deg, var(--color-negro) 0%, #2A0A14 100%);
+    border-top: 3px solid var(--color-guindo);
+    border-bottom: 3px solid var(--color-acento);
 }
 
 /* ================================================================

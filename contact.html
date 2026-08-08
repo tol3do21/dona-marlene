@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Book | La Cocina de la Familia Cejas — Sucre, Bolivia</title>
-    <meta name="description" content="Contact the Cejas family to book a cooking class, arrange your homestay or reserve Spanish lessons in Sucre, Bolivia. We reply via WhatsApp within a few hours.">
-    <meta name="keywords" content="contact familia cejas, book cooking class sucre, book homestay bolivia, book spanish class sucre, familia cejas whatsapp">
-    <meta property="og:title" content="Contact & Book | Familia Cejas — Sucre, Bolivia">
-    <meta property="og:description" content="Book your cooking class, Spanish lessons or homestay in Sucre. We reply on WhatsApp within hours.">
+    <title>Contact & Book | Sabores de Bolivia — Sucre, Bolivia</title>
+    <meta name="description" content="Contact the Cejas family to book a cooking class or reserve Spanish lessons in Sucre, Bolivia. We reply via WhatsApp within a few hours.">
+    <meta name="keywords" content="contact familia cejas, book cooking class sucre, book spanish class sucre, familia cejas whatsapp">
+    <meta property="og:title" content="Contact & Bookings | Sabores de Bolivia">
+    <meta property="og:description" content="Book your cooking class or Spanish lessons in Sucre. We reply on WhatsApp within hours.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +17,10 @@
         tailwind.config = {
             theme: { extend: {
                 colors: {
-                    adobe:'#F7F5F0', aji:'#8C3A3A', ajidark:'#6B2B2B', ajilight:'#F0E6E6',
-                    andino:'#4A7C8C', maiz:'#D99B29', tierra:'#2D2D2D',
+                    guindo: '#6B1D2B', guindodark: '#4A1320', guindobright: '#8B2438',
+                    acento: 'var(--color-acento)', acentolight: 'var(--color-acento-light)',
+                    verde: '#3D6B45', verdelight: '#E4EFE6',
+                    negro: '#141010', blanco: '#FFFFFF',
                     bolvred:'#D52B1E', bolvyellow:'#F4E400', bolvgreen:'#007934'
                 },
                 fontFamily: { display:['"Playfair Display"','serif'], body:['"Open Sans"','sans-serif'] }
@@ -27,7 +29,7 @@
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-adobe font-body text-tierra">
+<body class="bg-blanco font-body text-negro">
 
 <!-- Bolivia Stripe -->
 <div class="bolivia-stripe" aria-hidden="true">
@@ -38,19 +40,19 @@
 <header id="navbar" class="fixed top-6 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-5 sm:px-8">
         <div class="flex items-center justify-between h-16">
-            <a href="index.html" class="flex items-center gap-2.5" aria-label="Familia Cejas — Home">
-                <img src="logo_cejas.png" alt="Logo Familia Cejas" class="w-12 h-12 object-contain flex-shrink-0">
+            <a href="index.html" class="flex items-center gap-2.5" aria-label="Sabores de Bolivia — Home">
+                <img src="logo_sabores.png" alt="Logo Sabores de Bolivia" class="w-12 h-12 object-contain flex-shrink-0">
                 <div id="logo-name" class="flex flex-col justify-center transition-colors">
-                    <span class="font-display font-bold text-xl text-maiz leading-none">Familia Cejas</span>
+                    <span class="font-display font-bold text-xl text-acento leading-none">Sabores de Bolivia</span>
                     <span class="font-body text-[0.55rem] tracking-[0.2em] uppercase text-gray-500 mt-1">Experiencia Culinaria</span>
                 </div>
             </a>
             <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
-                <a href="index.html"         class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Cooking Classes</a>
-                <a href="accommodation.html" class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Accommodation</a>
-                <a href="spanish.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Spanish Classes</a>
-                <a href="contact.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-maiz transition-colors">Contact</a>
-                <a href="contact.html" class="ml-2 bg-aji text-white text-xs font-bold tracking-widest uppercase px-5 py-2.5 rounded-full hover:bg-ajidark transition-all shadow-lg">Book Now</a>
+                <a href="index.html"         class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Cooking Classes</a>
+
+                <a href="spanish.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Spanish Classes</a>
+                <a href="contact.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Contact</a>
+                <a href="contact.html" class="ml-2 bg-guindo text-white text-xs font-bold tracking-widest uppercase px-5 py-2.5 rounded-full hover:bg-guindodark transition-all shadow-lg">Book Now</a>
             </nav>
             <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
@@ -59,13 +61,13 @@
             </button>
         </div>
     </div>
-    <nav id="mobile-menu" class="hidden md:hidden bg-adobe border-t-2 border-aji/10 shadow-xl" aria-label="Mobile navigation">
+    <nav id="mobile-menu" class="hidden md:hidden bg-blanco border-t-2 border-guindo/10 shadow-xl" aria-label="Mobile navigation">
         <div class="flex flex-col px-5 py-5 gap-0.5">
-            <a href="index.html"         class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🍲 Cooking Classes</a>
-            <a href="accommodation.html" class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🛏️ Accommodation</a>
-            <a href="spanish.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">🗣️ Spanish Classes</a>
-            <a href="contact.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-tierra hover:text-aji transition-colors">📍 Contact</a>
-            <a href="contact.html"       class="mobile-nav-link mt-4 text-center bg-aji text-white font-bold py-3.5 rounded-full hover:bg-ajidark transition-colors shadow-md">Book Now →</a>
+            <a href="index.html"         class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m-6 0v2m12-2v2m-9 4h6c1.1 0 2 .9 2 2v2c0 3.3-2.7 6-6 6H9c-3.3 0-6-2.7-6-6v-2c0-1.1.9-2 2-2z"></path></svg> Cooking Classes</a>
+
+            <a href="spanish.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg> Spanish Classes</a>
+            <a href="contact.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> Contact</a>
+            <a href="contact.html"       class="mobile-nav-link mt-4 text-center bg-guindo text-white font-bold py-3.5 rounded-full hover:bg-guindodark transition-colors shadow-md">Book Now →</a>
         </div>
     </nav>
 </header>
@@ -73,12 +75,12 @@
 <main>
 
 <!-- CONTACT HERO -->
-<section class="relative min-h-[55vh] flex items-center justify-center overflow-hidden bg-tierra">
-    <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-             alt="A welcoming table with Bolivian food and warm candlelight in Sucre Bolivia"
-             class="w-full h-full object-cover opacity-30">
-        <div class="absolute inset-0 bg-gradient-to-b from-tierra/80 to-tierra/90"></div>
+<section class="page-hero">
+    <div class="page-hero-bg">
+        <img src="images/mesa_1.jpg"
+             alt="Mesa lista con platos bolivianos"
+             class="w-full h-full object-cover">
+        <div class="page-hero-overlay"></div>
     </div>
     <!-- Andean diamond overlay -->
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
@@ -90,7 +92,7 @@
         <div class="flex-1 h-1 bg-bolvgreen opacity-70"></div>
     </div>
     <div class="relative z-10 text-center text-white max-w-3xl mx-auto px-5 pt-24 pb-16">
-        <p class="text-maiz text-xs font-bold tracking-[0.3em] uppercase mb-5 flex items-center justify-center gap-3">
+        <p class="text-acento text-xs font-bold tracking-[0.3em] uppercase mb-5 flex items-center justify-center gap-3">
             <span class="w-8 h-px bg-bolvred inline-block"></span>
             <span class="w-2 h-2 bg-bolvyellow inline-block rotate-45"></span>
             We're Open — Sucre, Bolivia
@@ -98,38 +100,408 @@
             <span class="w-8 h-px bg-bolvred inline-block"></span>
         </p>
         <h1 class="font-display font-bold text-5xl sm:text-6xl text-white leading-tight mb-5">
-            Join Us at<br><em class="text-maiz font-semibold italic">Our Table</em>
+            Join Us at<br><em class="text-acento font-semibold italic">Our Table</em>
         </h1>
-        <p class="text-white/80 text-xl max-w-xl mx-auto">Whether you want to cook, learn Spanish or stay with us — our doors are open. Write to us and we'll make it happen.</p>
+        <p class="text-white/80 text-xl max-w-xl mx-auto">Whether you want to cook or learn Spanish — our doors are open. Write to us and we'll make it happen.</p>
     </div>
 </section>
 
-<!-- MAIN CTA (WhatsApp) -->
-<section class="py-24 bg-adobe wiphala-bg">
-    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
-        <div class="reveal-element">
-            <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
-            <p class="section-eyebrow">Get in Touch</p>
-            <h2 class="font-display text-4xl sm:text-5xl font-bold text-tierra mb-6 leading-tight">
-                The Easiest Way to<br><em class="text-aji italic">Reach Us</em>
-            </h2>
-            <p class="text-gray-600 text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
-                Send us a message on WhatsApp! Tell us what experience interests you (cooking, Spanish, accommodation or all three) and your travel dates, and we will get back to you within a few hours.
-            </p>
-            <a href="https://wa.me/59170000000?text=Hi%20Familia%20Cejas!%20I'm%20interested%20in%20booking%20a%20cooking%20class%20%2F%20accommodation%20%2F%20Spanish%20lessons%20in%20Sucre.%20My%20dates%20are%3A%20..."
-               target="_blank"
-               rel="noopener noreferrer"
-               id="whatsapp-cta"
-               class="inline-flex items-center justify-center gap-4 bg-[#25D366] text-white font-bold text-xl px-12 py-5 rounded-full hover:bg-[#1aab52] transition-all shadow-2xl hover:shadow-[0_0_50px_rgba(37,211,102,0.35)] transform hover:-translate-y-1">
-                <svg class="w-8 h-8 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                </svg>
-                Message Us on WhatsApp
-            </a>
-            <p class="mt-6 text-gray-400 text-sm">We reply within a few hours · Available in English & Spanish</p>
+<!-- CONTACT SECTION — MULTI-STEP FORM -->
+<section class="relative bg-negro overflow-hidden" aria-labelledby="contact-heading">
+
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #6B1D2B 0, #6B1D2B 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid lg:grid-cols-2 min-h-[80vh]">
+
+            <!-- LEFT: Brand Context Panel -->
+            <div class="flex flex-col justify-center py-20 pr-0 lg:pr-16 reveal-element">
+                <div class="andean-rule mb-6" aria-hidden="true"><div class="andean-rule__line"></div></div>
+                <p class="section-eyebrow text-acento mb-4">Book Your Experience</p>
+                <h2 id="contact-heading" class="font-display text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
+                    Let's Plan<br><em class="text-acento italic">Your Visit</em>
+                </h2>
+                <p class="text-white/70 text-lg leading-relaxed mb-10 max-w-md">
+                    Tell us a little about yourself and what you're looking for. We'll write back within 24 hours with everything you need to know.
+                </p>
+
+                <!-- Trust signals -->
+                <div class="space-y-5">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-guindo/30 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-acento" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">We reply within 24 hours</p>
+                            <p class="text-white/50 text-xs">Usually much faster — we love hearing from guests</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-guindo/30 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-acento" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Classes taught in Spanish</p>
+                            <p class="text-white/50 text-xs">A great way to practice your Spanish during your trip!</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-guindo/30 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-acento" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Small groups only — max 6 guests</p>
+                            <p class="text-white/50 text-xs">Every experience is personal and unhurried</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Multi-step Form -->
+            <div class="flex items-center py-12 lg:py-20">
+                <div class="w-full bg-white/[0.04] backdrop-blur-sm border border-white/10 rounded-3xl p-8 sm:p-10">
+
+                    <!-- Step Progress Bar -->
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span id="step-dot-1" class="w-7 h-7 rounded-full bg-guindo text-white text-xs font-bold flex items-center justify-center transition-all">1</span>
+                                <span id="step-text-1" class="text-white text-xs font-semibold uppercase tracking-wider hidden sm:block">Contact</span>
+                            </div>
+                            <div class="flex-1 h-0.5 mx-3 bg-white/10 rounded overflow-hidden">
+                                <div class="h-full bg-guindo rounded transition-all duration-500 w-0" id="line-fill-1"></div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span id="step-dot-2" class="w-7 h-7 rounded-full bg-white/10 text-white/30 text-xs font-bold flex items-center justify-center transition-all">2</span>
+                                <span id="step-text-2" class="text-white/30 text-xs font-semibold uppercase tracking-wider hidden sm:block transition-all">Your Trip</span>
+                            </div>
+                            <div class="flex-1 h-0.5 mx-3 bg-white/10 rounded overflow-hidden">
+                                <div class="h-full bg-guindo rounded transition-all duration-500 w-0" id="line-fill-2"></div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span id="step-dot-3" class="w-7 h-7 rounded-full bg-white/10 text-white/30 text-xs font-bold flex items-center justify-center transition-all">3</span>
+                                <span id="step-text-3" class="text-white/30 text-xs font-semibold uppercase tracking-wider hidden sm:block transition-all">Details</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" novalidate>
+
+                        <!-- STEP 1: Contact Info -->
+                        <div class="form-step" id="step-1">
+                            <h3 class="font-display text-xl font-bold text-white mb-1">Your Contact Info</h3>
+                            <p class="text-white/40 text-xs mb-6">Required fields are marked with *</p>
+                            <div class="space-y-5">
+                                <div class="grid sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="cf-name" class="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Full Name <span class="text-guindo">*</span></label>
+                                        <input type="text" id="cf-name" name="name" placeholder="Jane Smith" autocomplete="name"
+                                            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/25 focus:outline-none focus:border-acento transition-all text-sm font-medium">
+                                        <p class="text-guindo text-xs mt-1 hidden" id="err-name">Please enter your name.</p>
+                                    </div>
+                                    <div>
+                                        <label for="cf-email" class="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Email <span class="text-guindo">*</span></label>
+                                        <input type="email" id="cf-email" name="email" placeholder="jane@email.com" autocomplete="email"
+                                            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/25 focus:outline-none focus:border-acento transition-all text-sm font-medium">
+                                        <p class="text-guindo text-xs mt-1 hidden" id="err-email">Please enter a valid email.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="cf-phone" class="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">WhatsApp / Phone <span class="text-guindo">*</span></label>
+                                    <div class="flex gap-2">
+                                        <div class="relative flex-shrink-0 w-36">
+                                            <select id="cf-country-code" name="country_code"
+                                                class="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-3.5 text-white focus:outline-none focus:border-acento transition-all appearance-none cursor-pointer text-sm font-medium">
+                                                <option value="+591" class="bg-negro" selected>🇧🇴 BO +591</option>
+                                                <option value="+1" class="bg-negro">🇺🇸 US +1</option>
+                                                <option value="+1" class="bg-negro">🇨🇦 CA +1</option>
+                                                <option value="+44" class="bg-negro">🇬🇧 GB +44</option>
+                                                <option value="+49" class="bg-negro">🇩🇪 DE +49</option>
+                                                <option value="+33" class="bg-negro">🇫🇷 FR +33</option>
+                                                <option value="+34" class="bg-negro">🇪🇸 ES +34</option>
+                                                <option value="+39" class="bg-negro">🇮🇹 IT +39</option>
+                                                <option value="+31" class="bg-negro">🇳🇱 NL +31</option>
+                                                <option value="+41" class="bg-negro">🇨🇭 CH +41</option>
+                                                <option value="+43" class="bg-negro">🇦🇹 AT +43</option>
+                                                <option value="+46" class="bg-negro">🇸🇪 SE +46</option>
+                                                <option value="+47" class="bg-negro">🇳🇴 NO +47</option>
+                                                <option value="+45" class="bg-negro">🇩🇰 DK +45</option>
+                                                <option value="+61" class="bg-negro">🇦🇺 AU +61</option>
+                                                <option value="+64" class="bg-negro">🇳🇿 NZ +64</option>
+                                                <option value="+52" class="bg-negro">🇲🇽 MX +52</option>
+                                                <option value="+55" class="bg-negro">🇧🇷 BR +55</option>
+                                                <option value="+54" class="bg-negro">🇦🇷 AR +54</option>
+                                                <option value="+56" class="bg-negro">🇨🇱 CL +56</option>
+                                                <option value="+57" class="bg-negro">🇨🇴 CO +57</option>
+                                                <option value="+51" class="bg-negro">🇵🇪 PE +51</option>
+                                                <option value="+598" class="bg-negro">🇺🇾 UY +598</option>
+                                                <option value="+81" class="bg-negro">🇯🇵 JP +81</option>
+                                                <option value="+82" class="bg-negro">🇰🇷 KR +82</option>
+                                                <option value="+91" class="bg-negro">🇮🇳 IN +91</option>
+                                                <option value="+27" class="bg-negro">🇿🇦 ZA +27</option>
+                                            </select>
+                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-white/40">
+                                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                            </div>
+                                        </div>
+                                        <input type="tel" id="cf-phone" name="phone" placeholder="70 000 000" autocomplete="tel-national"
+                                            class="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/25 focus:outline-none focus:border-acento transition-all text-sm font-medium">
+                                    </div>
+                                    <p class="text-guindo text-xs mt-1 hidden" id="err-phone">Please enter your WhatsApp/Phone.</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-end mt-8">
+                                <button type="button" onclick="cfNextStep(1)"
+                                    class="bg-guindo text-white font-bold text-sm px-8 py-3.5 rounded-xl hover:bg-guindobright transition-all shadow-lg flex items-center gap-2">
+                                    Next &mdash; Your Trip
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- STEP 2: Trip Info -->
+                        <div class="form-step hidden" id="step-2">
+                            <h3 class="font-display text-xl font-bold text-white mb-1">Your Trip Details</h3>
+                            <p class="text-white/40 text-xs mb-6">Tell us what you are looking for</p>
+                            <div class="space-y-5">
+                                <div class="grid sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="cf-interest" class="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Experience <span class="text-guindo">*</span></label>
+                                        <div class="relative">
+                                            <select id="cf-interest" name="interest"
+                                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-acento transition-all appearance-none cursor-pointer text-sm font-medium">
+                                                <option value="" class="bg-negro">Select one...</option>
+                                                <option value="cooking" class="bg-negro">Cooking Class</option>
+                                                <option value="spanish" class="bg-negro">Spanish Lessons</option>
+                                                <option value="both" class="bg-negro">Both &mdash; Immersion Package</option>
+                                            </select>
+                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 text-white/40">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                            </div>
+                                        </div>
+                                        <p class="text-guindo text-xs mt-1 hidden" id="err-interest">Please select an experience.</p>
+                                    </div>
+                                    <div>
+                                        <label for="cf-guests" class="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Group Size</label>
+                                        <div class="relative">
+                                            <select id="cf-guests" name="guests"
+                                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-acento transition-all appearance-none cursor-pointer text-sm font-medium">
+                                                <option value="" class="bg-negro">How many people?</option>
+                                                <option value="1" class="bg-negro">1 &mdash; Solo traveler</option>
+                                                <option value="2" class="bg-negro">2 &mdash; Couple</option>
+                                                <option value="3-4" class="bg-negro">3 &ndash; 4 guests</option>
+                                                <option value="5-6" class="bg-negro">5 &ndash; 6 guests (max)</option>
+                                            </select>
+                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 text-white/40">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="cf-arrival" class="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Arrival Date <span class="text-guindo">*</span></label>
+                                        <input type="date" id="cf-arrival" name="arrival"
+                                            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-acento transition-all text-sm font-medium" style="color-scheme:dark;">
+                                        <p class="text-guindo text-xs mt-1 hidden" id="err-arrival">Please select a future arrival date.</p>
+                                    </div>
+                                    <div>
+                                        <label for="cf-departure" class="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Departure Date</label>
+                                        <input type="date" id="cf-departure" name="departure"
+                                            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-acento transition-all text-sm font-medium" style="color-scheme:dark;">
+                                        <p class="text-guindo text-xs mt-1 hidden" id="err-departure">Departure must be after arrival.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <button type="button" onclick="cfPrevStep(2)"
+                                    class="text-white/50 hover:text-white font-semibold text-sm px-5 py-3.5 rounded-xl border border-white/10 hover:border-white/30 transition-all flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+                                    Back
+                                </button>
+                                <button type="button" onclick="cfNextStep(2)"
+                                    class="bg-guindo text-white font-bold text-sm px-8 py-3.5 rounded-xl hover:bg-guindobright transition-all shadow-lg flex items-center gap-2">
+                                    Next &mdash; Final Details
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3: Additional Details -->
+                        <div class="form-step hidden" id="step-3">
+                            <h3 class="font-display text-xl font-bold text-white mb-1">Anything Else?</h3>
+                            <p class="text-white/40 text-xs mb-6">Optional, but helpful so we can prepare</p>
+                            <div class="space-y-5">
+                                <div>
+                                    <label class="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Are you vegetarian?</label>
+                                    <div class="flex gap-4">
+                                        <label class="flex items-center gap-2 cursor-pointer group">
+                                            <div class="relative w-5 h-5 rounded-full border border-white/30 flex items-center justify-center group-hover:border-acento transition-colors">
+                                                <input type="radio" name="vegetarian" value="Yes" class="peer absolute opacity-0 cursor-pointer w-full h-full" id="cf-veg-yes">
+                                                <div class="w-2.5 h-2.5 rounded-full bg-acento scale-0 peer-checked:scale-100 transition-transform"></div>
+                                            </div>
+                                            <span class="text-white/80 text-sm font-medium">Yes</span>
+                                        </label>
+                                        <label class="flex items-center gap-2 cursor-pointer group">
+                                            <div class="relative w-5 h-5 rounded-full border border-white/30 flex items-center justify-center group-hover:border-acento transition-colors">
+                                                <input type="radio" name="vegetarian" value="No" class="peer absolute opacity-0 cursor-pointer w-full h-full" id="cf-veg-no" checked>
+                                                <div class="w-2.5 h-2.5 rounded-full bg-acento scale-0 peer-checked:scale-100 transition-transform"></div>
+                                            </div>
+                                            <span class="text-white/80 text-sm font-medium">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="cf-message" class="block text-xs font-bold text-white/60 uppercase tracking-widest mb-2">Additional Details</label>
+                                    <textarea id="cf-message" name="message" rows="4"
+                                        placeholder="Dietary restrictions, allergies, Spanish level, special occasions..."
+                                        class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/25 focus:outline-none focus:border-acento transition-all resize-none text-sm font-medium"></textarea>
+                                </div>
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/10 space-y-1.5">
+                                    <p class="text-white/80 font-bold text-xs uppercase tracking-wider mb-3">Request Summary</p>
+                                    <p class="text-white/50 text-xs">Name: <span class="text-white/80 font-medium" id="s-name">&mdash;</span></p>
+                                    <p class="text-white/50 text-xs">Email: <span class="text-white/80 font-medium" id="s-email">&mdash;</span></p>
+                                    <p class="text-white/50 text-xs">Experience: <span class="text-white/80 font-medium" id="s-interest">&mdash;</span></p>
+                                    <p class="text-white/50 text-xs">Vegetarian: <span class="text-white/80 font-medium" id="s-veg">&mdash;</span></p>
+                                    <p class="text-white/50 text-xs">Dates: <span class="text-white/80 font-medium" id="s-dates">&mdash;</span></p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-8">
+                                <button type="button" onclick="cfPrevStep(3)"
+                                    class="text-white/50 hover:text-white font-semibold text-sm px-5 py-3.5 rounded-xl border border-white/10 hover:border-white/30 transition-all flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+                                    Back
+                                </button>
+                                <button type="submit"
+                                    class="bg-guindo text-white font-bold text-sm px-8 py-3.5 rounded-xl hover:bg-guindobright transition-all shadow-lg flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    Send My Request
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- SUCCESS -->
+                        <div class="form-step hidden text-center py-10" id="step-success">
+                            <div class="w-16 h-16 rounded-full bg-bolvgreen/20 border border-bolvgreen/40 flex items-center justify-center mx-auto mb-5">
+                                <svg class="w-8 h-8 text-bolvgreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-white mb-2">Request Sent!</h3>
+                            <p class="text-white/60 text-sm leading-relaxed max-w-xs mx-auto">Thank you! We will reply to your email within 24 hours. Check your inbox &mdash; and your spam folder just in case.</p>
+                        </div>
+
+                    </form>
+                    <p class="text-center text-white/20 text-xs mt-5">We reply within 24 hours &middot; No spam, ever.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
+
+<script>
+(function () {
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById('cf-arrival').min   = today;
+    document.getElementById('cf-departure').min = today;
+
+    document.getElementById('cf-arrival').addEventListener('change', function () {
+        var dep = document.getElementById('cf-departure');
+        dep.min = this.value || today;
+        if (dep.value && dep.value < this.value) dep.value = '';
+    });
+
+    document.getElementById('cf-departure').addEventListener('change', function () {
+        var arr = document.getElementById('cf-arrival').value;
+        var err = document.getElementById('err-departure');
+        if (arr && this.value && this.value < arr) { err.classList.remove('hidden'); this.value = ''; }
+        else { err.classList.add('hidden'); }
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        cfShowStep('success');
+    });
+})();
+
+function cfShowStep(id) {
+    document.querySelectorAll('.form-step').forEach(function (s) { s.classList.add('hidden'); });
+    var t = (id === 'success') ? document.getElementById('step-success') : document.getElementById('step-' + id);
+    t.classList.remove('hidden');
+    cfUpdateProgress(id);
+}
+
+function cfUpdateProgress(current) {
+    [1, 2, 3].forEach(function (n) {
+        var dot  = document.getElementById('step-dot-' + n);
+        var text = document.getElementById('step-text-' + n);
+        var done   = (current === 'success') || (typeof current === 'number' && n < current);
+        var active = (n === current);
+        if (done) {
+            dot.className = 'w-7 h-7 rounded-full bg-bolvgreen text-white text-xs font-bold flex items-center justify-center transition-all';
+            dot.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>';
+            if (text) text.className = 'text-bolvgreen text-xs font-semibold uppercase tracking-wider hidden sm:block transition-all';
+        } else if (active) {
+            dot.className = 'w-7 h-7 rounded-full bg-guindo text-white text-xs font-bold flex items-center justify-center transition-all';
+            dot.textContent = n;
+            if (text) text.className = 'text-white text-xs font-semibold uppercase tracking-wider hidden sm:block transition-all';
+        } else {
+            dot.className = 'w-7 h-7 rounded-full bg-white/10 text-white/30 text-xs font-bold flex items-center justify-center transition-all';
+            dot.textContent = n;
+            if (text) text.className = 'text-white/30 text-xs font-semibold uppercase tracking-wider hidden sm:block transition-all';
+        }
+    });
+    document.getElementById('line-fill-1').style.width = (current === 'success' || current >= 2) ? '100%' : '0%';
+    document.getElementById('line-fill-2').style.width = (current === 'success' || current >= 3) ? '100%' : '0%';
+}
+
+function cfValidateStep(step) {
+    var valid = true;
+    if (step === 1) {
+        var name  = document.getElementById('cf-name');
+        var email = document.getElementById('cf-email');
+        var phone = document.getElementById('cf-phone');
+        if (!name.value.trim()) { document.getElementById('err-name').classList.remove('hidden'); name.classList.add('border-guindo'); valid = false; }
+        else { document.getElementById('err-name').classList.add('hidden'); name.classList.remove('border-guindo'); }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { document.getElementById('err-email').classList.remove('hidden'); email.classList.add('border-guindo'); valid = false; }
+        else { document.getElementById('err-email').classList.add('hidden'); email.classList.remove('border-guindo'); }
+        if (!phone.value.trim()) { document.getElementById('err-phone').classList.remove('hidden'); phone.classList.add('border-guindo'); valid = false; }
+        else { document.getElementById('err-phone').classList.add('hidden'); phone.classList.remove('border-guindo'); }
+    }
+    if (step === 2) {
+        var interest = document.getElementById('cf-interest');
+        var arrival  = document.getElementById('cf-arrival');
+        var today    = new Date().toISOString().split('T')[0];
+        if (!interest.value) { document.getElementById('err-interest').classList.remove('hidden'); valid = false; }
+        else { document.getElementById('err-interest').classList.add('hidden'); }
+        if (!arrival.value || arrival.value < today) { document.getElementById('err-arrival').classList.remove('hidden'); arrival.classList.add('border-guindo'); valid = false; }
+        else { document.getElementById('err-arrival').classList.add('hidden'); arrival.classList.remove('border-guindo'); }
+    }
+    return valid;
+}
+
+function cfNextStep(current) {
+    if (!cfValidateStep(current)) return;
+    if (current === 2) { cfFillSummary(); }
+    cfShowStep(current + 1);
+}
+
+function cfPrevStep(current) { cfShowStep(current - 1); }
+
+function cfFillSummary() {
+    var interest  = document.getElementById('cf-interest');
+    var arrival   = document.getElementById('cf-arrival').value;
+    var departure = document.getElementById('cf-departure').value;
+    var isVeg     = document.getElementById('cf-veg-yes').checked ? 'Yes' : 'No';
+    document.getElementById('s-name').textContent     = document.getElementById('cf-name').value  || '—';
+    document.getElementById('s-email').textContent    = document.getElementById('cf-email').value || '—';
+    document.getElementById('s-interest').textContent = interest.options[interest.selectedIndex] ? interest.options[interest.selectedIndex].text : '—';
+    document.getElementById('s-veg').textContent      = isVeg;
+    document.getElementById('s-dates').textContent    = arrival ? (arrival + (departure ? ' → ' + departure : '')) : '—';
+}
+</script>
+
+
 
 <!-- WHAT TO INCLUDE IN YOUR MESSAGE -->
 <section class="py-20 bg-white">
@@ -137,22 +509,22 @@
         <div class="text-center mb-12 reveal-element">
             <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
             <p class="section-eyebrow">Make It Easy</p>
-            <h2 class="font-display text-3xl sm:text-4xl font-bold text-tierra">What to Tell Us</h2>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-negro">What to Tell Us</h2>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-ajilight rounded-2xl p-6 text-center reveal-element">
-                <div class="text-4xl mb-3" aria-hidden="true">📅</div>
-                <h3 class="font-display text-lg font-bold text-tierra mb-2">Your Travel Dates</h3>
+            <div class="bg-guindolight rounded-2xl p-6 text-center reveal-element">
+                <div class="text-4xl mb-3" aria-hidden="true"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></div>
+                <h3 class="font-display text-lg font-bold text-negro mb-2">Your Travel Dates</h3>
                 <p class="text-gray-600 text-sm">When are you arriving and leaving Sucre? This helps us check availability.</p>
             </div>
-            <div class="bg-ajilight rounded-2xl p-6 text-center reveal-element" data-delay="0.1">
-                <div class="text-4xl mb-3" aria-hidden="true">🎯</div>
-                <h3 class="font-display text-lg font-bold text-tierra mb-2">Your Interests</h3>
-                <p class="text-gray-600 text-sm">Cooking class? Spanish lessons? Homestay? Or the full immersion package?</p>
+            <div class="bg-guindolight rounded-2xl p-6 text-center reveal-element" data-delay="0.1">
+                <div class="text-4xl mb-3" aria-hidden="true"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v8l9-11h-7z"></path></svg></div>
+                <h3 class="font-display text-lg font-bold text-negro mb-2">Your Interests</h3>
+                <p class="text-gray-600 text-sm">Cooking class? Spanish lessons? Or both?</p>
             </div>
-            <div class="bg-ajilight rounded-2xl p-6 text-center reveal-element" data-delay="0.2">
-                <div class="text-4xl mb-3" aria-hidden="true">👥</div>
-                <h3 class="font-display text-lg font-bold text-tierra mb-2">Your Group Size</h3>
+            <div class="bg-guindolight rounded-2xl p-6 text-center reveal-element" data-delay="0.2">
+                <div class="text-4xl mb-3" aria-hidden="true"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div>
+                <h3 class="font-display text-lg font-bold text-negro mb-2">Your Group Size</h3>
                 <p class="text-gray-600 text-sm">Solo traveler, couple, or a small group? We accommodate all — max 6 per class.</p>
             </div>
         </div>
@@ -167,30 +539,26 @@
 </div>
 
 <!-- FAQ -->
-<section class="py-24 bg-adobe">
+<section class="py-24 bg-blanco">
     <div class="max-w-3xl mx-auto px-5 sm:px-8">
         <div class="text-center mb-14 reveal-element">
             <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
             <p class="section-eyebrow">FAQ</p>
-            <h2 class="font-display text-4xl font-bold text-tierra">
+            <h2 class="font-display text-4xl font-bold text-negro">
                 Common Questions
             </h2>
         </div>
         <div class="space-y-6">
-            <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-aji reveal-element">
-                <h3 class="font-display text-lg font-bold text-tierra mb-3">Do I need to speak Spanish to join the cooking class?</h3>
+            <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-guindo reveal-element">
+                <h3 class="font-display text-lg font-bold text-negro mb-3">Do I need to speak Spanish to join the cooking class?</h3>
                 <p class="text-gray-600 text-sm leading-relaxed">Not at all! The Cejas daughters are fluent in English and will guide you through every step. Doña Marlene will add the flavor (and the Spanish vocabulary) as you go.</p>
             </div>
-            <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-maiz reveal-element" data-delay="0.1">
-                <h3 class="font-display text-lg font-bold text-tierra mb-3">Can I book a cooking class even if I'm not staying for accommodation?</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Absolutely. All our classes and services are available independently. You can come for just a cooking class, or just Spanish lessons — no package required. We're flexible!</p>
-            </div>
             <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-bolvgreen reveal-element" data-delay="0.2">
-                <h3 class="font-display text-lg font-bold text-tierra mb-3">How far in advance should I book?</h3>
+                <h3 class="font-display text-lg font-bold text-negro mb-3">How far in advance should I book?</h3>
                 <p class="text-gray-600 text-sm leading-relaxed">We recommend at least 48 hours in advance to guarantee your spot, especially for the popular salteña class. However, if you're already in Sucre and just decided — message us anyway! We'll do our best.</p>
             </div>
             <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-andino reveal-element" data-delay="0.3">
-                <h3 class="font-display text-lg font-bold text-tierra mb-3">Are dietary restrictions accommodated?</h3>
+                <h3 class="font-display text-lg font-bold text-negro mb-3">Are dietary restrictions accommodated?</h3>
                 <p class="text-gray-600 text-sm leading-relaxed">Yes. Please let us know about any allergies, dietary restrictions or food preferences when you write to us, and we will adapt the menu accordingly.</p>
             </div>
         </div>
@@ -199,28 +567,28 @@
 
 <!-- LOCATION MAP / IMAGE -->
 <section class="relative h-72 sm:h-96 overflow-hidden" aria-label="Our location in Sucre, Bolivia">
-    <img src="https://images.unsplash.com/photo-1582297607736-474bd66be747?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+    <img src="https://unsplash.com/photos/gywgmqLMPkI/download?w=1920"
          alt="Panoramic view of Sucre, Bolivia — the white city with colonial architecture and the Andes in the background"
          loading="lazy"
          class="w-full h-full object-cover brightness-75">
-    <div class="absolute inset-0 bg-gradient-to-t from-tierra/85 via-tierra/30 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-negro/85 via-negro/30 to-transparent"></div>
     <div class="absolute bottom-0 left-0 right-0 z-10 text-center pb-10 text-white">
-        <p class="font-display text-3xl font-bold mb-2">Sucre, Bolivia 🇧🇴</p>
-        <p class="font-body text-white/75 text-sm">📍 A 10 minute walk from Plaza 25 de Mayo · La ciudad blanca de América</p>
+        <p class="font-display text-3xl font-bold mb-2">Sucre, Bolivia <svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></p>
+        <p class="font-body text-white/75 text-sm"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> A 10 minute walk from Plaza 25 de Mayo · La ciudad blanca de América</p>
     </div>
 </section>
 
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-tierra text-white pt-16 pb-8">
+<footer class="bg-negro text-white pt-16 pb-8">
     <div class="bolivia-stripe mb-12 opacity-60" aria-hidden="true">
         <span class="stripe-red"></span><span class="stripe-yellow"></span><span class="stripe-green"></span>
     </div>
     <div class="max-w-7xl mx-auto px-5 sm:px-8">
         <div class="grid md:grid-cols-4 gap-10 mb-12">
             <div class="md:col-span-2">
-                <div class="font-display font-bold text-2xl text-aji mb-1">Familia <span class="font-light italic text-maiz">Cejas</span></div>
+                <div class="font-display font-bold text-2xl text-guindo mb-1">Sabores de <span class="font-light italic text-acento">Bolivia</span></div>
                 <p class="text-white/55 text-sm leading-relaxed mb-4 max-w-xs">Sharing Bolivia's culinary heritage and warmth with travelers from around the world.</p>
                 <a href="https://wa.me/59170000000?text=Hi%20Familia%20Cejas!" target="_blank" rel="noopener noreferrer"
                    class="inline-flex items-center gap-2 bg-[#25D366] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-[#1aab52] transition-all shadow-md">
@@ -229,30 +597,38 @@
                 </a>
             </div>
             <div>
-                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-maiz mb-4">Explore</h3>
+                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-acento mb-4">Explore</h3>
                 <ul class="space-y-2.5">
                     <li><a href="index.html"         class="footer-link">Cooking Classes</a></li>
-                    <li><a href="accommodation.html" class="footer-link">Accommodation</a></li>
+
                     <li><a href="spanish.html"       class="footer-link">Spanish Classes</a></li>
                     <li><a href="contact.html"       class="footer-link">Contact & Book</a></li>
-                    <li><a href="brand-kit.html"     class="footer-link text-maiz/80 hover:text-maiz">🎨 Brand Kit & Media</a></li>
+                    <li><a href="brand-kit.html"     class="footer-link text-acento/80 hover:text-acento"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg> Brand Kit & Media</a></li>
                 </ul>
             </div>
             <div>
-                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-maiz mb-4">Find Us</h3>
+                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-acento mb-4">Find Us</h3>
                 <address class="not-italic space-y-2.5 text-white/55 text-sm">
-                    <p>📍 A 10 min walk from<br>Plaza 25 de Mayo,<br>Sucre, Bolivia</p>
-                    <p>💬 +591 70 000 000</p>
+                    <p><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> A 10 min walk from<br>Plaza 25 de Mayo,<br>Sucre, Bolivia</p>
+                    <p><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg> +591 70 000 000</p>
                 </address>
             </div>
         </div>
         <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/35 text-xs">
-            <p>© 2025 La Cocina de la Familia Cejas · Sucre, Bolivia</p>
-            <p>Hecho con ❤️ y ají en Sucre, Bolivia 🇧🇴</p>
+            <p>© 2025 Sabores de Bolivia · Sucre, Bolivia</p>
+            <p>Hecho con <svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg> y ají en Sucre, Bolivia <svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></p>
         </div>
     </div>
 </footer>
 
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/59170000000?text=Hi%20Familia%20Cejas!" target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1ebd5a] hover:-translate-y-1 transition-transform flex items-center justify-center group" style="box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);">
+    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-negro text-white text-xs font-bold rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">Chat with us!</span>
+</a>
+
 <script src="script.js" defer></script>
 </body>
 </html>
+
+
