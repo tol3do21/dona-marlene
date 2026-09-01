@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand Kit — Sabores de Bolivia | Doña Marlene</title>
-    <meta name="description" content="Documento oficial de identidad de marca para Sabores de Bolivia. Uso interno.">
+    <title>Brand Kit Oficial — Sabores de Bolivia | Clases de Cocina & Español con Lolo</title>
+    <meta name="description" content="Manual maestro de identidad de marca para Sabores de Bolivia y Español con Lolo. Uso oficial interno y desarrollo.">
     <meta name="robots" content="noindex, nofollow">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,54 +16,57 @@
             theme: { extend: {
                 colors: {
                     guindo: '#6B1D2B', guindodark: '#4A1320', guindobright: '#8B2438',
-                    acento: 'var(--color-acento)', acentolight: 'var(--color-acento-light)',
+                    acento: '#D99B29', acentolight: '#F3C364',
                     verde: '#3D6B45', verdelight: '#E4EFE6',
+                    andino: '#4A7C8C',
                     negro: '#141010', blanco: '#FFFFFF',
                     bolvred:'#D52B1E', bolvyellow:'#F4E400', bolvgreen:'#007934',
                 },
-                fontFamily: { display:['Playfair Display','serif'], body:['Open Sans','sans-serif'] }
+                fontFamily: { display:['"Playfair Display"','serif'], body:['"Open Sans"','sans-serif'] }
             }}
         }
     </script>
 
     <style>
-        /* ── Brand Kit Styles ── */
+        /* ── Brand Kit Theme System ── */
         :root {
-            --bk-bg: #1A1210;
-            --bk-surface: #231917;
-            --bk-card: #2C1F1B;
-            --bk-border: rgba(217,155,41,0.18);
+            --bk-bg: #141010;
+            --bk-surface: #1E1716;
+            --bk-card: #281F1D;
+            --bk-border: rgba(217, 155, 41, 0.2);
             --bk-gold: #D99B29;
+            --bk-guindo: #6B1D2B;
+            --bk-andino: #4A7C8C;
             --bk-cream: #F7F5F0;
         }
 
         *, *::before, *::after { box-sizing: border-box; }
-        body { background: var(--bk-bg); color: var(--bk-cream); font-family: 'Open Sans', sans-serif; margin: 0; }
+        body { background: var(--bk-bg); color: var(--bk-cream); font-family: 'Open Sans', sans-serif; margin: 0; scroll-behavior: smooth; }
 
         /* Sidebar */
         .bk-sidebar {
             position: fixed; top: 0; left: 0;
-            width: 260px; height: 100vh;
+            width: 270px; height: 100vh;
             background: var(--bk-surface);
             border-right: 1px solid var(--bk-border);
             overflow-y: auto; z-index: 100;
-            padding: 2rem 1.5rem;
+            padding: 2rem 1.25rem;
         }
         .bk-sidebar::-webkit-scrollbar { width: 4px; }
         .bk-sidebar::-webkit-scrollbar-thumb { background: var(--bk-gold); border-radius: 2px; }
-        .bk-main { margin-left: 260px; min-height: 100vh; }
+        .bk-main { margin-left: 270px; min-height: 100vh; }
 
         .bk-nav-link {
-            display: block; padding: 0.5rem 0.75rem;
-            border-radius: 8px; font-size: 0.78rem;
-            font-weight: 600; letter-spacing: 0.06em;
-            text-transform: uppercase; color: rgba(247,245,240,0.45);
+            display: block; padding: 0.55rem 0.75rem;
+            border-radius: 8px; font-size: 0.76rem;
+            font-weight: 600; letter-spacing: 0.05em;
+            text-transform: uppercase; color: rgba(247,245,240,0.5);
             text-decoration: none; transition: all 0.25s ease;
             border-left: 2px solid transparent;
         }
         .bk-nav-link:hover, .bk-nav-link.active {
             color: var(--bk-gold);
-            background: rgba(217,155,41,0.08);
+            background: rgba(217,155,41,0.1);
             border-left-color: var(--bk-gold);
         }
 
@@ -71,7 +74,7 @@
         .bk-section { padding: 5rem 3.5rem; border-bottom: 1px solid var(--bk-border); }
 
         .bk-section-label {
-            font-size: 0.65rem; font-weight: 700;
+            font-size: 0.68rem; font-weight: 700;
             letter-spacing: 0.3em; text-transform: uppercase;
             color: var(--bk-gold); margin-bottom: 0.5rem;
             display: flex; align-items: center; gap: 0.75rem;
@@ -83,12 +86,12 @@
         .bk-section-title {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: 700; line-height: 1.1;
+            font-weight: 700; line-height: 1.15;
             color: var(--bk-cream); margin: 0.5rem 0 1rem;
         }
         .bk-section-desc {
-            font-size: 1rem; line-height: 1.75;
-            color: rgba(247,245,240,0.58); max-width: 56ch;
+            font-size: 1rem; line-height: 1.8;
+            color: rgba(247,245,240,0.65); max-width: 60ch;
         }
 
         /* Cards */
@@ -96,29 +99,38 @@
             background: var(--bk-card);
             border: 1px solid var(--bk-border);
             border-radius: 20px; overflow: hidden;
-            transition: border-color 0.3s ease, transform 0.3s ease;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .logo-card:hover { border-color: rgba(217,155,41,0.5); transform: translateY(-4px); }
+        .logo-card:hover { 
+            border-color: rgba(217,155,41,0.5); 
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+        }
         .logo-preview {
             display: flex; align-items: center; justify-content: center;
-            padding: 3rem 2rem; min-height: 240px;
+            padding: 3rem 2rem; min-height: 220px;
         }
-        .logo-preview--dark  { background: #0f0a09; }
+        .logo-preview--dark  { background: #0E0A0A; }
         .logo-preview--light { background: #F7F5F0; }
-        .logo-preview--aji   { background: #8C3A3A; }
+        .logo-preview--guindo{ background: #6B1D2B; }
+        .logo-preview--andino{ background: #4A7C8C; }
 
         /* Color swatches */
         .color-swatch {
             border-radius: 16px; overflow: hidden;
             border: 1px solid var(--bk-border);
-            transition: transform 0.25s ease; cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease; cursor: pointer;
+            background: var(--bk-card);
         }
-        .color-swatch:hover { transform: scale(1.04); }
-        .swatch-block { height: 120px; width: 100%; }
-        .swatch-info { background: var(--bk-card); padding: 1rem; }
-        .swatch-name { font-weight: 700; font-size: 0.85rem; }
-        .swatch-hex  { font-size: 0.75rem; color: rgba(247,245,240,0.45); font-family: monospace; }
-        .swatch-role { font-size: 0.7rem; color: rgba(247,245,240,0.35); margin-top: 0.2rem; }
+        .color-swatch:hover { 
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        .swatch-block { height: 110px; width: 100%; }
+        .swatch-info { padding: 1rem; }
+        .swatch-name { font-weight: 700; font-size: 0.88rem; }
+        .swatch-hex  { font-size: 0.75rem; color: rgba(247,245,240,0.5); font-family: monospace; }
+        .swatch-role { font-size: 0.7rem; color: rgba(247,245,240,0.4); margin-top: 0.25rem; }
 
         /* Type samples */
         .type-sample { background: var(--bk-card); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--bk-border); }
@@ -134,7 +146,7 @@
 
         /* Mission boxes */
         .mission-box {
-            background: linear-gradient(135deg, var(--bk-card) 0%, #1e1210 100%);
+            background: linear-gradient(135deg, var(--bk-card) 0%, #1c1412 100%);
             border: 1px solid var(--bk-border);
             border-left: 4px solid var(--bk-gold);
             border-radius: 0 16px 16px 0; padding: 2.5rem;
@@ -142,11 +154,11 @@
         }
 
         /* Usage rule cards */
-        .rule-card-ok { border-left: 4px solid #007934; background: rgba(0,121,52,0.08); border-radius: 0 12px 12px 0; padding: 1.25rem; }
-        .rule-card-no { border-left: 4px solid #D52B1E; background: rgba(213,43,30,0.08); border-radius: 0 12px 12px 0; padding: 1.25rem; }
+        .rule-card-ok { border-left: 4px solid #007934; background: rgba(0,121,52,0.1); border-radius: 0 12px 12px 0; padding: 1.25rem; }
+        .rule-card-no { border-left: 4px solid #D52B1E; background: rgba(213,43,30,0.1); border-radius: 0 12px 12px 0; padding: 1.25rem; }
 
         /* Bolivia stripe */
-        .bolivia-stripe-bk { display: flex; height: 4px; }
+        .bolivia-stripe-bk { display: flex; height: 4px; width: 100%; }
         .bolivia-stripe-bk span { flex: 1; }
 
         /* Wiphala BG pattern */
@@ -154,8 +166,8 @@
         .wiphala-bg::before {
             content: ''; position: absolute; inset: 0;
             background-image: url('pattern_hojas.png');
-            background-size: 300px;
-            opacity: 0.08; mix-blend-mode: overlay;
+            background-size: 320px;
+            opacity: 0.07; mix-blend-mode: overlay;
             pointer-events: none; z-index: 0;
         }
         .wiphala-bg > * { position: relative; z-index: 1; }
@@ -169,12 +181,12 @@
 
         /* Copy button */
         .copy-btn {
-            font-size: 0.65rem; cursor: pointer; padding: 0.2rem 0.5rem;
-            background: rgba(217,155,41,0.12); border: 1px solid rgba(217,155,41,0.3);
-            border-radius: 4px; color: var(--bk-gold); transition: all 0.2s ease;
-            font-family: 'Open Sans', sans-serif; display: block; margin-top: 0.5rem;
+            font-size: 0.65rem; cursor: pointer; padding: 0.25rem 0.55rem;
+            background: rgba(217,155,41,0.15); border: 1px solid rgba(217,155,41,0.35);
+            border-radius: 6px; color: var(--bk-gold); transition: all 0.2s ease;
+            font-family: 'Open Sans', sans-serif; display: inline-block; margin-top: 0.6rem;
         }
-        .copy-btn:hover { background: rgba(217,155,41,0.25); }
+        .copy-btn:hover { background: rgba(217,155,41,0.3); color: #FFF; }
 
         @media (max-width: 1024px) {
             .bk-sidebar { display: none; }
@@ -194,55 +206,61 @@
     </div>
 
     <div class="mb-8">
-        <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D99B29;margin-bottom:0.3rem;">Brand Kit</p>
-        <h1 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;line-height:1.3;color:#F7F5F0;">La Cocina de<br>la <em>Sabores de Bolivia</em></h1>
-        <p style="font-size:0.7rem;color:rgba(247,245,240,0.3);margin-top:0.5rem;">Versión 1.0 · Julio 2026</p>
+        <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D99B29;margin-bottom:0.3rem;">Brand Identity</p>
+        <h1 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;line-height:1.25;color:#F7F5F0;">Sabores de Bolivia</h1>
+        <p style="font-size:0.75rem;color:#D99B29;margin-top:0.2rem;font-weight:600;">& Español con Lolo</p>
+        <p style="font-size:0.68rem;color:rgba(247,245,240,0.35);margin-top:0.5rem;">Versión Oficial · 2026</p>
     </div>
 
     <nav aria-label="Secciones">
-        <p style="font-size:0.6rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(247,245,240,0.25);margin-bottom:0.5rem;">Identidad</p>
-        <a href="#identity"   class="bk-nav-link">Identidad</a>
-        <a href="#tagline"    class="bk-nav-link">Eslogan</a>
-        <a href="#mission"    class="bk-nav-link">Misión y Visión</a>
-        <a href="#values"     class="bk-nav-link">Valores</a>
-        <p style="font-size:0.6rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(247,245,240,0.25);margin:1.25rem 0 0.5rem;">Visual</p>
-        <a href="#logos"      class="bk-nav-link">Logos</a>
-        <a href="#colors"     class="bk-nav-link">Paleta de Colores</a>
-        <a href="#typography" class="bk-nav-link">Tipografía</a>
-        <a href="#patterns"   class="bk-nav-link">Patrones</a>
-        <p style="font-size:0.6rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(247,245,240,0.25);margin:1.25rem 0 0.5rem;">Guía</p>
-        <a href="#usage"      class="bk-nav-link">Guía de Uso</a>
-        <a href="#voice"      class="bk-nav-link">Voz y Tono</a>
+        <p style="font-size:0.6rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(247,245,240,0.3);margin-bottom:0.4rem;">Identidad</p>
+        <a href="#identity"   class="bk-nav-link">01 · Quiénes Somos</a>
+        <a href="#tagline"    class="bk-nav-link">02 · Eslogan & Voz</a>
+        <a href="#mission"    class="bk-nav-link">03 · Misión & Visión</a>
+        <a href="#values"     class="bk-nav-link">04 · Valores Centrales</a>
+        
+        <p style="font-size:0.6rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(247,245,240,0.3);margin:1.25rem 0 0.4rem;">Experiencias</p>
+        <a href="#services"   class="bk-nav-link">05 · Arquitectura de Servicios</a>
+
+        <p style="font-size:0.6rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(247,245,240,0.3);margin:1.25rem 0 0.4rem;">Sistema Visual</p>
+        <a href="#logos"      class="bk-nav-link">06 · Logotipo e Isotipo</a>
+        <a href="#colors"     class="bk-nav-link">07 · Paleta de Colores</a>
+        <a href="#typography" class="bk-nav-link">08 · Tipografía</a>
+        <a href="#patterns"   class="bk-nav-link">09 · Texturas & Patrones</a>
+
+        <p style="font-size:0.6rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(247,245,240,0.3);margin:1.25rem 0 0.4rem;">Lineamientos</p>
+        <a href="#usage"      class="bk-nav-link">10 · Reglas del Logo</a>
+        <a href="#voice"      class="bk-nav-link">11 · Tono de Comunicación</a>
     </nav>
 
-    <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(217,155,41,0.12);">
-        <p style="font-size:0.7rem;color:rgba(247,245,240,0.28);line-height:1.6;">Documento de uso interno de la Sabores de Bolivia. No distribuir sin autorización.</p>
+    <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(217,155,41,0.15);">
+        <p style="font-size:0.68rem;color:rgba(247,245,240,0.35);line-height:1.6;">Documento maestro de marca. Sabores de Bolivia · Sucre, Bolivia.</p>
     </div>
 </aside>
 
-<!-- ══ MAIN ══ -->
+<!-- ══ MAIN CONTENT ══ -->
 <main class="bk-main">
 
     <!-- HERO -->
     <section class="bk-section wiphala-bg" style="padding-top:6rem;padding-bottom:6rem;">
-        <div class="bolivia-stripe-bk" style="margin-bottom:3rem;" aria-hidden="true">
+        <div class="bolivia-stripe-bk" style="margin-bottom:2.5rem;" aria-hidden="true">
             <span style="background:#D52B1E;"></span>
             <span style="background:#F4E400;"></span>
             <span style="background:#007934;"></span>
         </div>
-        <p class="bk-section-label">Documento Oficial de Marca</p>
-        <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:700;line-height:1.1;color:#F7F5F0;max-width:14ch;margin:0.5rem 0 1rem;">
-            La Cocina de<br>la <em>Sabores de Bolivia</em>
+        <p class="bk-section-label">Manual de Identidad de Marca</p>
+        <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5.5vw,4.5rem);font-weight:700;line-height:1.15;color:#F7F5F0;margin:0.5rem 0 1.25rem;">
+            Sabores de Bolivia<br><em style="color:#D99B29;font-weight:600;">& Español con Lolo</em>
         </h1>
         <p class="bk-section-desc">
-            Guía completa de identidad visual y verbal. Este documento define cómo se ve, suena y comunica la experiencia culinaria y cultural boliviana de Doña Marlene y sus hijas Andy y Lorena en Sucre, Bolivia.
+            Guía oficial de identidad visual, tono y arquitectura de servicios. Define cómo comunicamos la auténtica experiencia culinaria y lingüística de la Familia Cejas en Sucre, Bolivia: cocina tradicional hecha en casa e inmersión en español viva y cercana.
         </p>
         <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.5rem;">
-            <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.25rem;border-radius:9999px;background:rgba(217,155,41,0.12);border:1px solid rgba(217,155,41,0.4);color:#D99B29;font-size:0.8rem;font-weight:600;">
-                ● Opción A: Sabores de Bolivia
+            <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.25rem;border-radius:9999px;background:rgba(217,155,41,0.15);border:1px solid rgba(217,155,41,0.4);color:#D99B29;font-size:0.82rem;font-weight:600;">
+                🍲 Rama Culinaria: Clases de Cocina con Doña Marlene
             </span>
-            <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.25rem;border-radius:9999px;background:rgba(140,58,58,0.12);border:1px solid rgba(140,58,58,0.35);color:#F0E6E6;font-size:0.8rem;font-weight:600;">
-                ● Opción B: La Cocina de Marlene
+            <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.6rem 1.25rem;border-radius:9999px;background:rgba(74,124,140,0.18);border:1px solid rgba(74,124,140,0.4);color:#9fd6e7;font-size:0.82rem;font-weight:600;">
+                💬 Rama Lingüística: Español con Lolo (Inmersión Conversacional)
             </span>
         </div>
     </section>
@@ -251,46 +269,60 @@
     <section id="identity" class="bk-section">
         <p class="bk-section-label">01 · Identidad</p>
         <h2 class="bk-section-title">¿Quiénes somos?</h2>
-        <p class="bk-section-desc">Somos una familia boliviana real en Sucre que abre las puertas de su hogar a viajeros de todo el mundo. No somos un restaurante ni una escuela formal: somos <strong style="color:#D99B29;">Doña Marlene y sus hijas Andy y Lorena</strong>, cocinando, enseñando, riendo y compartiendo tal como lo hacemos todos los días.</p>
+        <p class="bk-section-desc">Somos una familia boliviana en Sucre que abre las puertas de su hogar a viajeros de todo el mundo. No somos un restaurante comercial ni un instituto tradicional de idiomas: somos <strong style="color:#D99B29;">Doña Marlene, Lorena ("Lolo") y la Familia Cejas</strong>, compartiendo recetas ancestrales, enseñando español y creando lazos humanos genuinos.</p>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem;">
-            <div class="logo-card" style="padding:1.75rem;">
-                <div style="width:48px;height:48px;border-radius:50%;background:rgba(217,155,41,0.12);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></div>
-                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;color:#F7F5F0;margin-bottom:0.5rem;">Doña Marlene</h3>
-                <p style="font-size:0.875rem;color:rgba(247,245,240,0.5);line-height:1.65;">El corazón de la experiencia. Chef, anfitriona y guardiana de recetas bolivianas transmitidas de generación en generación.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2.5rem;">
+            <!-- Doña Marlene -->
+            <div class="logo-card" style="padding:2rem;">
+                <div style="width:50px;height:50px;border-radius:50%;background:rgba(217,155,41,0.15);display:flex;align-items:center;justify-content:center;color:#D99B29;margin-bottom:1.25rem;">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </div>
+                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:#F7F5F0;margin-bottom:0.5rem;">Doña Marlene</h3>
+                <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#D99B29;margin-bottom:0.75rem;">Matriarca & Maestra Culinaria</p>
+                <p style="font-size:0.88rem;color:rgba(247,245,240,0.6);line-height:1.7;">El corazón de la cocina. Custodia las recetas heredadas de la familia y enseña los secretos del ají, la sopa de maní, las salteñas y las tucumanas con paciencia y calidez maternal.</p>
             </div>
-            <div class="logo-card" style="padding:1.75rem;">
-                <div style="width:48px;height:48px;border-radius:50%;background:rgba(74,124,140,0.12);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg></div>
-                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;color:#F7F5F0;margin-bottom:0.5rem;">Andy</h3>
-                <p style="font-size:0.875rem;color:rgba(247,245,240,0.5);line-height:1.65;">Guía cultural y lingüística. Conecta a los visitantes con la historia de Sucre y facilita la inmersión en el idioma español.</p>
+
+            <!-- Lorena "Lolo" -->
+            <div class="logo-card" style="padding:2rem;">
+                <div style="width:50px;height:50px;border-radius:50%;background:rgba(74,124,140,0.18);display:flex;align-items:center;justify-content:center;color:#4A7C8C;margin-bottom:1.25rem;">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                </div>
+                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:#F7F5F0;margin-bottom:0.5rem;">Lorena ("Lolo")</h3>
+                <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#4A7C8C;margin-bottom:0.75rem;">Español con Lolo · Instructora de Idiomas</p>
+                <p style="font-size:0.88rem;color:rgba(247,245,240,0.6);line-height:1.7;">Dinamismo, pedagogía y energía contagiosa. Diseña la inmersión lingüística en acción: clases conversacionales sin libros aburridos, paseos interactivos por el mercado y dinámicas con juegos.</p>
             </div>
-            <div class="logo-card" style="padding:1.75rem;">
-                <div style="width:48px;height:48px;border-radius:50%;background:rgba(140,58,58,0.12);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>‍<svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg></div>
-                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;color:#F7F5F0;margin-bottom:0.5rem;">Lorena</h3>
-                <p style="font-size:0.875rem;color:rgba(247,245,240,0.5);line-height:1.65;">La energía y diversión de la familia. Organiza los juegos (Ligretto, memoria) mientras la comida se cocina para crear momentos de conexión genuina.</p>
+
+            <!-- La Familia Cejas -->
+            <div class="logo-card" style="padding:2rem;">
+                <div style="width:50px;height:50px;border-radius:50%;background:rgba(107,29,43,0.25);display:flex;align-items:center;justify-content:center;color:#E57373;margin-bottom:1.25rem;">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                </div>
+                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:#F7F5F0;margin-bottom:0.5rem;">La Familia Cejas</h3>
+                <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#E57373;margin-bottom:0.75rem;">Hospedaje & Convivencia Genuina</p>
+                <p style="font-size:0.88rem;color:rgba(247,245,240,0.6);line-height:1.7;">El entorno acogedor donde cada viajero deja de ser un turista para convertirse en un invitado de la casa, compartiendo la mesa, las risas y la vida cotidiana en Sucre.</p>
             </div>
         </div>
     </section>
 
     <!-- 02 ESLOGAN -->
-    <section id="tagline" class="bk-section" style="background:linear-gradient(135deg,#231917 0%,#1a0e0c 100%);">
-        <p class="bk-section-label">02 · Eslogan</p>
-        <h2 class="bk-section-title">Taglines Oficiales</h2>
+    <section id="tagline" class="bk-section" style="background:linear-gradient(135deg,#1c1412 0%,#140d0c 100%);">
+        <p class="bk-section-label">02 · Eslogan & Taglines</p>
+        <h2 class="bk-section-title">Nuestros Taglines Oficiales</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;">
             <div class="logo-card" style="padding:2rem;border-color:rgba(217,155,41,0.4);">
-                <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D99B29;margin-bottom:1rem;">✦ Principal (Inglés)</p>
-                <blockquote style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.75rem;color:#F7F5F0;line-height:1.3;margin:0 0 1rem;">"Cook with us.<br>Live with us."</blockquote>
-                <p style="font-size:0.8rem;color:rgba(247,245,240,0.45);">Directo, emocional. Invita a una experiencia de vida, no solo de cocina.</p>
+                <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D99B29;margin-bottom:1rem;">✦ Principal (Global / Inglés)</p>
+                <blockquote style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.8rem;color:#F7F5F0;line-height:1.25;margin:0 0 1rem;">"Cook with us.<br>Learn with us.<br>Live with us."</blockquote>
+                <p style="font-size:0.8rem;color:rgba(247,245,240,0.5);">Síntesis perfecta de las dos ramas: cocina auténtica, español conversacional y convivencia familiar.</p>
             </div>
             <div class="logo-card" style="padding:2rem;">
-                <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(217,155,41,0.55);margin-bottom:1rem;">Versión Español</p>
-                <blockquote style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.75rem;color:#F7F5F0;line-height:1.3;margin:0 0 1rem;">"Cocina con nosotros.<br>Vive con nosotros."</blockquote>
-                <p style="font-size:0.8rem;color:rgba(247,245,240,0.45);">Para redes sociales y comunicaciones en español.</p>
+                <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D99B29;margin-bottom:1rem;">Versión Español</p>
+                <blockquote style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.8rem;color:#F7F5F0;line-height:1.25;margin:0 0 1rem;">"Cocina con nosotros.<br>Aprende con nosotros.<br>Vive con nosotros."</blockquote>
+                <p style="font-size:0.8rem;color:rgba(247,245,240,0.5);">Para comunicaciones locales, redes sociales y contacto directo.</p>
             </div>
             <div class="logo-card" style="padding:2rem;grid-column:1/-1;">
-                <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(217,155,41,0.55);margin-bottom:1rem;">Versión Extendida (subtítulos / hero)</p>
-                <blockquote style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;color:#F7F5F0;line-height:1.3;margin:0 0 1rem;">"Where every meal is a family story."</blockquote>
-                <p style="font-size:0.8rem;color:rgba(247,245,240,0.45);">Para portadas de redes sociales, hero del sitio web y materiales impresos.</p>
+                <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(217,155,41,0.6);margin-bottom:0.75rem;">Tagline Narrativo (Hero / Portadas)</p>
+                <blockquote style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.45rem;color:#F7F5F0;line-height:1.3;margin:0 0 0.5rem;">"Where every recipe and every word is a family story."</blockquote>
+                <p style="font-size:0.82rem;color:rgba(247,245,240,0.45);">Utilizado en banners, portadas y materiales editoriales.</p>
             </div>
         </div>
     </section>
@@ -302,257 +334,374 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:2rem;">
             <div class="mission-box">
                 <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
-                    <div style="width:36px;height:36px;border-radius:10px;background:rgba(217,155,41,0.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v8l9-11h-7z"></path></svg></div>
+                    <div style="width:36px;height:36px;border-radius:10px;background:rgba(217,155,41,0.15);display:flex;align-items:center;justify-content:center;color:#D99B29;font-weight:bold;">M</div>
                     <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:#D99B29;margin:0;">Misión</h3>
                 </div>
-                <p style="color:rgba(247,245,240,0.78);line-height:1.8;font-size:0.975rem;">
-                    Compartir la auténtica cultura y gastronomía boliviana a través de una experiencia familiar inmersiva. Abrimos las puertas de nuestro hogar para que viajeros de todo el mundo aprendan español, cocinen platos tradicionales y conecten a través del juego y la alegría, <strong style="color:#F7F5F0;">sintiéndose como un miembro más de nuestra familia.</strong>
+                <p style="color:rgba(247,245,240,0.8);line-height:1.8;font-size:0.95rem;">
+                    Compartir con orgullo la gastronomía y el idioma boliviano a través de una experiencia inmersiva y profundamente humana. Abrimos las puertas de nuestro hogar para que los viajeros cocinen recetas tradicionales con Doña Marlene, aprendan español práctico y dinámico con Lolo y vivan la autenticidad de Sucre <strong style="color:#F7F5F0;">sintiéndose un miembro más de la familia.</strong>
                 </p>
             </div>
             <div class="mission-box" style="border-left-color:#4A7C8C;">
                 <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
-                    <div style="width:36px;height:36px;border-radius:10px;background:rgba(74,124,140,0.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg></div>
+                    <div style="width:36px;height:36px;border-radius:10px;background:rgba(74,124,140,0.18);display:flex;align-items:center;justify-content:center;color:#4A7C8C;font-weight:bold;">V</div>
                     <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:#4A7C8C;margin:0;">Visión</h3>
                 </div>
-                <p style="color:rgba(247,245,240,0.78);line-height:1.8;font-size:0.975rem;">
-                    Ser la experiencia cultural y culinaria más memorable de Sucre, <strong style="color:#F7F5F0;">reconocidos internacionalmente</strong> por mostrar con orgullo y sencillez la verdadera esencia de cómo vive, cocina y comparte una familia boliviana.
+                <p style="color:rgba(247,245,240,0.8);line-height:1.8;font-size:0.95rem;">
+                    Ser la experiencia cultural, culinaria y lingüística vivencial más querida de Sucre y Bolivia, <strong style="color:#F7F5F0;">reconocida a nivel internacional</strong> por su calidez, enseñanza de impacto real y la preservación honesta de nuestras tradiciones.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- 04 VALORES -->
-    <section id="values" class="bk-section" style="background:#1e1310;">
+    <section id="values" class="bk-section" style="background:#191211;">
         <p class="bk-section-label">04 · Valores</p>
-        <h2 class="bk-section-title">Nuestros Valores</h2>
-        <p class="bk-section-desc">Los principios que guían cada clase, cada conversación y cada plato que preparamos juntos.</p>
+        <h2 class="bk-section-title">Nuestros Pilares</h2>
+        <p class="bk-section-desc">Los principios fundamentales que rigen cada clase de cocina, cada lección de español y cada sobremesa.</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:2.5rem;">
             <div class="value-item">
-                <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg></div>
-                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#F7F5F0;margin-bottom:0.5rem;">Familiaridad</h3>
-                <p style="font-size:0.85rem;color:rgba(247,245,240,0.5);line-height:1.65;">Acogemos a cada visitante no como turista, sino como invitado en nuestra propia casa. La calidez es nuestra esencia.</p>
+                <div style="color:#D99B29;margin-bottom:0.75rem;">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </div>
+                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#F7F5F0;margin-bottom:0.5rem;">Hospitalidad Familiar</h3>
+                <p style="font-size:0.85rem;color:rgba(247,245,240,0.55);line-height:1.65;">Recibimos a cada visitante con calor de hogar. No hay distancias protocolares; compartimos nuestra casa con honestidad y cariño.</p>
             </div>
             <div class="value-item" style="border-top-color:#4A7C8C;">
-                <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
-                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#F7F5F0;margin-bottom:0.5rem;">Autenticidad</h3>
-                <p style="font-size:0.85rem;color:rgba(247,245,240,0.5);line-height:1.65;">Mostramos la sencillez y la verdad de la vida boliviana, sin filtros ni puesta en escena. Lo que ves es lo que vivimos.</p>
+                <div style="color:#4A7C8C;margin-bottom:0.75rem;">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#F7F5F0;margin-bottom:0.5rem;">Autenticidad sin Filtros</h3>
+                <p style="font-size:0.85rem;color:rgba(247,245,240,0.55);line-height:1.65;">Platos tradicionales cocinados tal como se preparan para la familia y español aprendido en la vida real, sin escenografías artificiales.</p>
             </div>
             <div class="value-item" style="border-top-color:#D52B1E;">
-                <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg></div>
-                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#F7F5F0;margin-bottom:0.5rem;">Alegría y Conexión</h3>
-                <p style="font-size:0.85rem;color:rgba(247,245,240,0.5);line-height:1.65;">Fomentamos las risas y la unión a través de juegos compartidos (Ligretto, memoria) mientras la comida se prepara. La diversión es parte de la receta.</p>
+                <div style="color:#D52B1E;margin-bottom:0.75rem;">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#F7F5F0;margin-bottom:0.5rem;">Alegría y Dinamismo</h3>
+                <p style="font-size:0.85rem;color:rgba(247,245,240,0.55);line-height:1.65;">Aprender y cocinar es divertido. Juegos de cartas (Ligretto), dinámicas interactivas y risas compartidas mientras la comida se cocina.</p>
             </div>
             <div class="value-item" style="border-top-color:#007934;">
-                <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M6 21l6-12 6 12M9 15l3-6 3 6"></path></svg>️</div>
-                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#F7F5F0;margin-bottom:0.5rem;">Inmersión Cultural</h3>
-                <p style="font-size:0.85rem;color:rgba(247,245,240,0.5);line-height:1.65;">Integramos de manera natural nuestro idioma, costumbres y sabores ancestrales. Cada visita es una ventana genuina a Bolivia.</p>
+                <div style="color:#007934;margin-bottom:0.75rem;">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </div>
+                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#F7F5F0;margin-bottom:0.5rem;">Inmersión Cultural</h3>
+                <p style="font-size:0.85rem;color:rgba(247,245,240,0.55);line-height:1.65;">Conexión profunda con la identidad boliviana: productos locales, historia culinaria y conversación fluida 100% en español.</p>
             </div>
         </div>
     </section>
 
-    <!-- 05 LOGOS -->
-    <section id="logos" class="bk-section">
-        <p class="bk-section-label">05 · Sistema de Logo</p>
-        <h2 class="bk-section-title">Logos y Variaciones</h2>
-        <p class="bk-section-desc">Dos propuestas de nombre, cada una con variaciones para fondo oscuro, fondo claro e ícono solo. Elige la que mejor represente la experiencia.</p>
+    <!-- 05 ARQUITECTURA DE SERVICIOS -->
+    <section id="services" class="bk-section">
+        <p class="bk-section-label">05 · Arquitectura de Servicios</p>
+        <h2 class="bk-section-title">Estructura de Experiencias</h2>
+        <p class="bk-section-desc">Detalle oficial de las especificaciones, modalidades y reglas de operación para cada rama de la marca.</p>
 
-        <!-- OPCIÓN A -->
+        <!-- SUB-BLOQUE A: Gastronomía -->
+        <div style="margin-top:3rem;">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+                <span style="font-size:0.68rem;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:#D99B29;border-left:3px solid #D99B29;padding-left:0.75rem;">Rama A · Gastronomía — Sabores de Bolivia</span>
+                <div style="flex:1;height:1px;background:rgba(217,155,41,0.2);"></div>
+                <span style="font-size:0.7rem;padding:0.2rem 0.7rem;background:rgba(217,155,41,0.12);color:#D99B29;border-radius:6px;font-weight:700;">Doña Marlene</span>
+            </div>
+
+            <!-- Condiciones Generales de Cocina -->
+            <div style="background:rgba(217,155,41,0.07);border:1px solid rgba(217,155,41,0.25);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;font-size:0.8rem;color:rgba(247,245,240,0.65);display:flex;flex-wrap:wrap;gap:1.25rem;">
+                <span><strong style="color:#D99B29;">&#x26A0; Capacidad:</strong> Mínimo 2 — Máximo 10 personas por clase.</span>
+                <span><strong style="color:#D99B29;">&#x1F374; Regla de Platos:</strong> Si el grupo supera 8 personas, se preparan <strong style="color:#F7F5F0;">2 platos fuertes</strong>.</span>
+                <span><strong style="color:#D99B29;">&#x23F1; Duración:</strong> Aproximadamente 3 horas por sesión.</span>
+                <span><strong style="color:#D99B29;">&#x1F3E0; Formato:</strong> 100% en la cocina de la casa (sin visitas al mercado).</span>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+                <!-- Clase 1: Traditional Culinary Experience -->
+                <div class="logo-card" style="padding:1.75rem;border-top:3px solid #D99B29;">
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                        <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#D99B29;">Clase 1</span>
+                        <span style="font-size:0.7rem;padding:0.15rem 0.5rem;background:rgba(217,155,41,0.15);color:#D99B29;border-radius:5px;font-weight:bold;">~3 Horas</span>
+                    </div>
+                    <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#F7F5F0;margin-bottom:0.6rem;">Traditional Culinary Experience</h3>
+                    <ul style="font-size:0.82rem;color:rgba(247,245,240,0.65);line-height:1.7;list-style:none;padding:0;margin:0 0 1rem;">
+                        <li>✓ Menú tradicional dinámico (plato fuerte del día)</li>
+                        <li>✓ Postre típico boliviano</li>
+                        <li>✓ Cóctel / bebida de bienvenida incluida</li>
+                        <li>✓ Recetario digital + todos los ingredientes</li>
+                    </ul>
+                    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-top:0.75rem;border-top:1px solid rgba(217,155,41,0.2);">
+                        <div>
+                            <span style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#D99B29;">200 BOB</span>
+                            <div style="font-size:0.7rem;color:rgba(247,245,240,0.4);margin-top:0.1rem;">≈ $28 USD · por persona</div>
+                        </div>
+                        <span style="font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,245,240,0.3);border:1px solid rgba(247,245,240,0.12);border-radius:20px;padding:0.2rem 0.6rem;">Todo incluido</span>
+                    </div>
+                </div>
+
+                <!-- Clase 2: Sajra Hora -->
+                <div class="logo-card" style="padding:1.75rem;border-top:3px solid #D99B29;">
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                        <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#D99B29;">Clase 2</span>
+                        <span style="font-size:0.7rem;padding:0.15rem 0.5rem;background:rgba(217,155,41,0.15);color:#D99B29;border-radius:5px;font-weight:bold;">~3 Horas</span>
+                    </div>
+                    <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#F7F5F0;margin-bottom:0.6rem;">La Tradicional “Sajra Hora”</h3>
+                    <ul style="font-size:0.82rem;color:rgba(247,245,240,0.65);line-height:1.7;list-style:none;padding:0;margin:0 0 1rem;">
+                        <li>✓ Taller de masa y relleno (Tucumanas, Salteñas o Papas Rellenas)</li>
+                        <li>✓ Preparación de llajwa (salsa picante tradicional)</li>
+                        <li>✓ Degustación completa al terminar</li>
+                        <li>✓ Recetario digital + cóctel de bienvenida</li>
+                    </ul>
+                    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-top:0.75rem;border-top:1px solid rgba(217,155,41,0.2);">
+                        <div>
+                            <span style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#D99B29;">180 BOB</span>
+                            <div style="font-size:0.7rem;color:rgba(247,245,240,0.4);margin-top:0.1rem;">≈ $25 USD · por persona</div>
+                        </div>
+                        <span style="font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,245,240,0.3);border:1px solid rgba(247,245,240,0.12);border-radius:20px;padding:0.2rem 0.6rem;">Todo incluido</span>
+                    </div>
+                </div>
+
+                <!-- Clase 3: Private Family Experience -->
+                <div class="logo-card" style="padding:1.75rem;border-top:3px solid #8B2438;">
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                        <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#E57373;">Clase 3</span>
+                        <span style="font-size:0.7rem;padding:0.15rem 0.5rem;background:rgba(139,36,56,0.25);color:#FFCDD2;border-radius:5px;font-weight:bold;">Exclusiva</span>
+                    </div>
+                    <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#F7F5F0;margin-bottom:0.6rem;">Private Family Experience</h3>
+                    <ul style="font-size:0.82rem;color:rgba(247,245,240,0.65);line-height:1.7;list-style:none;padding:0;margin:0 0 1rem;">
+                        <li>✓ Menú 100% personalizado (grupo o pareja)</li>
+                        <li>✓ Ritmo propio, sin grupos externos</li>
+                        <li>✓ Ideal para parejas, familias o grupos privados</li>
+                        <li>✓ Experiencia íntima y completamente adaptada</li>
+                    </ul>
+                    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-top:0.75rem;border-top:1px solid rgba(139,36,56,0.25);">
+                        <div>
+                            <span style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:rgba(247,245,240,0.6);">Cotización a medida</span>
+                            <div style="font-size:0.7rem;color:rgba(247,245,240,0.35);margin-top:0.1rem;">Contactar para precio personalizado</div>
+                        </div>
+                        <span style="font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,245,240,0.3);border:1px solid rgba(247,245,240,0.12);border-radius:20px;padding:0.2rem 0.6rem;">Exclusiva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUB-BLOQUE B: Lingüística -->
         <div style="margin-top:3.5rem;">
             <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
-                <div style="width:8px;height:8px;border-radius:50%;background:#D99B29;flex-shrink:0;"></div>
-                <h3 style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;color:#D99B29;margin:0;">Opción A — Sabores de Bolivia: Experiencia Culinaria</h3>
+                <span style="font-size:0.68rem;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:#4A7C8C;border-left:3px solid #4A7C8C;padding-left:0.75rem;">Rama B · Idiomas — Español con Lolo</span>
+                <div style="flex:1;height:1px;background:rgba(74,124,140,0.2);"></div>
+                <span style="font-size:0.7rem;padding:0.2rem 0.7rem;background:rgba(74,124,140,0.15);color:#9fd6e7;border-radius:6px;font-weight:700;">Lorena &#x201CLolo&#x201D;</span>
             </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
-                <!-- Logo A dark -->
-                <div class="logo-card">
-                    <div class="logo-preview logo-preview--dark">
-                        <div style="display:flex;align-items:center;gap:1.25rem;">
-                            <img src="logo_sabores.png" alt="Logo Sabores de Bolivia Oficial" style="width: 70px; height: 70px; object-fit: contain;">
-                            <div>
-                                <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;line-height:1.2;color:#F7F5F0;">Familia<br><span style="font-weight:300;font-style:italic;font-size:0.9rem;color:#D99B29;">Cejas</span></div>
-                                <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,245,240,0.35);margin-top:0.3rem;">Experiencia Culinaria</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:1rem;border-top:1px solid var(--bk-border);">
-                        <p style="font-size:0.75rem;font-weight:600;color:#D99B29;margin-bottom:0.25rem;">Uso principal · Fondo oscuro</p>
-                        <p style="font-size:0.72rem;color:rgba(247,245,240,0.35);">Header del sitio web, redes sociales, materiales digitales.</p>
-                    </div>
-                </div>
-                <!-- Logo A light -->
-                <div class="logo-card">
-                    <div class="logo-preview logo-preview--light">
-                        <div style="display:flex;align-items:center;gap:1.25rem;">
-                            <img src="logo_sabores.png" alt="Logo Sabores de Bolivia Oficial" style="width: 70px; height: 70px; object-fit: contain;">
-                            <div>
-                                <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;line-height:1.2;color:#2D2D2D;">Familia<br><span style="font-weight:300;font-style:italic;font-size:0.9rem;color:#8C3A3A;">Cejas</span></div>
-                                <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(45,45,45,0.4);margin-top:0.3rem;">Experiencia Culinaria</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:1rem;border-top:1px solid var(--bk-border);">
-                        <p style="font-size:0.75rem;font-weight:600;color:#D99B29;margin-bottom:0.25rem;">Versión clara · Fondo Adobe</p>
-                        <p style="font-size:0.72rem;color:rgba(247,245,240,0.35);">Tarjetas de presentación, emails, flyers impresos.</p>
-                    </div>
-                </div>
-                <!-- Logo A icon only -->
-                <div class="logo-card">
-                    <div class="logo-preview logo-preview--aji">
-                        <img src="logo_sabores.png" alt="Logo Sabores de Bolivia Oficial" style="width: 90px; height: 90px; object-fit: contain;">
-                    </div>
-                    <div style="padding:1rem;border-top:1px solid var(--bk-border);">
-                        <p style="font-size:0.75rem;font-weight:600;color:#D99B29;margin-bottom:0.25rem;">Solo ícono · Fondo Ají</p>
-                        <p style="font-size:0.72rem;color:rgba(247,245,240,0.35);">Favicon del sitio, avatar de Instagram, WhatsApp Business.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- OPCIÓN B -->
-        <div style="margin-top:4rem;">
-            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
-                <div style="width:8px;height:8px;border-radius:50%;background:#4A7C8C;flex-shrink:0;"></div>
-                <h3 style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;color:#4A7C8C;margin:0;">Opción B — La Cocina de Marlene</h3>
+            <!-- Niveles oficiales -->
+            <div style="background:rgba(74,124,140,0.08);border:1px solid rgba(74,124,140,0.25);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;font-size:0.8rem;color:rgba(247,245,240,0.65);">
+                <strong style="color:#4A7C8C;">&#x1F4D6; Niveles oficiales del programa:</strong>
+                <span style="margin-left:0.5rem;"><strong style="color:#9fd6e7;">A1</strong> (Principiante), <strong style="color:#9fd6e7;">A2</strong> (Elemental) y <strong style="color:#9fd6e7;">B1</strong> (Intermedio Conversacional).</span>
+                <span style="margin-left:0.75rem;color:rgba(247,245,240,0.4);">Objetivo: llevar al alumno de cero a hablante independiente y fluido.</span>
             </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
-                <!-- Logo B dark -->
-                <div class="logo-card">
-                    <div class="logo-preview logo-preview--dark">
-                        <div style="text-align:center;">
-                            <img src="logo_sabores.png" alt="Logo La Cocina de Marlene Oficial" style="width: 75px; height: 75px; object-fit: contain; margin: 0 auto 0.75rem;">
-                            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#F7F5F0;line-height:1.3;">La Cocina de</div>
-                            <div style="font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:1.5rem;color:#D99B29;">Marlene</div>
-                            <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,245,240,0.3);margin-top:0.4rem;">Auténtica Experiencia Boliviana</div>
-                        </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+                <!-- Modalidad 1: 1-on-1 Presencial -->
+                <div class="logo-card" style="padding:1.75rem;border-top:3px solid #4A7C8C;">
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                        <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#4A7C8C;">Modalidad 1</span>
+                        <span style="font-size:0.7rem;padding:0.15rem 0.5rem;background:rgba(74,124,140,0.18);color:#9fd6e7;border-radius:5px;font-weight:bold;">In-Person</span>
                     </div>
-                    <div style="padding:1rem;border-top:1px solid var(--bk-border);">
-                        <p style="font-size:0.75rem;font-weight:600;color:#4A7C8C;margin-bottom:0.25rem;">Uso principal · Fondo oscuro</p>
-                        <p style="font-size:0.72rem;color:rgba(247,245,240,0.35);">Transmite calidez del hogar. Ideal para turismo.</p>
+                    <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#F7F5F0;margin-bottom:0.6rem;">Clases 1-on-1 Presenciales</h3>
+                    <ul style="font-size:0.82rem;color:rgba(247,245,240,0.65);line-height:1.7;list-style:none;padding:0;margin:0 0 1rem;">
+                        <li>✓ Sesión individual en el patio de la casa (Sucre)</li>
+                        <li>✓ Conversación natural y dinámicas con juegos (Ligretto)</li>
+                        <li>✓ Práctica real en el Mercado Central (<em>Español en Acción</em>)</li>
+                        <li>✓ Niveles A1 a B1 — flexible horario</li>
+                    </ul>
+                    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-top:0.75rem;border-top:1px solid rgba(74,124,140,0.25);">
+                        <div>
+                            <span style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#4A7C8C;">70 BOB <span style="font-size:1rem;font-weight:500;">/hr</span></span>
+                            <div style="font-size:0.7rem;color:rgba(247,245,240,0.4);margin-top:0.1rem;">≈ $10 USD · Packs de 5 y 10 horas disponibles</div>
+                        </div>
+                        <span style="font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,245,240,0.3);border:1px solid rgba(247,245,240,0.12);border-radius:20px;padding:0.2rem 0.6rem;">1-on-1</span>
                     </div>
                 </div>
-                <!-- Logo B light -->
-                <div class="logo-card">
-                    <div class="logo-preview logo-preview--light">
-                        <div style="text-align:center;">
-                            <img src="logo_sabores.png" alt="Logo La Cocina de Marlene (Versión Oscura)" style="width: 75px; height: 75px; object-fit: contain; margin: 0 auto 0.75rem;">
-                            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#2D2D2D;line-height:1.3;">La Cocina de</div>
-                            <div style="font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:1.5rem;color:#8C3A3A;">Marlene</div>
-                            <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(45,45,45,0.35);margin-top:0.4rem;">Auténtica Experiencia Boliviana</div>
-                        </div>
+
+                <!-- Modalidad 2: Online -->
+                <div class="logo-card" style="padding:1.75rem;border-top:3px solid #4A7C8C;">
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                        <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#4A7C8C;">Modalidad 2</span>
+                        <span style="font-size:0.7rem;padding:0.15rem 0.5rem;background:rgba(74,124,140,0.18);color:#9fd6e7;border-radius:5px;font-weight:bold;">Online</span>
                     </div>
-                    <div style="padding:1rem;border-top:1px solid var(--bk-border);">
-                        <p style="font-size:0.75rem;font-weight:600;color:#4A7C8C;margin-bottom:0.25rem;">Versión clara · Fondo blanco / Adobe</p>
-                        <p style="font-size:0.72rem;color:rgba(247,245,240,0.35);">Materiales impresos, PDF, tarjetas de presentación.</p>
+                    <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#F7F5F0;margin-bottom:0.6rem;">Clases Online en Vivo</h3>
+                    <ul style="font-size:0.82rem;color:rgba(247,245,240,0.65);line-height:1.7;list-style:none;padding:0;margin:0 0 1rem;">
+                        <li>✓ Videollamada 1-on-1 desde cualquier parte del mundo</li>
+                        <li>✓ Misma metodología conversacional y didáctica</li>
+                        <li>✓ Juegos interactivos y escenarios de vida real</li>
+                        <li>✓ Niveles A1 a B1 — ritmo personalizado</li>
+                    </ul>
+                    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-top:0.75rem;border-top:1px solid rgba(74,124,140,0.25);">
+                        <div>
+                            <span style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#4A7C8C;">$12 USD <span style="font-size:1rem;font-weight:500;">/hr</span></span>
+                            <div style="font-size:0.7rem;color:rgba(247,245,240,0.4);margin-top:0.1rem;">Vía Zoom / Google Meet · Packs de 5 y 10 horas</div>
+                        </div>
+                        <span style="font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,245,240,0.3);border:1px solid rgba(247,245,240,0.12);border-radius:20px;padding:0.2rem 0.6rem;">Online</span>
                     </div>
                 </div>
-                <!-- Logo B icon only -->
-                <div class="logo-card">
-                    <div class="logo-preview" style="background:#4A7C8C;">
-                        <img src="logo_sabores.png" alt="Logo La Cocina de Marlene Oficial" style="width: 100px; height: 100px; object-fit: contain;">
+
+                <!-- Modalidad 3: Inmersión Total -->
+                <div class="logo-card" style="padding:1.75rem;border-top:3px solid #8B2438;">
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                        <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#E57373;">Modalidad 3</span>
+                        <span style="font-size:0.7rem;padding:0.15rem 0.5rem;background:rgba(139,36,56,0.25);color:#FFCDD2;border-radius:5px;font-weight:bold;">&#x2605; Más Popular</span>
                     </div>
-                    <div style="padding:1rem;border-top:1px solid var(--bk-border);">
-                        <p style="font-size:0.75rem;font-weight:600;color:#4A7C8C;margin-bottom:0.25rem;">Solo ícono · Fondo Andino</p>
-                        <p style="font-size:0.72rem;color:rgba(247,245,240,0.35);">Favicon, avatar de redes sociales alternativo.</p>
+                    <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#F7F5F0;margin-bottom:0.6rem;">Paquete Inmersión Total</h3>
+                    <ul style="font-size:0.82rem;color:rgba(247,245,240,0.65);line-height:1.7;list-style:none;padding:0;margin:0 0 1rem;">
+                        <li>✓ Clases de español con Lolo (1-on-1, A1–B1)</li>
+                        <li><strong style="color:#F7F5F0;">✓ 1 Clase de Cocina con Doña Marlene incluida</strong></li>
+                        <li>✓ Práctica del español mientras cocinas recetas tradicionales</li>
+                        <li>✓ Convivencia familiar diaria en Sucre</li>
+                        <li>✓ Personalizado según la estancia (días, semanas o más)</li>
+                    </ul>
+                    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-top:0.75rem;border-top:1px solid rgba(139,36,56,0.25);">
+                        <div>
+                            <span style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#E57373;">Desde $180 USD <span style="font-size:0.9rem;font-weight:500;">/semana</span></span>
+                            <div style="font-size:0.7rem;color:rgba(247,245,240,0.4);margin-top:0.1rem;">Personalizado según duración de estancia</div>
+                        </div>
+                        <span style="font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,245,240,0.3);border:1px solid rgba(247,245,240,0.12);border-radius:20px;padding:0.2rem 0.6rem;">★ Popular</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 06 COLORES -->
-    <section id="colors" class="bk-section" style="background:#1a100e;">
-        <p class="bk-section-label">06 · Color</p>
-        <h2 class="bk-section-title">Paleta de Colores</h2>
-        <p class="bk-section-desc">Sistema de color completo. Haz clic en cualquier swatch para copiar el código HEX al portapapeles.</p>
+    <!-- 06 LOGOS Y VARIACIONES -->
+    <section id="logos" class="bk-section">
+        <p class="bk-section-label">06 · Sistema de Identidad Visual</p>
+        <h2 class="bk-section-title">Logotipo e Isotipo Oficial</h2>
+        <p class="bk-section-desc">Identidad oficial unificada bajo el nombre de <strong>Sabores de Bolivia</strong>, con adaptaciones para entornos oscuros, claros e isotipos de aplicación digital.</p>
 
-        <h3 style="font-family:'Playfair Display',serif;font-style:italic;color:#D99B29;font-size:1.2rem;margin:2.5rem 0 1.25rem;">Colores Primarios de Marca</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;">
-            <div class="color-swatch" onclick="copyHex('#8C3A3A',this)">
-                <div class="swatch-block" style="background:#8C3A3A;"></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.75rem;margin-top:2.5rem;">
+            <!-- Logo dark -->
+            <div class="logo-card">
+                <div class="logo-preview logo-preview--dark">
+                    <div style="display:flex;align-items:center;gap:1.25rem;">
+                        <img src="logo_sabores.png" alt="Logo Sabores de Bolivia Oficial" style="width: 75px; height: 75px; object-fit: contain;">
+                        <div>
+                            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;line-height:1.2;color:#F7F5F0;">Sabores de<br><span style="font-weight:400;font-style:italic;color:#D99B29;">Bolivia</span></div>
+                            <div style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,245,240,0.4);margin-top:0.35rem;">Experiencia Culinaria</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding:1.25rem;border-top:1px solid var(--bk-border);">
+                    <p style="font-size:0.8rem;font-weight:700;color:#D99B29;margin-bottom:0.25rem;">Principal · Fondo Oscuro</p>
+                    <p style="font-size:0.75rem;color:rgba(247,245,240,0.45);line-height:1.5;">Para la cabecera principal del sitio web, banners digitales y fondos oscuros.</p>
+                </div>
+            </div>
+
+            <!-- Logo light -->
+            <div class="logo-card">
+                <div class="logo-preview logo-preview--light">
+                    <div style="display:flex;align-items:center;gap:1.25rem;">
+                        <img src="logo_sabores.png" alt="Logo Sabores de Bolivia Oficial" style="width: 75px; height: 75px; object-fit: contain;">
+                        <div>
+                            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;line-height:1.2;color:#141010;">Sabores de<br><span style="font-weight:400;font-style:italic;color:#6B1D2B;">Bolivia</span></div>
+                            <div style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(20,16,16,0.5);margin-top:0.35rem;">Experiencia Culinaria</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding:1.25rem;border-top:1px solid var(--bk-border);">
+                    <p style="font-size:0.8rem;font-weight:700;color:#D99B29;margin-bottom:0.25rem;">Versión Clara · Fondo Adobe</p>
+                    <p style="font-size:0.75rem;color:rgba(247,245,240,0.45);line-height:1.5;">Para documentos impresos, recetarios físicos, flyers y fondos claros.</p>
+                </div>
+            </div>
+
+            <!-- Isotipo Guindo -->
+            <div class="logo-card">
+                <div class="logo-preview logo-preview--guindo">
+                    <img src="logo_sabores.png" alt="Isotipo Sabores de Bolivia" style="width: 85px; height: 85px; object-fit: contain;">
+                </div>
+                <div style="padding:1.25rem;border-top:1px solid var(--bk-border);">
+                    <p style="font-size:0.8rem;font-weight:700;color:#D99B29;margin-bottom:0.25rem;">Isotipo · Fondo Guindo Oficial</p>
+                    <p style="font-size:0.75rem;color:rgba(247,245,240,0.45);line-height:1.5;">Favicon del sitio web, foto de perfil de WhatsApp Business e Instagram.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07 COLORES -->
+    <section id="colors" class="bk-section" style="background:#171110;">
+        <p class="bk-section-label">07 · Color</p>
+        <h2 class="bk-section-title">Paleta de Colores Oficial</h2>
+        <p class="bk-section-desc">Sistema cromático derivado de la tierra, los ingredientes tradicionales de Sucre y los colores patrios. Haz clic en cualquier recuadro para copiar su valor HEX.</p>
+
+        <h3 style="font-family:'Playfair Display',serif;font-style:italic;color:#D99B29;font-size:1.25rem;margin:2.5rem 0 1.25rem;">Colores Primarios de Identidad</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1rem;">
+            <!-- Guindo -->
+            <div class="color-swatch" onclick="copyHex('#6B1D2B',this)">
+                <div class="swatch-block" style="background:#6B1D2B;"></div>
                 <div class="swatch-info">
-                    <p class="swatch-name" style="color:#F7F5F0;">Ají</p>
-                    <p class="swatch-hex">#8C3A3A</p>
-                    <p class="swatch-role">Primario · CTAs</p>
+                    <p class="swatch-name" style="color:#F7F5F0;">Guindo Sucre</p>
+                    <p class="swatch-hex">#6B1D2B</p>
+                    <p class="swatch-role">Color Primario de Marca</p>
                     <button class="copy-btn">Copiar HEX</button>
                 </div>
             </div>
+
+            <!-- Maíz / Acento -->
             <div class="color-swatch" onclick="copyHex('#D99B29',this)">
                 <div class="swatch-block" style="background:#D99B29;"></div>
                 <div class="swatch-info">
-                    <p class="swatch-name" style="color:#F7F5F0;">Maíz</p>
+                    <p class="swatch-name" style="color:#F7F5F0;">Maíz / Oro</p>
                     <p class="swatch-hex">#D99B29</p>
-                    <p class="swatch-role">Énfasis · Oro</p>
+                    <p class="swatch-role">Acento & Botones Destacados</p>
                     <button class="copy-btn">Copiar HEX</button>
                 </div>
             </div>
+
+            <!-- Andino -->
             <div class="color-swatch" onclick="copyHex('#4A7C8C',this)">
                 <div class="swatch-block" style="background:#4A7C8C;"></div>
                 <div class="swatch-info">
-                    <p class="swatch-name" style="color:#F7F5F0;">Andino</p>
+                    <p class="swatch-name" style="color:#F7F5F0;">Azul Andino</p>
                     <p class="swatch-hex">#4A7C8C</p>
-                    <p class="swatch-role">Acento · Cielo</p>
+                    <p class="swatch-role">Acento Español con Lolo</p>
                     <button class="copy-btn">Copiar HEX</button>
                 </div>
             </div>
+
+            <!-- Adobe / Crema -->
             <div class="color-swatch" onclick="copyHex('#F7F5F0',this)">
                 <div class="swatch-block" style="background:#F7F5F0;border-bottom:1px solid #e0ddd6;"></div>
                 <div class="swatch-info">
-                    <p class="swatch-name" style="color:#2D2D2D;">Adobe</p>
-                    <p class="swatch-hex" style="color:rgba(45,45,45,0.5);">#F7F5F0</p>
-                    <p class="swatch-role" style="color:rgba(45,45,45,0.4);">Fondo principal</p>
+                    <p class="swatch-name" style="color:#141010;">Adobe / Crema</p>
+                    <p class="swatch-hex" style="color:rgba(20,16,16,0.6);">#F7F5F0</p>
+                    <p class="swatch-role" style="color:rgba(20,16,16,0.5);">Fondo Claro & Secciones</p>
                     <button class="copy-btn">Copiar HEX</button>
                 </div>
             </div>
-            <div class="color-swatch" onclick="copyHex('#2D2D2D',this)">
-                <div class="swatch-block" style="background:#2D2D2D;"></div>
+
+            <!-- Negro Carbón -->
+            <div class="color-swatch" onclick="copyHex('#141010',this)">
+                <div class="swatch-block" style="background:#141010;border-bottom:1px solid #2a2220;"></div>
                 <div class="swatch-info">
-                    <p class="swatch-name" style="color:#F7F5F0;">Tierra</p>
-                    <p class="swatch-hex">#2D2D2D</p>
-                    <p class="swatch-role">Texto principal</p>
+                    <p class="swatch-name" style="color:#F7F5F0;">Negro Carbón</p>
+                    <p class="swatch-hex">#141010</p>
+                    <p class="swatch-role">Fondo Dark & Tipografía</p>
                     <button class="copy-btn">Copiar HEX</button>
                 </div>
             </div>
         </div>
 
-        <h3 style="font-family:'Playfair Display',serif;font-style:italic;color:#D99B29;font-size:1.2rem;margin:2.5rem 0 1.25rem;">Variantes</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;">
-            <div class="color-swatch" onclick="copyHex('#6B2B2B',this)">
-                <div class="swatch-block" style="background:#6B2B2B;"></div>
-                <div class="swatch-info">
-                    <p class="swatch-name" style="color:#F7F5F0;">Ají Dark</p>
-                    <p class="swatch-hex">#6B2B2B</p>
-                    <p class="swatch-role">Hover de botones</p>
-                    <button class="copy-btn">Copiar HEX</button>
-                </div>
-            </div>
-            <div class="color-swatch" onclick="copyHex('#F0E6E6',this)">
-                <div class="swatch-block" style="background:#F0E6E6;border-bottom:1px solid #e0d5d5;"></div>
-                <div class="swatch-info">
-                    <p class="swatch-name" style="color:#2D2D2D;">Ají Light</p>
-                    <p class="swatch-hex" style="color:rgba(45,45,45,0.5);">#F0E6E6</p>
-                    <p class="swatch-role" style="color:rgba(45,45,45,0.4);">Fondos sutiles</p>
-                    <button class="copy-btn">Copiar HEX</button>
-                </div>
-            </div>
-        </div>
-
-        <h3 style="font-family:'Playfair Display',serif;font-style:italic;color:#D99B29;font-size:1.2rem;margin:2.5rem 0 1.25rem;">Bolivia — Identidad Nacional</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;">
+        <h3 style="font-family:'Playfair Display',serif;font-style:italic;color:#D99B29;font-size:1.25rem;margin:2.5rem 0 1.25rem;">Tricolor de Bolivia</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1rem;">
             <div class="color-swatch" onclick="copyHex('#D52B1E',this)">
                 <div class="swatch-block" style="background:#D52B1E;"></div>
                 <div class="swatch-info">
                     <p class="swatch-name" style="color:#F7F5F0;">Bolivia Rojo</p>
                     <p class="swatch-hex">#D52B1E</p>
-                    <p class="swatch-role">Franja bandera</p>
+                    <p class="swatch-role">Franja Tricolor</p>
                     <button class="copy-btn">Copiar HEX</button>
                 </div>
             </div>
             <div class="color-swatch" onclick="copyHex('#F4E400',this)">
                 <div class="swatch-block" style="background:#F4E400;"></div>
                 <div class="swatch-info">
-                    <p class="swatch-name" style="color:#2D2D2D;">Bolivia Amarillo</p>
-                    <p class="swatch-hex" style="color:rgba(45,45,45,0.5);">#F4E400</p>
-                    <p class="swatch-role" style="color:rgba(45,45,45,0.4);">Franja central</p>
+                    <p class="swatch-name" style="color:#141010;">Bolivia Amarillo</p>
+                    <p class="swatch-hex" style="color:rgba(20,16,16,0.6);">#F4E400</p>
+                    <p class="swatch-role" style="color:rgba(20,16,16,0.5);">Franja Tricolor</p>
                     <button class="copy-btn">Copiar HEX</button>
                 </div>
             </div>
@@ -561,178 +710,181 @@
                 <div class="swatch-info">
                     <p class="swatch-name" style="color:#F7F5F0;">Bolivia Verde</p>
                     <p class="swatch-hex">#007934</p>
-                    <p class="swatch-role">Franja bandera</p>
+                    <p class="swatch-role">Franja Tricolor</p>
                     <button class="copy-btn">Copiar HEX</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 07 TIPOGRAFÍA -->
+    <!-- 08 TIPOGRAFÍA -->
     <section id="typography" class="bk-section">
-        <p class="bk-section-label">07 · Tipografía</p>
+        <p class="bk-section-label">08 · Tipografía</p>
         <h2 class="bk-section-title">Sistema Tipográfico</h2>
-        <p class="bk-section-desc">Dos familias tipográficas que equilibran elegancia artesanal con legibilidad moderna.</p>
+        <p class="bk-section-desc">Elegancia editorial combinada con máxima legibilidad en plataformas digitales.</p>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:2.5rem;">
             <!-- Playfair -->
             <div class="type-sample">
-                <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D99B29;margin-bottom:1.5rem;">Display / Serif — Títulos</p>
+                <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D99B29;margin-bottom:1.5rem;">Display / Serif — Encabezados</p>
                 <div style="font-family:'Playfair Display',serif;">
-                    <div style="font-size:5rem;font-weight:700;color:#F7F5F0;line-height:1;">Aa</div>
+                    <div style="font-size:4.5rem;font-weight:700;color:#F7F5F0;line-height:1;">Aa</div>
                     <div style="font-size:1.5rem;font-weight:700;color:#F7F5F0;margin:0.5rem 0 0.25rem;">Playfair Display</div>
-                    <div style="font-style:italic;color:rgba(247,245,240,0.5);">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
-                    <div style="color:rgba(247,245,240,0.5);">abcdefghijklmnopqrstuvwxyz</div>
-                    <div style="color:rgba(247,245,240,0.5);margin-top:0.25rem;">0123456789 !@#$%&</div>
+                    <div style="font-style:italic;color:rgba(247,245,240,0.55);font-size:0.9rem;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+                    <div style="color:rgba(247,245,240,0.55);font-size:0.9rem;">abcdefghijklmnopqrstuvwxyz</div>
+                    <div style="color:rgba(247,245,240,0.55);margin-top:0.25rem;font-size:0.9rem;">0123456789 !@#$%&</div>
                 </div>
-                <div style="border-top:1px solid rgba(217,155,41,0.15);margin-top:1.5rem;padding-top:1.5rem;">
-                    <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:2rem;color:#F7F5F0;margin-bottom:0.5rem;">Heading Bold 700</div>
-                    <div style="font-family:'Playfair Display',serif;font-weight:600;font-size:1.5rem;color:#F7F5F0;margin-bottom:0.5rem;">Heading Semibold 600</div>
-                    <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.25rem;color:rgba(247,245,240,0.65);margin-bottom:0.5rem;">Italic Regular — Subheadings</div>
-                    <div style="font-family:'Playfair Display',serif;font-size:1rem;color:rgba(247,245,240,0.4);">Normal 400 — Subtítulos</div>
+                <div style="border-top:1px solid rgba(217,155,41,0.18);margin-top:1.5rem;padding-top:1.5rem;">
+                    <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.8rem;color:#F7F5F0;margin-bottom:0.4rem;">Heading Bold 700</div>
+                    <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;color:#D99B29;margin-bottom:0.4rem;">Heading Italic — Subtítulos</div>
                 </div>
             </div>
+
             <!-- Open Sans -->
             <div class="type-sample">
-                <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D99B29;margin-bottom:1.5rem;">Body / Sans-serif — Texto UI</p>
+                <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#D99B29;margin-bottom:1.5rem;">Body / Sans-serif — Texto & UI</p>
                 <div>
-                    <div style="font-size:5rem;font-weight:700;color:#F7F5F0;line-height:1;">Aa</div>
+                    <div style="font-size:4.5rem;font-weight:700;color:#F7F5F0;line-height:1;">Aa</div>
                     <div style="font-size:1.5rem;font-weight:700;color:#F7F5F0;margin:0.5rem 0 0.25rem;">Open Sans</div>
-                    <div style="color:rgba(247,245,240,0.5);">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
-                    <div style="color:rgba(247,245,240,0.5);">abcdefghijklmnopqrstuvwxyz</div>
-                    <div style="color:rgba(247,245,240,0.5);margin-top:0.25rem;">0123456789 !@#$%&</div>
+                    <div style="color:rgba(247,245,240,0.55);font-size:0.9rem;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+                    <div style="color:rgba(247,245,240,0.55);font-size:0.9rem;">abcdefghijklmnopqrstuvwxyz</div>
+                    <div style="color:rgba(247,245,240,0.55);margin-top:0.25rem;font-size:0.9rem;">0123456789 !@#$%&</div>
                 </div>
-                <div style="border-top:1px solid rgba(217,155,41,0.15);margin-top:1.5rem;padding-top:1.5rem;">
-                    <div style="font-weight:700;font-size:1.1rem;color:#F7F5F0;margin-bottom:0.5rem;">Body Large — Bold 700</div>
-                    <div style="font-weight:600;font-size:0.95rem;color:#F7F5F0;margin-bottom:0.5rem;">Body Regular — Semibold 600</div>
-                    <div style="font-weight:400;font-size:0.9rem;color:rgba(247,245,240,0.65);margin-bottom:0.5rem;line-height:1.7;">Body texto corrido 400 — Lorem ipsum cocina boliviana para turistas internacionales.</div>
-                    <div style="font-weight:700;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(247,245,240,0.4);">EYEBROW / LABEL / ETIQUETA</div>
+                <div style="border-top:1px solid rgba(217,155,41,0.18);margin-top:1.5rem;padding-top:1.5rem;">
+                    <div style="font-weight:700;font-size:1rem;color:#F7F5F0;margin-bottom:0.4rem;">Body Bold 700 & Semibold 600</div>
+                    <div style="font-weight:400;font-size:0.88rem;color:rgba(247,245,240,0.7);margin-bottom:0.4rem;line-height:1.6;">Body Regular 400 — Párrafos limpios y legibles para web y móvil.</div>
+                    <div style="font-weight:700;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#D99B29;">EYEBROW / ETIQUETA / BOTONES</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 08 PATRONES -->
-    <section id="patterns" class="bk-section" style="background:#1a100e;">
-        <p class="bk-section-label">08 · Patrones</p>
-        <h2 class="bk-section-title">Texturas y Patrones</h2>
-        <p class="bk-section-desc">Inspirados en el aguayo boliviano (tejido andino tradicional). Se usan como fondos decorativos sutiles — nunca sobre texto.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:2.5rem;">
-            <div class="logo-card" style="overflow:hidden; position: relative; background: #231917;">
+    <!-- 09 PATRONES Y TEXTURAS -->
+    <section id="patterns" class="bk-section" style="background:#171110;">
+        <p class="bk-section-label">09 · Texturas & Patrones</p>
+        <h2 class="bk-section-title">Elementos Visuales de Apoyo</h2>
+        <p class="bk-section-desc">Detalles visuales que aportan identidad andina y boliviana de forma elegante y sutil.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:2.5rem;">
+            <div class="logo-card" style="overflow:hidden; position: relative; background: #201715;">
                 <div class="pattern-botanico" style="position: absolute; inset: 0; height: 10rem; opacity: 0.25; mix-blend-mode: overlay;"></div>
                 <div style="height:10rem;"></div>
                 <div style="padding:1.25rem; position: relative; z-index: 10; background: var(--bk-card);">
-                    <h4 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:#F7F5F0;margin:0 0 0.4rem;">Textura Botánica Sutil</h4>
-                    <p style="font-size:0.78rem;color:rgba(247,245,240,0.45);line-height:1.6;">Patrón orgánico para fondos de página y secciones. Transmite rusticidad y calidez. Usar con opacidad reducida.</p>
+                    <h4 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#F7F5F0;margin:0 0 0.4rem;">Textura Botánica Sutil</h4>
+                    <p style="font-size:0.8rem;color:rgba(247,245,240,0.5);line-height:1.6;">Patrón botánico para fondos de página y tarjetas. Usar con baja opacidad (5% a 10%).</p>
                     <code style="font-size:0.7rem;color:#D99B29;display:block;margin-top:0.75rem;">background-image: url('pattern_hojas.png');</code>
                 </div>
             </div>
+
             <div class="logo-card" style="overflow:hidden;">
                 <div style="height:10rem;display:flex;">
                     <div style="flex:1;background:#D52B1E;"></div>
                     <div style="flex:1;background:#F4E400;"></div>
                     <div style="flex:1;background:#007934;"></div>
                 </div>
-                <div style="padding:1.25rem;">
-                    <h4 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:#F7F5F0;margin:0 0 0.4rem;">Tricolor Bolivia</h4>
-                    <p style="font-size:0.78rem;color:rgba(247,245,240,0.45);line-height:1.6;">Franja tricolor en la parte superior de todas las páginas. Sello de identidad nacional.</p>
-                    <code style="font-size:0.7rem;color:#D99B29;display:block;margin-top:0.75rem;">height: 4–6px · top of page</code>
+                <div style="padding:1.25rem; background: var(--bk-card);">
+                    <h4 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#F7F5F0;margin:0 0 0.4rem;">Franja Tricolor Nacional</h4>
+                    <p style="font-size:0.8rem;color:rgba(247,245,240,0.5);line-height:1.6;">Línea tricolor de 4px a 6px de alto en encabezados, pie de página y divisores.</p>
+                    <code style="font-size:0.7rem;color:#D99B29;display:block;margin-top:0.75rem;">.bolivia-stripe { height: 4px; }</code>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 09 GUÍA DE USO -->
+    <!-- 10 REGLAS DE USO DEL LOGO -->
     <section id="usage" class="bk-section">
-        <p class="bk-section-label">09 · Guía de Uso</p>
+        <p class="bk-section-label">10 · Guía de Uso</p>
         <h2 class="bk-section-title">Reglas del Logo</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2rem;">
             <div>
-                <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#80ffb4;margin-bottom:1rem;">✓ PERMITIDO</p>
+                <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#80ffb4;margin-bottom:1rem;">✓ PERMITIDO</p>
                 <div style="display:flex;flex-direction:column;gap:0.75rem;">
-                    <div class="rule-card-ok"><p style="font-size:0.875rem;color:rgba(247,245,240,0.72);margin:0;">Usar el logo sobre fondos sólidos (oscuro, claro, Ají, Andino).</p></div>
-                    <div class="rule-card-ok"><p style="font-size:0.875rem;color:rgba(247,245,240,0.72);margin:0;">Usar el ícono solo (sin wordmark) para avatares y favicons.</p></div>
-                    <div class="rule-card-ok"><p style="font-size:0.875rem;color:rgba(247,245,240,0.72);margin:0;">Escalar el logo proporcionalmente, siempre manteniendo el aspect ratio.</p></div>
-                    <div class="rule-card-ok"><p style="font-size:0.875rem;color:rgba(247,245,240,0.72);margin:0;">Usar las versiones dark/light según el fondo del documento.</p></div>
-                    <div class="rule-card-ok"><p style="font-size:0.875rem;color:rgba(247,245,240,0.72);margin:0;">Mantener espacio de protección = altura de la "F" de Familia.</p></div>
+                    <div class="rule-card-ok"><p style="font-size:0.88rem;color:rgba(247,245,240,0.8);margin:0;">Usar el logotipo sobre fondos oscuros sólidos o claros con contraste suficiente.</p></div>
+                    <div class="rule-card-ok"><p style="font-size:0.88rem;color:rgba(247,245,240,0.8);margin:0;">Utilizar el isotipo solo (sin texto) en avatares de WhatsApp, Instagram y favicons.</p></div>
+                    <div class="rule-card-ok"><p style="font-size:0.88rem;color:rgba(247,245,240,0.8);margin:0;">Escalar el logotipo de forma proporcional sin distorsionar proporciones.</p></div>
+                    <div class="rule-card-ok"><p style="font-size:0.88rem;color:rgba(247,245,240,0.8);margin:0;">Mantener un área de aislamiento despejada alrededor del símbolo.</p></div>
                 </div>
             </div>
             <div>
-                <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#ff8080;margin-bottom:1rem;">✗ PROHIBIDO</p>
+                <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#ff8080;margin-bottom:1rem;">✗ PROHIBIDO</p>
                 <div style="display:flex;flex-direction:column;gap:0.75rem;">
-                    <div class="rule-card-no"><p style="font-size:0.875rem;color:rgba(247,245,240,0.72);margin:0;">No usar el logo sobre fotografías sin overlay de color.</p></div>
-                    <div class="rule-card-no"><p style="font-size:0.875rem;color:rgba(247,245,240,0.72);margin:0;">No distorsionar, rotar ni deformar el logo.</p></div>
-                    <div class="rule-card-no"><p style="font-size:0.875rem;color:rgba(247,245,240,0.72);margin:0;">No cambiar los colores por valores fuera de la paleta oficial.</p></div>
-                    <div class="rule-card-no"><p style="font-size:0.875rem;color:rgba(247,245,240,0.72);margin:0;">No agregar sombras, brillos ni efectos extras al logo.</p></div>
-                    <div class="rule-card-no"><p style="font-size:0.875rem;color:rgba(247,245,240,0.72);margin:0;">No usar el logo sobre fondos con patrones de alta complejidad.</p></div>
+                    <div class="rule-card-no"><p style="font-size:0.88rem;color:rgba(247,245,240,0.8);margin:0;">No colocar el logo sobre fotografías complejas sin una capa de oscurecimiento.</p></div>
+                    <div class="rule-card-no"><p style="font-size:0.88rem;color:rgba(247,245,240,0.8);margin:0;">No estirar, comprimir ni rotar el logotipo.</p></div>
+                    <div class="rule-card-no"><p style="font-size:0.88rem;color:rgba(247,245,240,0.8);margin:0;">No alterar los colores oficiales por tonos ajenos a la paleta.</p></div>
+                    <div class="rule-card-no"><p style="font-size:0.88rem;color:rgba(247,245,240,0.8);margin:0;">No añadir efectos de sombra intensa, bisel o trazos artificiales.</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 10 VOZ Y TONO -->
-    <section id="voice" class="bk-section" style="background:#1a100e;">
-        <p class="bk-section-label">10 · Comunicación</p>
+    <!-- 11 VOZ Y TONO DE COMUNICACIÓN -->
+    <section id="voice" class="bk-section" style="background:#171110;">
+        <p class="bk-section-label">11 · Comunicación</p>
         <h2 class="bk-section-title">Voz y Tono de Marca</h2>
-        <p class="bk-section-desc">Cómo nos comunicamos: auténtico, cálido, cercano y lleno de vida boliviana.</p>
+        <p class="bk-section-desc">Cómo nos comunicamos con los viajeros: cercano, cálido, auténtico y entusiasta.</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2.5rem;">
             <div class="logo-card" style="padding:2rem;">
-                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:#D99B29;margin-bottom:1.5rem;">Nuestra Voz es...</h3>
+                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:#D99B29;margin-bottom:1.25rem;">Nuestra Voz es...</h3>
                 <div style="display:flex;flex-direction:column;gap:1.25rem;">
                     <div style="display:flex;gap:0.75rem;">
-                        <span style="font-size:1.25rem;flex-shrink:0;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></span>
+                        <span style="color:#D99B29;font-size:1.2rem;">●</span>
                         <div>
-                            <strong style="color:#F7F5F0;font-weight:600;font-size:0.9rem;">Familiar y cercana</strong>
-                            <p style="font-size:0.82rem;color:rgba(247,245,240,0.5);margin:0.3rem 0 0;line-height:1.6;">Sin formalidades, con calor boliviano genuino. Como si fuéramos amigos desde hace años.</p>
+                            <strong style="color:#F7F5F0;font-weight:600;font-size:0.9rem;">Familiar y Acogedora</strong>
+                            <p style="font-size:0.82rem;color:rgba(247,245,240,0.55);margin:0.25rem 0 0;line-height:1.6;">Tratamos a cada viajero como a un amigo que visita nuestra casa.</p>
                         </div>
                     </div>
                     <div style="display:flex;gap:0.75rem;">
-                        <span style="font-size:1.25rem;flex-shrink:0;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+                        <span style="color:#D99B29;font-size:1.2rem;">●</span>
                         <div>
-                            <strong style="color:#F7F5F0;font-weight:600;font-size:0.9rem;">Auténtica y sin filtros</strong>
-                            <p style="font-size:0.82rem;color:rgba(247,245,240,0.5);margin:0.3rem 0 0;line-height:1.6;">Contamos las cosas como son: con honestidad y orgullo por nuestras raíces.</p>
+                            <strong style="color:#F7F5F0;font-weight:600;font-size:0.9rem;">Auténtica y Honesta</strong>
+                            <p style="font-size:0.82rem;color:rgba(247,245,240,0.55);margin:0.25rem 0 0;line-height:1.6;">Orgullo por la tradición boliviana, sin pretensiones ni modismos artificiales.</p>
                         </div>
                     </div>
                     <div style="display:flex;gap:0.75rem;">
-                        <span style="font-size:1.25rem;flex-shrink:0;"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+                        <span style="color:#D99B29;font-size:1.2rem;">●</span>
                         <div>
-                            <strong style="color:#F7F5F0;font-weight:600;font-size:0.9rem;">Alegre y llena de vida</strong>
-                            <p style="font-size:0.82rem;color:rgba(247,245,240,0.5);margin:0.3rem 0 0;line-height:1.6;">Hay risas, juegos y sabores. Nuestra comunicación refleja esa energía positiva.</p>
+                            <strong style="color:#F7F5F0;font-weight:600;font-size:0.9rem;">Alegre y Motivadora</strong>
+                            <p style="font-size:0.82rem;color:rgba(247,245,240,0.55);margin:0.25rem 0 0;line-height:1.6;">Aprender español y cocinar platos locales debe ser una experiencia estimulante y divertida.</p>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="logo-card" style="padding:2rem;">
-                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:#4A7C8C;margin-bottom:1.5rem;">Ejemplos de Tono</h3>
-                <div>
-                    <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#D99B29;margin-bottom:0.5rem;">Redes Sociales</p>
-                    <blockquote style="font-family:'Playfair Display',serif;font-style:italic;color:#F7F5F0;font-size:0.975rem;line-height:1.65;margin:0 0 1.25rem;">
-                        "Hoy cocinamos sopa de maní con nuevos amigos de Alemania. La cocina olía increíble. ¿Cuándo vienes tú? <svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m-6 0v2m12-2v2m-9 4h6c1.1 0 2 .9 2 2v2c0 3.3-2.7 6-6 6H9c-3.3 0-6-2.7-6-6v-2c0-1.1.9-2 2-2z"></path></svg><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>"
-                    </blockquote>
-                    <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#D99B29;margin-bottom:0.5rem;">Sitio Web</p>
-                    <p style="font-size:0.875rem;color:rgba(247,245,240,0.65);line-height:1.7;margin:0;">
-                        "No eres un turista en nuestra casa. Eres parte de la familia Cejas por un día. Cocinamos juntos, reímos juntos y compartimos la Bolivia de verdad."
-                    </p>
+                <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:#4A7C8C;margin-bottom:1.25rem;">Ejemplos de Mensajes</h3>
+                <div class="space-y-4">
+                    <div>
+                        <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#D99B29;margin-bottom:0.4rem;">Gastronomía (Doña Marlene)</p>
+                        <blockquote style="font-family:'Playfair Display',serif;font-style:italic;color:#F7F5F0;font-size:0.95rem;line-height:1.6;margin:0;">
+                            "En nuestra cocina no hay secretos industriales: hay ají molido a mano, recetas de familia y la calidez de Sucre esperándote."
+                        </blockquote>
+                    </div>
+                    <div>
+                        <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#4A7C8C;margin-bottom:0.4rem;">Español con Lolo</p>
+                        <blockquote style="font-family:'Playfair Display',serif;font-style:italic;color:#F7F5F0;font-size:0.95rem;line-height:1.6;margin:0;">
+                            "Olvídate de memorizar listas aburridas. Ven a practicar en el mercado, jugando y conversando en situaciones reales."
+                        </blockquote>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem;">
             <div class="rule-card-ok">
-                <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#80ffb4;margin-bottom:0.75rem;">✓ SÍ decimos</p>
-                <ul style="font-size:0.85rem;color:rgba(247,245,240,0.65);list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.35rem;">
-                    <li>"Bienvenido a nuestra casa..."</li>
-                    <li>"Cocinamos, reímos y jugamos..."</li>
-                    <li>"Una experiencia real, no un tour"</li>
-                    <li>"La familia Cejas te espera"</li>
+                <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#80ffb4;margin-bottom:0.6rem;">✓ SÍ decimos</p>
+                <ul style="font-size:0.85rem;color:rgba(247,245,240,0.7);list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.35rem;">
+                    <li>"Te damos la bienvenida a nuestra casa"</li>
+                    <li>"Cocina con Doña Marlene y aprende con Lolo"</li>
+                    <li>"Una experiencia familiar auténtica en Sucre"</li>
+                    <li>"Aprende español en la vida real"</li>
                 </ul>
             </div>
             <div class="rule-card-no">
-                <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#ff8080;margin-bottom:0.75rem;">✗ NO decimos</p>
-                <ul style="font-size:0.85rem;color:rgba(247,245,240,0.65);list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.35rem;">
-                    <li>"Clase de cocina #1 en Sucre"</li>
-                    <li>"Experiencia de lujo premium..."</li>
-                    <li>"Taller gastronómico profesional"</li>
-                    <li>"Reserva tu slot ahora"</li>
+                <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#ff8080;margin-bottom:0.6rem;">✗ NO decimos</p>
+                <ul style="font-size:0.85rem;color:rgba(247,245,240,0.7);list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.35rem;">
+                    <li>"Tour comercial masivo"</li>
+                    <li>"Clases rígidas de gramática teórica"</li>
+                    <li>"Restaurante de comida rápida"</li>
+                    <li>"Paquete turístico empaquetado"</li>
                 </ul>
             </div>
         </div>
@@ -740,18 +892,18 @@
 
     <!-- FOOTER -->
     <footer style="padding:4rem 3.5rem;text-align:center;border-top:1px solid var(--bk-border);">
-        <div class="bolivia-stripe-bk" style="margin-bottom:3rem;" aria-hidden="true">
+        <div class="bolivia-stripe-bk" style="margin-bottom:2.5rem;" aria-hidden="true">
             <span style="background:#D52B1E;"></span>
             <span style="background:#F4E400;"></span>
             <span style="background:#007934;"></span>
         </div>
-        <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:2.5rem;color:#D99B29;margin-bottom:0.75rem;">"Cook with us. Live with us."</p>
-        <p style="font-size:0.8rem;color:rgba(247,245,240,0.3);">Brand Kit v1.0 · Sabores de Bolivia · Sucre, Bolivia · 2026<br>Documento de uso interno. Todos los derechos reservados.</p>
+        <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:2.2rem;color:#D99B29;margin-bottom:0.75rem;">"Cook with us. Learn with us. Live with us."</p>
+        <p style="font-size:0.82rem;color:rgba(247,245,240,0.4);">Brand Kit Oficial · Sabores de Bolivia & Español con Lolo · Sucre, Bolivia · 2026<br>Documento maestro de identidad visual y comunicación.</p>
     </footer>
 </main>
 
 <script>
-    // Highlight active nav link
+    // Highlight active nav link on scroll
     const sections = document.querySelectorAll('section[id]');
     const links = document.querySelectorAll('.bk-nav-link');
     const obs = new IntersectionObserver(entries => {
@@ -765,14 +917,14 @@
     }, { rootMargin: '-20% 0px -60% 0px' });
     sections.forEach(s => obs.observe(s));
 
-    // Copy hex to clipboard
+    // Copy hex to clipboard with feedback
     function copyHex(hex, el) {
         navigator.clipboard.writeText(hex).then(() => {
             const btn = el.querySelector('.copy-btn');
             if (!btn) return;
             const orig = btn.textContent;
             btn.textContent = '¡Copiado!';
-            btn.style.background = 'rgba(0,121,52,0.25)';
+            btn.style.background = 'rgba(0,121,52,0.3)';
             btn.style.borderColor = '#007934';
             btn.style.color = '#80ffb4';
             setTimeout(() => {
@@ -780,7 +932,7 @@
                 btn.style.background = '';
                 btn.style.borderColor = '';
                 btn.style.color = '';
-            }, 1500);
+            }, 1600);
         });
     }
 </script>
