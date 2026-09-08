@@ -1,426 +1,699 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spanish Language Classes in Sucre Bolivia | Sabores de Bolivia</title>
-    <meta name="description" content="Learn Spanish in Sucre, Bolivia — Latin America's capital of neutral Spanish. Structured classes and conversational immersion with certified native teachers from the Cejas family.">
-    <meta name="keywords" content="spanish classes sucre bolivia, learn spanish sucre, spanish immersion bolivia, conversational spanish sucre, language school sucre">
+    <meta name="description"
+        content="Learn Spanish in Sucre, Bolivia — Latin America's capital of neutral Spanish. Structured classes and conversational immersion with certified native teachers from the Cejas family.">
+    <meta name="keywords"
+        content="spanish classes sucre bolivia, learn spanish sucre, spanish immersion bolivia, conversational spanish sucre, language school sucre">
     <meta property="og:title" content="Spanish Language Classes in Sucre | Sabores de Bolivia">
-    <meta property="og:description" content="Learn Spanish in the best city in Latin America for it. Structured and conversational classes with a real Bolivian family.">
+    <meta property="og:description"
+        content="Learn Spanish in the best city in Latin America for it. Structured and conversational classes with a real Bolivian family.">
     <meta property="og:image" content="images/clases_español/clases_1.jpg">
     <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            theme: { extend: {
-                colors: {
-                    guindo: '#6B1D2B', guindodark: '#4A1320', guindobright: '#8B2438',
-                    acento: 'var(--color-acento)', acentolight: 'var(--color-acento-light)',
-                    verde: '#3D6B45', verdelight: '#E4EFE6',
-                    negro: '#141010', blanco: '#FFFFFF',
-                    bolvred:'#D52B1E', bolvyellow:'#F4E400', bolvgreen:'#007934'
-                },
-                fontFamily: { display:['"Playfair Display"','serif'], body:['"Open Sans"','sans-serif'] }
-            }}
+            theme: {
+                extend: {
+                    colors: {
+                        guindo: '#6B1D2B', guindodark: '#4A1320', guindobright: '#8B2438',
+                        acento: 'var(--color-acento)', acentolight: 'var(--color-acento-light)',
+                        verde: '#3D6B45', verdelight: '#E4EFE6',
+                        negro: '#141010', blanco: '#FFFFFF',
+                        bolvred: '#D52B1E', bolvyellow: '#F4E400', bolvgreen: '#007934'
+                    },
+                    fontFamily: { display: ['"Playfair Display"', 'serif'], body: ['"Open Sans"', 'sans-serif'] }
+                }
+            }
         }
     </script>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Override brand colors for Spanish classes to match LOLO ESPAÑOL */
         :root {
-            --color-acento: #9F814B; /* Gold */
-            --color-acento-light: #F4EEDF; 
-            --color-guindo: #182C44; /* Deep Navy Blue */
+            --color-acento: #9F814B;
+            /* Gold */
+            --color-acento-light: #F4EEDF;
+            --color-guindo: #182C44;
+            /* Deep Navy Blue */
             --color-guindo-dark: #0F1D2E;
         }
     </style>
 </head>
+
 <body class="bg-blanco font-body text-negro">
 
-<!-- Bolivia Stripe -->
-<div class="bolivia-stripe" aria-hidden="true">
-    <span class="stripe-red"></span><span class="stripe-yellow"></span><span class="stripe-green"></span>
-</div>
-
-<!-- NAVBAR -->
-<header id="navbar" class="fixed top-6 left-0 right-0 z-50">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="flex items-center justify-between h-16">
-            <a href="spanish.html" class="flex items-center gap-2.5" aria-label="Español con Lolo">
-                <img src="images/clases_español/logo.jpg" alt="Logo Español con Lolo" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
-                <div id="logo-name" class="flex flex-col justify-center transition-colors">
-                    <span class="font-display font-bold text-xl text-acento leading-none">Español con Lolo</span>
-                    <span class="font-body text-[0.55rem] tracking-[0.2em] uppercase text-gray-500 mt-1">Spanish School</span>
-                </div>
-            </a>
-            <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
-                <a href="index.html"         class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Cooking Classes</a>
-
-                <a href="spanish.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Spanish Classes</a>
-                <a href="contact.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Contact</a>
-                <a href="contact.html" class="ml-2 bg-guindo text-white text-xs font-bold tracking-widest uppercase px-5 py-2.5 rounded-full hover:bg-guindodark transition-all shadow-lg">Book Now</a>
-            </nav>
-            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
-                <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
-                <span class="hamburger-bar block w-4 h-0.5 rounded transition-all duration-300"></span>
-            </button>
-        </div>
-    </div>
-    <nav id="mobile-menu" class="hidden md:hidden bg-blanco border-t-2 border-guindo/10 shadow-xl" aria-label="Mobile navigation">
-        <div class="flex flex-col px-5 py-5 gap-0.5">
-            <a href="index.html"         class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m-6 0v2m12-2v2m-9 4h6c1.1 0 2 .9 2 2v2c0 3.3-2.7 6-6 6H9c-3.3 0-6-2.7-6-6v-2c0-1.1.9-2 2-2z"></path></svg> Cooking Classes</a>
-
-            <a href="spanish.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg> Spanish Classes</a>
-            <a href="contact.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> Contact</a>
-            <a href="contact.html"       class="mobile-nav-link mt-4 text-center bg-guindo text-white font-bold py-3.5 rounded-full hover:bg-guindodark transition-colors shadow-md">Book Now →</a>
-        </div>
-    </nav>
-</header>
-
-<main>
-
-<!-- PAGE HERO -->
-<section class="page-hero">
-    <div class="page-hero-bg">
-        <img src="images/clases_español/clases_1.jpg"
-             alt="Estudiante y profesora sonriendo y conversando en una clase de español en Sucre, Bolivia"
-             class="w-full h-full object-cover object-[center_30%]">
-        <div class="page-hero-overlay"></div>
-    </div>
-    <!-- Bolivia tricolor accent lines -->
-    <div class="absolute bottom-0 left-0 right-0 flex z-10" aria-hidden="true">
-        <div class="flex-1 h-1 bg-bolvred opacity-70"></div>
-        <div class="flex-1 h-1 bg-bolvyellow opacity-70"></div>
-        <div class="flex-1 h-1 bg-bolvgreen opacity-70"></div>
-    </div>
-    <!-- Andean diamond overlay -->
-    <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
-         style="background-image:repeating-linear-gradient(45deg,rgba(244,228,0,0.05) 0 2px,transparent 2px 30px),repeating-linear-gradient(-45deg,rgba(213,43,30,0.04) 0 2px,transparent 2px 30px);background-size:30px 30px;"></div>
-    <div class="page-hero-content">
-        <p class="text-acento text-xs font-bold tracking-[0.3em] uppercase mb-5 flex items-center justify-center gap-3">
-            <span class="w-8 h-px bg-bolvred inline-block"></span>
-            <span class="w-2 h-2 bg-bolvyellow inline-block rotate-45"></span>
-            Sucre, Bolivia &middot; Language Immersion
-            <span class="w-2 h-2 bg-bolvgreen inline-block rotate-45"></span>
-            <span class="w-8 h-px bg-bolvred inline-block"></span>
-        </p>
-        <h1 class="font-display font-bold text-5xl sm:text-6xl text-white leading-tight mb-5">
-            Learn Spanish<br>
-            <em class="text-acento font-semibold italic">con Lolo</em>
-        </h1>
-        <p class="text-white/80 text-xl max-w-xl mx-auto">Speak Spanish where it sounds its clearest — with a real Bolivian family, in the most beautiful city in the Andes.</p>
-    </div>
-</section>
-
-<!-- WHY SUCRE -->
-<section class="py-24 bg-blanco">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div class="reveal-element">
-                <div class="andean-rule" aria-hidden="true"><div class="andean-rule__line"></div></div>
-                <p class="section-eyebrow">Why Sucre?</p>
-                <h2 class="font-display text-4xl sm:text-5xl font-bold text-negro mb-6 leading-tight">
-                    South America's<br>
-                    <em class="text-guindo italic">Spanish Capital</em>
-                </h2>
-                <p class="text-gray-600 text-lg leading-relaxed mb-5">
-                    Sucre is widely considered the best city in Latin America to learn Spanish. Bolivians speak a clear, neutral, and friendly Spanish — no strong accents, no confusing local slang — just beautiful, standard Spanish you can use anywhere in the world.
-                </p>
-                <p class="text-gray-600 text-lg leading-relaxed mb-8">
-                    And what better way to practice than in the sunny courtyard with Lorena (Lolo)? Classes are named "Español con Lolo" in her honor, as she leads the teaching. With her, Spanish is not just a subject — it is the language of your daily life.
-                </p>
-                <div class="grid grid-cols-2 gap-4 text-center">
-                    <div class="bg-white rounded-2xl p-4 shadow-sm border border-guindo/10">
-                        <div class="font-display font-bold text-2xl text-guindo">Neutral</div>
-                        <div class="text-xs text-gray-500 mt-1">accent-free Spanish</div>
-                    </div>
-                    <div class="bg-white rounded-2xl p-4 shadow-sm border border-guindo/10">
-                        <div class="font-display font-bold text-2xl text-guindo">A1–B2</div>
-                        <div class="text-xs text-gray-500 mt-1">all levels welcome</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Natural Proportions Gallery -->
-            <div class="flex flex-col gap-5 reveal-element" data-delay="0.15">
-                <!-- Top image: Market Classes -->
-                <img src="images/clases_español/market_classes.jpg"
-                     alt="Practicando español mientras caminamos por Sucre" loading="lazy" 
-                     class="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
-                
-                <!-- Bottom images: Classes 5 and 3 -->
-                <div class="grid grid-cols-2 gap-4">
-                    <img src="images/clases_español/clases_5.jpg"
-                         alt="Estudiantes en clase de español" loading="lazy" 
-                         class="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
-                    <img src="images/clases_español/clases_3.jpg"
-                         alt="Lorena enseñando español a una alumna" loading="lazy" 
-                         class="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Bolivia tricolor section divider -->
-<div class="bolivia-stripe" aria-hidden="true">
-    <span class="stripe-red"></span>
-    <span class="stripe-yellow"></span>
-    <span class="stripe-green"></span>
-</div>
-
-<!-- CLASS OPTIONS -->
-<section class="py-24 bg-negro relative overflow-hidden">
-    <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true"
-         style="background-image:repeating-linear-gradient(45deg,#D99B29 0,#D99B29 1px,transparent 0,transparent 50%);background-size:18px 18px;"></div>
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-        <div class="text-center max-w-3xl mx-auto mb-20 reveal-element">
-            <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
-            <p class="section-eyebrow text-acento/80">Our Methods</p>
-            <h2 class="font-display text-4xl sm:text-5xl font-bold text-white mb-5 leading-tight">
-                Three Ways to<br><em class="text-acento italic">Learn</em>
-            </h2>
-            <p class="text-white/70 text-lg leading-relaxed">In-person, online, or full immersion — choose what fits your life and your goals.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <!-- Clases 1-on-1 Presenciales -->
-            <article class="service-card service-card--featured reveal-element" data-delay="0" aria-label="Spanish class: Private 1-on-1 in Sucre">
-                <div class="service-card-img-wrap">
-                    <img src="images/clases_español/clases_3.jpg"
-                         alt="Alumna estudiando español con Lolo en sesión 1-a-1"
-                         loading="lazy" class="service-card-img">
-                    <div class="service-card-badge bg-verde text-white">In-Person · Sucre</div>
-                </div>
-                <div class="service-card-body">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">Clases 1-on-1 con Lolo</h3>
-                    <p class="text-white/60 text-xs font-bold uppercase tracking-wider mb-4">Private · In-Person Sessions</p>
-                    <ul class="space-y-2 text-white/75 text-sm mb-6">
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Private 1-on-1 sessions in our sunny patio</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Conversational focus — zero boring textbooks</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Card games (Ligretto) & real-life dynamics</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Levels A1 to B1 — from zero to fluent speaker</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Morning or afternoon — flexible schedule</li>
-                    </ul>
-                    <div class="flex items-end justify-between py-3.5 mb-5 border-t border-white/10">
-                        <div>
-                            <p class="font-display text-3xl font-bold text-acento leading-none">70 <span class="text-xl font-semibold">BOB</span> <span class="text-lg text-white/40 font-normal">/ hr</span></p>
-                            <p class="text-white/45 text-xs mt-1">≈ $10 USD &nbsp;·&nbsp; per hour &nbsp;·&nbsp; packs of 5 or 10 hrs available</p>
-                        </div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-white/35 border border-white/15 rounded-full px-2.5 py-1">1-on-1</span>
-                    </div>
-                    <a href="contact.html" class="card-cta">Book In-Person Classes →</a>
-                </div>
-            </article>
-
-            <!-- Clases Online -->
-            <article class="service-card reveal-element" data-delay="0.12" aria-label="Spanish class: Live Online">
-                <div class="service-card-img-wrap">
-                    <img src="images/clases_español/clases_4.jpg"
-                         alt="Lolo enseñando español en clase online en vivo"
-                         loading="lazy" class="service-card-img">
-                    <div class="service-card-badge" style="background:#4A7C8C;color:#fff;">Online · Live</div>
-                </div>
-                <div class="service-card-body">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">Clases Online con Lolo</h3>
-                    <p class="text-white/60 text-xs font-bold uppercase tracking-wider mb-4">Live Video · Anywhere in the World</p>
-                    <ul class="space-y-2 text-white/75 text-sm mb-6">
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Live 1-on-1 video sessions from anywhere</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Same conversational method — no dry grammar</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Interactive games and real-world scenarios</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Levels A1 to B1 — at your own rhythm</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Book weekly or intensive crash-course blocks</li>
-                    </ul>
-                    <div class="flex items-end justify-between py-3.5 mb-5 border-t border-white/10">
-                        <div>
-                            <p class="font-display text-3xl font-bold text-acento leading-none">$12 <span class="text-xl font-semibold">USD</span> <span class="text-lg text-white/40 font-normal">/ hr</span></p>
-                            <p class="text-white/45 text-xs mt-1">Via Zoom or Google Meet &nbsp;·&nbsp; packs of 5 or 10 hrs available</p>
-                        </div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-white/35 border border-white/15 rounded-full px-2.5 py-1">Online</span>
-                    </div>
-                    <a href="contact.html" class="card-cta">Book Online Classes →</a>
-                </div>
-            </article>
-
-            <!-- Paquete Inmersión Total -->
-            <article class="service-card reveal-element" data-delay="0.24" aria-label="Spanish class: Total Immersion Package">
-                <div class="service-card-img-wrap">
-                    <img src="images/clases_español/clases_1.jpg"
-                         alt="Estudiante cocinando con Doña Marlene durante la clase de inmersión total"
-                         loading="lazy" class="service-card-img">
-                    <div class="service-card-badge bg-acento text-negro">Most Popular ★</div>
-                </div>
-                <div class="service-card-body">
-                    <h3 class="font-display text-2xl font-bold text-white mb-2">Paquete Inmersión Total</h3>
-                    <p class="text-acento text-xs font-bold uppercase tracking-wider mb-4">Spanish + Cooking · Full Experience</p>
-                    <ul class="space-y-2 text-white/75 text-sm mb-6">
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Spanish classes with Lolo (1-on-1, A1–B1)</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> <strong>1 cooking class with Doña Marlene included</strong></li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Practice Spanish <em>while</em> you cook traditional recipes</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Daily family meals & authentic Sucre life</li>
-                        <li class="flex gap-2"><span class="text-acento">✓</span> Tailored to your stay — days, weeks or longer</li>
-                    </ul>
-                    <div class="flex items-end justify-between py-3.5 mb-5 border-t border-white/10">
-                        <div>
-                            <p class="font-display text-2xl font-bold text-acento leading-none">Desde <span class="text-3xl">$180</span> <span class="text-xl font-semibold">USD</span></p>
-                            <p class="text-white/45 text-xs mt-1">per week &nbsp;·&nbsp; customised to your stay</p>
-                        </div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-white/35 border border-white/15 rounded-full px-2.5 py-1">Custom</span>
-                    </div>
-                    <a href="contact.html" class="card-cta card-cta--featured">Design My Immersion →</a>
-                </div>
-            </article>
-        </div>
-
-        <!-- Level guide -->
-        <div class="mt-14 border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto reveal-element" data-delay="0.3">
-            <h3 class="font-display text-xl font-bold text-white text-center mb-2">Which Level Are You?</h3>
-            <p class="text-center text-white/45 text-sm mb-8">Lolo's program takes you from absolute beginner to confident, independent speaker — levels A1 through B1.</p>
-            <div class="grid grid-cols-3 gap-6 max-w-sm mx-auto">
-                <div class="text-center">
-                    <div class="w-14 h-14 rounded-full bg-bolvgreen/30 border-2 border-bolvgreen flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg">A1</div>
-                    <div class="text-white/65 text-xs font-semibold uppercase tracking-wider">Beginner</div>
-                    <div class="text-white/35 text-xs mt-1">Zero Spanish</div>
-                </div>
-                <div class="text-center">
-                    <div class="w-14 h-14 rounded-full bg-bolvgreen/50 border-2 border-bolvgreen flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg">A2</div>
-                    <div class="text-white/65 text-xs font-semibold uppercase tracking-wider">Elementary</div>
-                    <div class="text-white/35 text-xs mt-1">Basic phrases</div>
-                </div>
-                <div class="text-center">
-                    <div class="w-14 h-14 rounded-full bg-acento/50 border-2 border-acento flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg">B1</div>
-                    <div class="text-white/65 text-xs font-semibold uppercase tracking-wider">Intermediate</div>
-                    <div class="text-white/35 text-xs mt-1">Fluent & free</div>
-                </div>
-            </div>
-            <p class="text-center text-white/50 text-sm mt-8">Not sure of your level? <a href="contact.html" class="text-acento hover:underline font-semibold">Send us a message</a> and we'll do a quick free assessment — no pressure.</p>
-        </div>
-    </div>
-</section>
-
-<!-- COMBINE THE EXPERIENCE -->
-<section class="py-24 bg-guindolight wiphala-bg">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="text-center mb-14 reveal-element">
-            <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
-            <p class="section-eyebrow">The Full Immersion</p>
-            <h2 class="font-display text-4xl font-bold text-negro leading-tight">
-                Combine Everything for<br><em class="text-guindo italic">Total Immersion</em>
-            </h2>
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto mt-4">The ultimate Sucre experience: learn Spanish, cook traditional food, and live with a real Bolivian family — all in one place.</p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div class="bg-white rounded-2xl p-6 shadow-md text-center border-t-4 border-guindo reveal-element">
-                <div class="text-5xl mb-4" aria-hidden="true"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
-                <h3 class="font-display text-xl font-bold text-negro mb-2">Spanish Classes</h3>
-                <p class="text-gray-500 text-sm">Formal or conversational — or both! 1-on-1 or small groups.</p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 shadow-md text-center border-t-4 border-acento reveal-element" data-delay="0.1">
-                <div class="text-5xl mb-4" aria-hidden="true"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m-6 0v2m12-2v2m-9 4h6c1.1 0 2 .9 2 2v2c0 3.3-2.7 6-6 6H9c-3.3 0-6-2.7-6-6v-2c0-1.1.9-2 2-2z"></path></svg></div>
-                <h3 class="font-display text-xl font-bold text-negro mb-2">Cooking Classes</h3>
-                <p class="text-gray-500 text-sm">Practice Spanish while you grind spices and repulgar salteñas.</p>
-            </div>
-        </div>
-        <div class="text-center mt-12 reveal-element" data-delay="0.3">
-            <a href="contact.html" class="inline-flex items-center gap-2 bg-guindo text-white font-bold px-10 py-4 rounded-full hover:bg-guindodark transition-all shadow-xl transform hover:-translate-y-1 text-lg">
-                Design My Immersion Package →
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="py-24 bg-blanco">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
-        <div class="andean-rule justify-center" aria-hidden="true"><div class="andean-rule__line"></div></div>
-        <p class="section-eyebrow">Student Story</p>
-        <blockquote class="testimonial-card max-w-2xl mx-auto mt-8 reveal-element">
-            <div class="text-acento text-5xl font-display leading-none mb-4 text-left" aria-hidden="true">"</div>
-            <p class="text-gray-700 text-xl italic leading-relaxed mb-6">
-                I came to Sucre speaking almost zero Spanish. After two weeks of classes with Lorena (Lolo) and cooking with Doña Marlene every day, I left able to hold full conversations. The immersion method works incredibly fast because you never leave the language — you live in it.
-            </p>
-            <footer class="flex items-center gap-4 justify-center">
-                <div class="w-12 h-12 rounded-full bg-verde/20 flex items-center justify-center text-verde font-bold font-display">M</div>
-                <div class="text-left">
-                    <div class="font-semibold text-negro">Marco V.</div>
-                    <div class="text-gray-500 text-sm"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Rome, Italy &middot; 3 weeks in Sucre</div>
-                </div>
-                <div class="ml-auto text-acento font-bold text-sm"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg></div>
-            </footer>
-        </blockquote>
-    </div>
-</section>
-
-<!-- CROSS-LINKS -->
-<section class="promo-banner py-16" aria-label="More services">
-    <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
-        <p class="text-acento text-xs font-bold tracking-widest uppercase mb-4 reveal-element">Complete your experience</p>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8 reveal-element" data-delay="0.1">
-            <em class="text-acento italic">Habla.</em> Cook.
-        </h2>
-        <div class="flex flex-col sm:flex-row justify-center gap-4 reveal-element" data-delay="0.2">
-            <a href="index.html"        class="bg-white/10 border border-white/20 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/20 transition-all"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m-6 0v2m12-2v2m-9 4h6c1.1 0 2 .9 2 2v2c0 3.3-2.7 6-6 6H9c-3.3 0-6-2.7-6-6v-2c0-1.1.9-2 2-2z"></path></svg> Cooking Classes</a>
-
-            <a href="contact.html"       class="bg-acento text-negro font-bold px-7 py-3 rounded-full hover:bg-yellow-500 transition-all shadow-lg">Reserve Your First Class →</a>
-        </div>
-    </div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="bg-negro text-white pt-16 pb-8">
-    <div class="bolivia-stripe mb-12 opacity-60" aria-hidden="true">
+    <!-- Bolivia Stripe -->
+    <div class="bolivia-stripe" aria-hidden="true">
         <span class="stripe-red"></span><span class="stripe-yellow"></span><span class="stripe-green"></span>
     </div>
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="grid md:grid-cols-4 gap-10 mb-12">
-            <div class="md:col-span-2">
-                <div class="font-display font-bold text-2xl text-guindo mb-1">Sabores de <span class="font-light italic text-acento">Bolivia</span></div>
-                <p class="text-white/55 text-sm leading-relaxed mb-4 max-w-xs">Sharing Bolivia's culinary heritage and language with travelers from around the world.</p>
-                <a href="https://wa.me/59170000000?text=Hi%20Familia%20Cejas!" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center gap-2 bg-[#25D366] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-[#1aab52] transition-all shadow-md">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-                    WhatsApp Us
+
+    <!-- NAVBAR -->
+    <header id="navbar" class="fixed top-6 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="spanish.html" class="flex items-center gap-2.5" aria-label="Español con Lolo">
+                    <img src="images/clases_español/logo.jpg" alt="Logo Español con Lolo"
+                        class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+                    <div id="logo-name" class="flex flex-col justify-center transition-colors">
+                        <span class="font-display font-bold text-xl text-acento leading-none">Español con Lolo</span>
+                        <span class="font-body text-[0.55rem] tracking-[0.2em] uppercase text-gray-500 mt-1">Spanish
+                            School</span>
+                    </div>
                 </a>
-            </div>
-            <div>
-                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-acento mb-4">Explore</h3>
-                <ul class="space-y-2.5">
-                    <li><a href="index.html"         class="footer-link">Cooking Classes</a></li>
+                <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+                    <a href="index.html"
+                        class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Cooking
+                        Classes</a>
 
-                    <li><a href="spanish.html"       class="footer-link">Spanish Classes</a></li>
-                    <li><a href="contact.html"       class="footer-link">Contact & Book</a></li>
-                    <li><a href="brand-kit.html"     class="footer-link text-acento/80 hover:text-acento"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg> Brand Kit & Media</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-acento mb-4">Find Us</h3>
-                <address class="not-italic space-y-2.5 text-white/55 text-sm">
-                    <p><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> A 10 min walk from<br>Plaza 25 de Mayo,<br>Sucre, Bolivia</p>
-                    <p><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg> +591 70 000 000</p>
-                </address>
+                    <a href="spanish.html"
+                        class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Spanish
+                        Classes</a>
+                    <a href="contact.html"
+                        class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Contact</a>
+                    <a href="contact.html"
+                        class="ml-2 bg-guindo text-white text-xs font-bold tracking-widest uppercase px-5 py-2.5 rounded-full hover:bg-guindodark transition-all shadow-lg">Book
+                        Now</a>
+                </nav>
+                <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu"
+                    aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
+                    <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
+                    <span class="hamburger-bar block w-4 h-0.5 rounded transition-all duration-300"></span>
+                </button>
             </div>
         </div>
-        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/35 text-xs">
-            <p>&copy; 2025 Sabores de Bolivia &middot; Sucre, Bolivia</p>
-            <p>Hecho con <svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg> y ají en Sucre, Bolivia <svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></p>
+        <nav id="mobile-menu" class="hidden md:hidden bg-blanco border-t-2 border-guindo/10 shadow-xl"
+            aria-label="Mobile navigation">
+            <div class="flex flex-col px-5 py-5 gap-0.5">
+                <a href="index.html"
+                    class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors"><svg
+                        class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 2v2m-6 0v2m12-2v2m-9 4h6c1.1 0 2 .9 2 2v2c0 3.3-2.7 6-6 6H9c-3.3 0-6-2.7-6-6v-2c0-1.1.9-2 2-2z">
+                        </path>
+                    </svg> Cooking Classes</a>
+
+                <a href="spanish.html"
+                    class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors"><svg
+                        class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                        </path>
+                    </svg> Spanish Classes</a>
+                <a href="contact.html"
+                    class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors"><svg
+                        class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg> Contact</a>
+                <a href="contact.html"
+                    class="mobile-nav-link mt-4 text-center bg-guindo text-white font-bold py-3.5 rounded-full hover:bg-guindodark transition-colors shadow-md">Book
+                    Now →</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="page-hero-bg">
+                <img src="images/clases_español/clases_1.jpg"
+                    alt="Estudiante y profesora sonriendo y conversando en una clase de español en Sucre, Bolivia"
+                    class="w-full h-full object-cover object-[center_30%]">
+                <div class="page-hero-overlay"></div>
+            </div>
+            <!-- Bolivia tricolor accent lines -->
+            <div class="absolute bottom-0 left-0 right-0 flex z-10" aria-hidden="true">
+                <div class="flex-1 h-1 bg-bolvred opacity-70"></div>
+                <div class="flex-1 h-1 bg-bolvyellow opacity-70"></div>
+                <div class="flex-1 h-1 bg-bolvgreen opacity-70"></div>
+            </div>
+            <!-- Andean diamond overlay -->
+            <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+                style="background-image:repeating-linear-gradient(45deg,rgba(244,228,0,0.05) 0 2px,transparent 2px 30px),repeating-linear-gradient(-45deg,rgba(213,43,30,0.04) 0 2px,transparent 2px 30px);background-size:30px 30px;">
+            </div>
+            <div class="page-hero-content">
+                <p
+                    class="text-acento text-xs font-bold tracking-[0.3em] uppercase mb-5 flex items-center justify-center gap-3">
+                    <span class="w-8 h-px bg-bolvred inline-block"></span>
+                    <span class="w-2 h-2 bg-bolvyellow inline-block rotate-45"></span>
+                    Sucre, Bolivia &middot; Language Immersion
+                    <span class="w-2 h-2 bg-bolvgreen inline-block rotate-45"></span>
+                    <span class="w-8 h-px bg-bolvred inline-block"></span>
+                </p>
+                <h1 class="font-display font-bold text-5xl sm:text-6xl text-white leading-tight mb-5">
+                    Learn Spanish<br>
+                    <em class="text-acento font-semibold italic">con Lolo</em>
+                </h1>
+                <p class="text-white/80 text-xl max-w-xl mx-auto">Speak Spanish where it sounds its clearest — with a
+                    real Bolivian family, in the most beautiful city in the Andes.</p>
+            </div>
+        </section>
+
+        <!-- WHY SUCRE -->
+        <section class="py-24 bg-blanco">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="reveal-element">
+                        <div class="andean-rule" aria-hidden="true">
+                            <div class="andean-rule__line"></div>
+                        </div>
+                        <p class="section-eyebrow">Why Sucre?</p>
+                        <h2 class="font-display text-4xl sm:text-5xl font-bold text-negro mb-6 leading-tight">
+                            South America's<br>
+                            <em class="text-guindo italic">Spanish Capital</em>
+                        </h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-5">
+                            Sucre is widely considered the best city in Latin America to learn Spanish. Bolivians speak
+                            a clear, neutral, and friendly Spanish — no strong accents, no confusing local slang — just
+                            beautiful, standard Spanish you can use anywhere in the world.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                            And what better way to practice than in the sunny courtyard with Lorena (Lolo)? Classes are
+                            named "Español con Lolo" in her honor, as she leads the teaching. With her, Spanish is not
+                            just a subject — it is the language of your daily life.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-guindo/10">
+                                <div class="font-display font-bold text-2xl text-guindo">Neutral</div>
+                                <div class="text-xs text-gray-500 mt-1">accent-free Spanish</div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-guindo/10">
+                                <div class="font-display font-bold text-2xl text-guindo">A1–B2</div>
+                                <div class="text-xs text-gray-500 mt-1">all levels welcome</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Natural Proportions Gallery -->
+                    <div class="flex flex-col gap-5 reveal-element" data-delay="0.15">
+                        <!-- Top image: Market Classes -->
+                        <img src="images/clases_español/market_classes.jpg"
+                            alt="Practicando español mientras caminamos por Sucre" loading="lazy"
+                            class="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
+
+                        <!-- Bottom images: Classes 5 and 3 -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="images/clases_español/clases_5.jpg" alt="Estudiantes en clase de español"
+                                loading="lazy"
+                                class="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
+                            <img src="images/clases_español/clases_3.jpg" alt="Lorena enseñando español a una alumna"
+                                loading="lazy"
+                                class="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bolivia tricolor section divider -->
+        <div class="bolivia-stripe" aria-hidden="true">
+            <span class="stripe-red"></span>
+            <span class="stripe-yellow"></span>
+            <span class="stripe-green"></span>
         </div>
-    </div>
-</footer>
 
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/59170000000?text=Hi%20Familia%20Cejas!" target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1ebd5a] hover:-translate-y-1 transition-transform flex items-center justify-center group" style="box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);">
-    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-    <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-negro text-white text-xs font-bold rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">Chat with us!</span>
-</a>
+        <!-- CLASS OPTIONS -->
+        <section class="py-24 bg-negro relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true"
+                style="background-image:repeating-linear-gradient(45deg,#D99B29 0,#D99B29 1px,transparent 0,transparent 50%);background-size:18px 18px;">
+            </div>
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-20 reveal-element">
+                    <div class="andean-rule justify-center" aria-hidden="true">
+                        <div class="andean-rule__line"></div>
+                    </div>
+                    <p class="section-eyebrow text-acento/80">Our Methods</p>
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold text-white mb-5 leading-tight">
+                        Three Ways to<br><em class="text-acento italic">Learn</em>
+                    </h2>
+                    <p class="text-white/70 text-lg leading-relaxed">In-person, online, or full immersion — choose what
+                        fits your life and your goals.</p>
+                </div>
 
-<script src="script.js" defer></script>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Clases 1-on-1 Presenciales -->
+                    <article class="service-card service-card--featured reveal-element" data-delay="0"
+                        aria-label="Spanish class: Private 1-on-1 in Sucre">
+                        <div class="service-card-img-wrap">
+                            <img src="images/clases_español/clases_3.jpg"
+                                alt="Alumna estudiando español con Lolo en sesión 1-a-1" loading="lazy"
+                                class="service-card-img">
+                            <div class="service-card-badge bg-verde text-white">In-Person · Sucre</div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="font-display text-2xl font-bold text-white mb-2">Clases 1-on-1 con Lolo</h3>
+                            <p class="text-white/60 text-xs font-bold uppercase tracking-wider mb-4">Private · In-Person
+                                Sessions</p>
+                            <ul class="space-y-2 text-white/75 text-sm mb-6">
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Private 1-on-1 sessions in our
+                                    sunny patio</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Conversational focus — zero
+                                    boring textbooks</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Card games (Ligretto) &
+                                    real-life dynamics</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Levels A1 to B1 — from zero to
+                                    fluent speaker</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Morning or afternoon —
+                                    flexible schedule</li>
+                            </ul>
+                            <div class="flex items-end justify-between py-3.5 mb-5 border-t border-white/10">
+                                <div>
+                                    <p class="font-display text-3xl font-bold text-acento leading-none">80 <span
+                                            class="text-xl font-semibold">BOB</span> <span
+                                            class="text-lg text-white/40 font-normal">/ hr</span></p>
+                                    <p class="text-white/45 text-xs mt-1">Face to face &nbsp;·&nbsp; per hour
+                                        &nbsp;·&nbsp; packs of 5 or 10 hrs available</p>
+                                </div>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-wider text-white/35 border border-white/15 rounded-full px-2.5 py-1">1-on-1</span>
+                            </div>
+                            <a href="contact.html" class="card-cta">Book In-Person Classes →</a>
+                        </div>
+                    </article>
+
+                    <!-- Clases Online -->
+                    <article class="service-card reveal-element" data-delay="0.12"
+                        aria-label="Spanish class: Live Online">
+                        <div class="service-card-img-wrap">
+                            <img src="images/clases_español/clases_4.jpg"
+                                alt="Lolo enseñando español en clase online en vivo" loading="lazy"
+                                class="service-card-img">
+                            <div class="service-card-badge" style="background:#4A7C8C;color:#fff;">Online · Live</div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="font-display text-2xl font-bold text-white mb-2">Clases Online con Lolo</h3>
+                            <p class="text-white/60 text-xs font-bold uppercase tracking-wider mb-4">Live Video ·
+                                Anywhere in the World</p>
+                            <ul class="space-y-2 text-white/75 text-sm mb-6">
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Live 1-on-1 video sessions
+                                    from anywhere</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Same conversational method —
+                                    no dry grammar</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Interactive games and
+                                    real-world scenarios</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Levels A1 to B1 — at your own
+                                    rhythm</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Book weekly or intensive
+                                    crash-course blocks</li>
+                            </ul>
+                            <div class="flex items-end justify-between py-3.5 mb-5 border-t border-white/10">
+                                <div>
+                                    <p class="font-display text-3xl font-bold text-acento leading-none">$10 <span
+                                            class="text-xl font-semibold">USD</span> <span
+                                            class="text-lg text-white/40 font-normal">/ hr</span></p>
+                                    <p class="text-white/45 text-xs mt-1">Via Zoom or Google Meet &nbsp;·&nbsp; packs of
+                                        5 or 10 hrs available</p>
+                                </div>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-wider text-white/35 border border-white/15 rounded-full px-2.5 py-1">Online</span>
+                            </div>
+                            <a href="contact.html" class="card-cta">Book Online Classes →</a>
+                        </div>
+                    </article>
+
+                    <!-- Paquete Inmersión Total -->
+                    <article class="service-card reveal-element" data-delay="0.24"
+                        aria-label="Spanish class: Total Immersion Package">
+                        <div class="service-card-img-wrap">
+                            <img src="images/clases_español/clases_1.jpg"
+                                alt="Estudiante cocinando con Doña Marlene durante la clase de inmersión total"
+                                loading="lazy" class="service-card-img">
+                            <div class="service-card-badge bg-acento text-negro">Most Popular ★</div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="font-display text-2xl font-bold text-white mb-2">Paquete Inmersión Total</h3>
+                            <p class="text-acento text-xs font-bold uppercase tracking-wider mb-4">Spanish + Cooking ·
+                                Full Experience</p>
+                            <ul class="space-y-2 text-white/75 text-sm mb-6">
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Spanish classes with Lolo
+                                    (1-on-1, A1–B1)</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> <strong>1 cooking class with
+                                        Doña Marlene included</strong></li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Practice Spanish
+                                    <em>while</em> you cook traditional recipes</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Daily family meals & authentic
+                                    Sucre life</li>
+                                <li class="flex gap-2"><span class="text-acento">✓</span> Tailored to your stay — days,
+                                    weeks or longer</li>
+                            </ul>
+                            <div class="flex items-end justify-between py-3.5 mb-5 border-t border-white/10">
+                                <div>
+                                    <p class="font-display text-3xl font-bold text-acento leading-none">A consultar</p>
+                                    <p class="text-white/45 text-xs mt-1">Customised to your stay &nbsp;·&nbsp; contact
+                                        for pricing</p>
+                                </div>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-wider text-white/35 border border-white/15 rounded-full px-2.5 py-1">Custom</span>
+                            </div>
+                            <a href="contact.html" class="card-cta card-cta--featured">Design My Immersion →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Level guide -->
+                <div class="mt-14 border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto reveal-element"
+                    data-delay="0.3">
+                    <h3 class="font-display text-xl font-bold text-white text-center mb-2">Which Level Are You?</h3>
+                    <p class="text-center text-white/45 text-sm mb-8">Lolo's program takes you from absolute beginner to
+                        confident, independent speaker — levels A1 through B1.</p>
+                    <div class="grid grid-cols-3 gap-6 max-w-sm mx-auto">
+                        <div class="text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-bolvgreen/30 border-2 border-bolvgreen flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg">
+                                A1</div>
+                            <div class="text-white/65 text-xs font-semibold uppercase tracking-wider">Beginner</div>
+                            <div class="text-white/35 text-xs mt-1">Zero Spanish</div>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-bolvgreen/50 border-2 border-bolvgreen flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg">
+                                A2</div>
+                            <div class="text-white/65 text-xs font-semibold uppercase tracking-wider">Elementary</div>
+                            <div class="text-white/35 text-xs mt-1">Basic phrases</div>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-acento/50 border-2 border-acento flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg">
+                                B1</div>
+                            <div class="text-white/65 text-xs font-semibold uppercase tracking-wider">Intermediate</div>
+                            <div class="text-white/35 text-xs mt-1">Fluent & free</div>
+                        </div>
+                    </div>
+                    <p class="text-center text-white/50 text-sm mt-8">Not sure of your level? <a
+                            href="https://wa.me/59169686019?text=Hi%20Lorena!%20I'd%20like%20a%20free%20Spanish%20level%20assessment"
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-acento hover:underline font-semibold">Message us on WhatsApp</a> and we'll do a
+                        quick free assessment — no pressure.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMBINE THE EXPERIENCE -->
+        <section class="py-24 bg-guindolight wiphala-bg">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
+                <div class="text-center mb-14 reveal-element">
+                    <div class="andean-rule justify-center" aria-hidden="true">
+                        <div class="andean-rule__line"></div>
+                    </div>
+                    <p class="section-eyebrow">The Full Immersion</p>
+                    <h2 class="font-display text-4xl font-bold text-negro leading-tight">
+                        Combine Everything for<br><em class="text-guindo italic">Total Immersion</em>
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto mt-4">The ultimate Sucre experience: learn
+                        Spanish, cook traditional food, and live with a real Bolivian family — all in one place.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div class="bg-white rounded-2xl p-6 shadow-md text-center border-t-4 border-guindo reveal-element">
+                        <div class="text-5xl mb-4" aria-hidden="true"><svg
+                                class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                </path>
+                            </svg></div>
+                        <h3 class="font-display text-xl font-bold text-negro mb-2">Spanish Classes</h3>
+                        <p class="text-gray-500 text-sm">Formal or conversational — or both! 1-on-1 or small groups.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-md text-center border-t-4 border-acento reveal-element"
+                        data-delay="0.1">
+                        <div class="text-5xl mb-4" aria-hidden="true"><svg
+                                class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 2v2m-6 0v2m12-2v2m-9 4h6c1.1 0 2 .9 2 2v2c0 3.3-2.7 6-6 6H9c-3.3 0-6-2.7-6-6v-2c0-1.1.9-2 2-2z">
+                                </path>
+                            </svg></div>
+                        <h3 class="font-display text-xl font-bold text-negro mb-2">Cooking Classes</h3>
+                        <p class="text-gray-500 text-sm">Practice Spanish while you grind spices and repulgar salteñas.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center mt-12 reveal-element" data-delay="0.3">
+                    <a href="contact.html"
+                        class="inline-flex items-center gap-2 bg-guindo text-white font-bold px-10 py-4 rounded-full hover:bg-guindodark transition-all shadow-xl transform hover:-translate-y-1 text-lg">
+                        Design My Immersion Package →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIAL -->
+        <section class="py-24 bg-blanco">
+            <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+                <div class="andean-rule justify-center" aria-hidden="true">
+                    <div class="andean-rule__line"></div>
+                </div>
+                <p class="section-eyebrow">Student Story</p>
+                <blockquote class="testimonial-card max-w-2xl mx-auto mt-8 reveal-element">
+                    <div class="text-acento text-5xl font-display leading-none mb-4 text-left" aria-hidden="true">"
+                    </div>
+                    <p class="text-gray-700 text-xl italic leading-relaxed mb-6">
+                        I came to Sucre speaking almost zero Spanish. After two weeks of classes with Lorena (Lolo) and
+                        cooking with Doña Marlene every day, I left able to hold full conversations. The immersion
+                        method works incredibly fast because you never leave the language — you live in it.
+                    </p>
+                    <footer class="flex items-center gap-4 justify-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-verde/20 flex items-center justify-center text-verde font-bold font-display">
+                            M</div>
+                        <div class="text-left">
+                            <div class="font-semibold text-negro">Marco V.</div>
+                            <div class="text-gray-500 text-sm"><svg class="w-5 h-5 inline-block mr-1 align-text-bottom"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                    </path>
+                                </svg> Rome, Italy &middot; 3 weeks in Sucre</div>
+                        </div>
+                        <div class="ml-auto text-acento font-bold text-sm"><svg
+                                class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
+                                </path>
+                            </svg><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
+                                </path>
+                            </svg><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
+                                </path>
+                            </svg><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
+                                </path>
+                            </svg><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
+                                </path>
+                            </svg></div>
+                    </footer>
+                </blockquote>
+            </div>
+        <!-- CLASSROOM LOCATION SECTION -->
+        <section class="py-20 bg-blanco border-t border-gray-100" aria-labelledby="classroom-location-heading">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
+                <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+                    
+                    <!-- Left Info Card (5 cols) -->
+                    <div class="lg:col-span-5 bg-negro text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl reveal-element">
+                        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: repeating-linear-gradient(45deg, #9F814B 0, #9F814B 1px, transparent 0, transparent 50%); background-size: 16px 16px;"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="andean-rule mb-5" aria-hidden="true"><div class="andean-rule__line"></div></div>
+                            <p class="section-eyebrow text-acento mb-2">In-Person Sessions</p>
+                            <h2 id="classroom-location-heading" class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+                                Our Sunny Patio in <em class="text-acento italic">Sucre</em>
+                            </h2>
+                            <p class="text-white/70 text-sm sm:text-base leading-relaxed mb-6">
+                                For face-to-face classes, we welcome you to our quiet, sunlit family patio located in the heart of Sucre's historic colonial center.
+                            </p>
+
+                            <div class="space-y-4 pt-4 border-t border-white/10">
+                                <div class="flex items-start gap-3.5">
+                                    <div class="w-9 h-9 rounded-full bg-acento/20 flex items-center justify-center flex-shrink-0 mt-0.5 text-acento">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-white font-semibold text-sm">Classroom Address</h3>
+                                        <p class="text-white/70 text-xs sm:text-sm mt-0.5">Bernardo Bitti #9, Sucre, Bolivia</p>
+                                        <p class="text-white/40 text-[11px] mt-0.5">10 min walk from Plaza 25 de Mayo</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3.5">
+                                    <div class="w-9 h-9 rounded-full bg-acento/20 flex items-center justify-center flex-shrink-0 mt-0.5 text-acento">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-white font-semibold text-sm">Google Rating</h3>
+                                        <p class="text-white/70 text-xs sm:text-sm mt-0.5"><span class="text-bolvyellow font-bold">5.0 ★★★★★</span> Google Maps Reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative z-10 pt-8 mt-6 border-t border-white/10 flex flex-wrap gap-3">
+                            <a href="https://maps.google.com/?cid=13271966205869375353" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center gap-2 bg-acento text-negro text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-full hover:bg-yellow-500 transition-all shadow-md">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Open in Google Maps
+                            </a>
+                            <a href="https://wa.me/59169686019?text=Hi%20Lorena!%20I'm%20coming%20for%20a%20Spanish%20lesson" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center gap-2 bg-white/10 text-white border border-white/20 text-xs font-semibold px-4 py-3 rounded-full hover:bg-white/20 transition-all">
+                                Directions via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Interactive Map Embed (7 cols) -->
+                    <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 min-h-[380px] sm:min-h-[460px] relative reveal-element bg-gray-100" data-delay="0.15">
+                        <iframe 
+                            title="Sabores de Bolivia - Spanish Classes Location Map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7542.819732944242!2d-65.26237920642087!3d-19.045708799999982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf002dd12fa5%3A0xb82fa1e07ab53f79!2sSabores%20de%20Bolivia%20-%20Cooking%20Class%20Sucre!5e0!3m2!1ses-419!2sbo!4v1788899411555!5m2!1ses-419!2sbo" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 100%; width: 100%; display: block;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CROSS-LINKS -->
+        <section class="promo-banner py-16" aria-label="More services">
+            <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+                <p class="text-acento text-xs font-bold tracking-widest uppercase mb-4 reveal-element">Complete your
+                    experience</p>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8 reveal-element" data-delay="0.1">
+                    <em class="text-acento italic">Habla.</em> Cook.
+                </h2>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 reveal-element" data-delay="0.2">
+                    <a href="index.html"
+                        class="bg-white/10 border border-white/20 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/20 transition-all"><svg
+                            class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 2v2m-6 0v2m12-2v2m-9 4h6c1.1 0 2 .9 2 2v2c0 3.3-2.7 6-6 6H9c-3.3 0-6-2.7-6-6v-2c0-1.1.9-2 2-2z">
+                            </path>
+                        </svg> Cooking Classes</a>
+
+                    <a href="contact.html"
+                        class="bg-acento text-negro font-bold px-7 py-3 rounded-full hover:bg-yellow-500 transition-all shadow-lg">Reserve
+                        Your First Class →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-negro text-white pt-16 pb-8">
+        <div class="bolivia-stripe mb-12 opacity-60" aria-hidden="true">
+            <span class="stripe-red"></span><span class="stripe-yellow"></span><span class="stripe-green"></span>
+        </div>
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2">
+                    <div class="font-display font-bold text-2xl text-guindo mb-1">Sabores de <span
+                            class="font-light italic text-acento">Bolivia</span></div>
+                    <p class="text-white/55 text-sm leading-relaxed mb-4 max-w-xs">Sharing Bolivia's culinary heritage
+                        and language with travelers from around the world.</p>
+                    <a href="https://wa.me/59169686019?text=Hi%20Familia%20Cejas!" target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 bg-[#25D366] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-[#1aab52] transition-all shadow-md">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                        </svg>
+                        WhatsApp Us
+                    </a>
+                </div>
+                <div>
+                    <h3 class="font-body text-xs font-bold uppercase tracking-widest text-acento mb-4">Explore</h3>
+                    <ul class="space-y-2.5">
+                        <li><a href="index.html" class="footer-link">Cooking Classes</a></li>
+                        <li><a href="spanish.html" class="footer-link">Spanish Classes</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact & Book</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-body text-xs font-bold uppercase tracking-widest text-acento mb-4">Find Us</h3>
+                    <address class="not-italic space-y-2.5 text-white/55 text-sm">
+                        <p>
+                            <a href="https://maps.google.com/?cid=13271966205869375353" target="_blank" rel="noopener noreferrer" class="hover:text-acento transition-colors flex items-start gap-1.5">
+                                <svg class="w-4 h-4 mt-1 flex-shrink-0 text-acento" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <span><strong class="text-white font-semibold">Bernardo Bitti #9</strong><br>A 10 min walk from Plaza 25 de Mayo,<br>Sucre, Bolivia</span>
+                            </a>
+                        </p>
+                        <p><svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg> +591 69 686 019</p>
+                    </address>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/35 text-xs">
+                <p>&copy; 2025 Sabores de Bolivia &middot; Sucre, Bolivia</p>
+                <p>Hecho con <svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                        </path>
+                    </svg> y ají en Sucre, Bolivia <svg class="w-5 h-5 inline-block mr-1 align-text-bottom" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                        </path>
+                    </svg></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/59169686019?text=Hi%20Familia%20Cejas!" target="_blank" rel="noopener noreferrer"
+        aria-label="Message us on WhatsApp"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1ebd5a] hover:-translate-y-1 transition-transform flex items-center justify-center group"
+        style="box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg>
+        <span
+            class="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-negro text-white text-xs font-bold rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">Chat
+            with us!</span>
+    </a>
+
+    <script src="script.js" defer></script>
 </body>
+
 </html>
-
-

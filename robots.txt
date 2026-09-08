@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sabores-de-bolivia.pages.dev/sitemap.xml
