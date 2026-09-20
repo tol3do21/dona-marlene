@@ -527,6 +527,53 @@
 </a>
 
 <script src="script.js" defer></script>
+
+<!-- GA4 Event Tracking: WhatsApp, CTAs, Scroll Depth -->
+<script>
+(function () {
+  if (typeof gtag !== 'function') return;
+
+  // --- WhatsApp clicks (floating button + footer) ---
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var loc = el.classList.contains('fixed') ? 'floating_button' : 'inline_link';
+      gtag('event', 'whatsapp_click', {
+        event_category: 'engagement',
+        event_label: loc,
+        page: 'index'
+      });
+    });
+  });
+
+  // --- CTA clicks (Book Now / Book This Class / Book Everything) ---
+  document.querySelectorAll('a[href="contact.html"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      gtag('event', 'cta_click', {
+        event_category: 'engagement',
+        event_label: (el.textContent.trim() || 'cta'),
+        page: 'index'
+      });
+    });
+  });
+
+  // --- Scroll depth: 50% and 90% ---
+  var scrollFired = { '50': false, '90': false };
+  window.addEventListener('scroll', function () {
+    var scrollPct = Math.round(
+      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+    );
+    if (scrollPct >= 50 && !scrollFired['50']) {
+      scrollFired['50'] = true;
+      gtag('event', 'scroll_depth', { event_category: 'behavior', event_label: '50_percent', page: 'index' });
+    }
+    if (scrollPct >= 90 && !scrollFired['90']) {
+      scrollFired['90'] = true;
+      gtag('event', 'scroll_depth', { event_category: 'behavior', event_label: '90_percent', page: 'index' });
+    }
+  }, { passive: true });
+
+})();
+</script>
 </body>
 </html>
 

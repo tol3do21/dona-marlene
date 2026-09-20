@@ -730,6 +730,60 @@ function cfFillSummary() {
 </a>
 
 <script src="script.js" defer></script>
+
+<!-- GA4 Event Tracking: Form Submit, WhatsApp, Map -->
+<script>
+(function () {
+  if (typeof gtag !== 'function') return;
+
+  // --- Booking form submission ---
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', function () {
+      gtag('event', 'form_submit', {
+        event_category: 'conversion',
+        event_label: 'booking_form',
+        page: 'contact'
+      });
+    });
+  }
+
+  // --- WhatsApp clicks (floating button + all inline links) ---
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var loc = el.classList.contains('fixed') ? 'floating_button' : 'inline_link';
+      gtag('event', 'whatsapp_click', {
+        event_category: 'conversion',
+        event_label: loc,
+        page: 'contact'
+      });
+    });
+  });
+
+  // --- Google Maps click ---
+  document.querySelectorAll('a[href*="maps.google.com"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      gtag('event', 'map_click', {
+        event_category: 'engagement',
+        event_label: 'google_maps',
+        page: 'contact'
+      });
+    });
+  });
+
+  // --- CTA clicks (Book Now) ---
+  document.querySelectorAll('a[href="contact.html"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      gtag('event', 'cta_click', {
+        event_category: 'engagement',
+        event_label: (el.textContent.trim() || 'cta'),
+        page: 'contact'
+      });
+    });
+  });
+
+})();
+</script>
 </body>
 </html>
 
