@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1J3540D3K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L1J3540D3K');
+    </script>
+    <title>Live with a Bolivian Family in Sucre | Authentic Homestay Sucre Bolivia</title>
+    <meta name="description" content="Live with the Cejas family in Sucre, Bolivia. Not just a place to stay — share home-cooked breakfast, lunch, and dinner at the family table with Doña Marlene and her daughters. Spacious family apartment 10–15 min walk from Plaza 25 de Mayo. Authentic cultural & Spanish immersion.">
+    <meta name="keywords" content="homestay sucre bolivia, live with a bolivian family, stay with bolivian family, accommodation sucre bolivia, family homestay sucre, spanish immersion sucre bolivia, familia cejas homestay">
+    <meta property="og:title" content="Live with a Bolivian Family in Sucre | Sabores de Bolivia Homestay">
+    <meta property="og:description" content="Share daily meals at the family table, practice Spanish, and live like a local in our spacious family apartment in Sucre.">
+    <meta property="og:image" content="images/homestay/sala_1.jpg">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: {
+                    guindo: '#6B1D2B', guindodark: '#4A1320', guindobright: '#8B2438',
+                    acento: 'var(--color-acento)', acentolight: 'var(--color-acento-light)',
+                    verde: '#3D6B45', verdelight: '#E4EFE6',
+                    negro: '#141010', blanco: '#FFFFFF',
+                    bolvred:'#D52B1E', bolvyellow:'#F4E400', bolvgreen:'#007934'
+                },
+                fontFamily: {
+                    display:['Playfair Display','serif'],
+                    body:['Open Sans','sans-serif'],
+                    handwritten:['Caveat','cursive']
+                }
+            }}
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root { --color-acento: #855E40; --color-acento-light: #E6D6C8; }
+
+        /* Guestbook Journal */
+        .guestbook-journal {
+            background: #fdf9f1;
+            border-radius: 1rem;
+            box-shadow: 0 24px 80px rgba(0,0,0,0.18), inset 0 0 0 1px rgba(133,94,64,0.12);
+            position: relative;
+            overflow: hidden;
+        }
+        .guestbook-journal::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 40px;
+            background: linear-gradient(to right, #c8a882 0%, #e8d5bb 40%, transparent 100%);
+            border-right: 2px solid rgba(133,94,64,0.25);
+            z-index: 1;
+        }
+        .guestbook-lines {
+            background-image: repeating-linear-gradient(transparent, transparent 27px, rgba(133,94,64,0.12) 27px, rgba(133,94,64,0.12) 28px);
+            background-size: 100% 28px;
+        }
+        .handwritten { font-family: 'Caveat', cursive; }
+
+        .entry-page { display: none; }
+        .entry-page.active {
+            display: block;
+            animation: page-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+        @keyframes page-in {
+            from { opacity: 0; transform: translateX(20px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .page-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: rgba(133,94,64,0.25);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+        .page-dot.active { background: #855E40; transform: scale(1.35); }
+
+        .stars { color: #D99B29; letter-spacing: 1px; }
+
+        .room-card {
+            background: white;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .room-card:hover { transform: translateY(-8px); box-shadow: 0 24px 64px rgba(0,0,0,0.16); }
+        .room-card-img-wrap { position: relative; overflow: hidden; height: 280px; }
+        .room-card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+        .room-card:hover .room-card-img { transform: scale(1.05); }
+
+        .amenity-pill {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: #f4eedf; color: #5c3d1f;
+            font-size: 0.78rem; font-weight: 600;
+            padding: 0.3rem 0.75rem; border-radius: 9999px;
+        }
+
+
+        .sticky-note {
+            background: #fffde7; padding: 1rem; border-radius: 3px;
+            box-shadow: 3px 3px 12px rgba(0,0,0,0.12);
+            transform: rotate(-2deg);
+            font-family: 'Caveat', cursive; font-size: 1.05rem; line-height: 1.5; color: #4a3728;
+        }
+    </style>
+</head>
+<body class="bg-blanco font-body text-negro">
+
+<!-- Bolivia Tricolor Stripe -->
+<div class="bolivia-stripe" aria-hidden="true">
+    <span class="stripe-red"></span>
+    <span class="stripe-yellow"></span>
+    <span class="stripe-green"></span>
+</div>
+
+<!-- Sticky Navbar -->
+<header id="navbar" class="fixed top-6 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2.5" aria-label="Sabores de Bolivia Home">
+                <img src="logo_sabores.png" alt="Logo Sabores de Bolivia" class="w-12 h-12 object-contain flex-shrink-0">
+                <div id="logo-name" class="flex flex-col justify-center transition-colors">
+                    <span class="font-display font-bold text-xl text-acento leading-none">Sabores de Bolivia</span>
+                    <span class="font-body text-[0.55rem] tracking-[0.2em] uppercase text-gray-500 mt-1">Experiencia Culinaria</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+                <a href="index.html"         class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Cooking Classes</a>
+                <a href="espanolconlolo.html" class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Spanish Classes</a>
+                <a href="homestay.html"       class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Homestay</a>
+                <a href="contact.html"        class="nav-anchor text-xs font-semibold tracking-widest uppercase hover:text-acento transition-colors">Contact</a>
+                <a href="contact.html" class="ml-2 bg-guindo text-white text-xs font-bold tracking-widest uppercase px-5 py-2.5 rounded-full hover:bg-guindodark transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-px">Book Now</a>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
+                <span class="hamburger-bar block w-6 h-0.5 rounded transition-all duration-300"></span>
+                <span class="hamburger-bar block w-4 h-0.5 rounded transition-all duration-300"></span>
+            </button>
+        </div>
+    </div>
+    <nav id="mobile-menu" class="hidden md:hidden bg-blanco border-t-2 border-guindo/10 shadow-xl" aria-label="Mobile navigation">
+        <div class="flex flex-col px-5 py-5 gap-0.5">
+            <a href="index.html"         class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors">Cooking Classes</a>
+            <a href="espanolconlolo.html" class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors">Spanish Classes</a>
+            <a href="homestay.html"       class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors">Homestay</a>
+            <a href="contact.html"        class="mobile-nav-link py-3 border-b border-gray-100 text-sm font-semibold text-negro hover:text-guindo transition-colors">Contact</a>
+            <a href="contact.html"        class="mobile-nav-link mt-4 text-center bg-guindo text-white font-bold py-3.5 rounded-full hover:bg-guindodark transition-colors shadow-md">Book a Stay</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="images/homestay/sala_1.jpg" alt="Sala de estar amplia y acogedora del departamento de la Familia Cejas en Sucre, Bolivia" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-negro/90 via-negro/75 to-negro/90"></div>
+    </div>
+    <div class="absolute inset-0 z-1 pointer-events-none" aria-hidden="true" style="background-image:repeating-linear-gradient(45deg,rgba(244,228,0,0.06) 0 2px,transparent 2px 30px),repeating-linear-gradient(-45deg,rgba(213,43,30,0.05) 0 2px,transparent 2px 30px);background-size:30px 30px;"></div>
+    <div class="absolute bottom-0 left-0 right-0 flex z-10" aria-hidden="true">
+        <div class="flex-1 h-1 bg-bolvred opacity-70"></div>
+        <div class="flex-1 h-1 bg-bolvyellow opacity-70"></div>
+        <div class="flex-1 h-1 bg-bolvgreen opacity-70"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-5 text-center text-white pt-24">
+        <div class="reveal-element">
+            <p class="text-acento font-body text-xs font-bold tracking-[0.3em] uppercase mb-6 flex items-center justify-center gap-3">
+                <span class="w-8 h-px bg-bolvred inline-block"></span>
+                <span class="w-2 h-2 bg-bolvyellow inline-block rotate-45"></span>
+                Sucre, Bolivia &middot; Bernardo Bitti #9
+                <span class="w-2 h-2 bg-bolvgreen inline-block rotate-45"></span>
+                <span class="w-8 h-px bg-bolvred inline-block"></span>
+            </p>
+        </div>
+        <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6 reveal-element" data-delay="0.15">
+            Live with a<br>
+            <em class="text-acento font-semibold drop-shadow-lg">Bolivian Family</em><br>
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-normal">in Sucre, Bolivia</span>
+        </h1>
+        <p class="font-body text-lg sm:text-xl text-white/85 max-w-3xl mx-auto leading-relaxed mb-10 reveal-element" data-delay="0.3">
+            This is not a hostel or typical hotel &mdash; it is a true family immersion. Share home-cooked breakfast, lunch, and dinner around the table with Do&ntilde;a Marlene and her daughters in our spacious apartment, just a 10&ndash;15 minute walk from Plaza 25 de Mayo.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center reveal-element" data-delay="0.45">
+            <a href="#rooms" class="bg-guindo text-white font-bold px-8 py-4 rounded-full hover:bg-guindodark transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">See Our Rooms</a>
+            <a href="https://wa.me/59169686019?text=Hi%20Familia%20Cejas!%20I%27m%20interested%20in%20living%20with%20your%20family%20(Homestay%20Sucre)." target="_blank" rel="noopener noreferrer"
+               class="bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all">Ask About Availability</a>
+        </div>
+        <div class="mt-14 flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-white/80 text-sm reveal-element" data-delay="0.6">
+            <div class="inline-flex items-center gap-2">
+                <svg class="w-4 h-4 text-acento flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                <span>Spacious family apartment</span>
+            </div>
+            <div class="inline-flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-bolvred inline-block flex-shrink-0" aria-hidden="true"></span>
+                <span>2 private rooms</span>
+            </div>
+            <div class="inline-flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-bolvyellow inline-block flex-shrink-0" aria-hidden="true"></span>
+                <span>Breakfast, lunch &amp; dinner with family</span>
+            </div>
+            <div class="inline-flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-bolvgreen inline-block flex-shrink-0" aria-hidden="true"></span>
+                <span>100% Spanish immersion</span>
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50 text-xs">
+        <span class="scroll-line block w-px h-10 bg-gradient-to-b from-white/50 to-transparent"></span>
+        scroll
+    </div>
+</section>
+
+<!-- ===== WHY STAY ===== -->
+<section id="why" class="py-24 bg-blanco wiphala-bg">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div class="grid grid-cols-5 gap-4 items-end py-6 reveal-element" data-delay="0">
+                <div class="col-span-3 rounded-2xl overflow-hidden shadow-[0_28px_70px_rgba(0,0,0,0.22)] border-[5px] border-white -rotate-2 h-[28rem] sm:h-[34rem] transition-transform duration-500 hover:rotate-0 hover:scale-[1.02]">
+                    <img src="images/marlene_2.jpg" alt="Doña Marlene en la calidez de su hogar en Sucre" loading="lazy" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="col-span-2 flex flex-col gap-5 -mb-6">
+                    <div class="rounded-2xl overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.18)] border-[5px] border-white rotate-2 h-[17rem] sm:h-[19rem] transition-transform duration-500 hover:rotate-0 hover:scale-[1.02]">
+                        <img src="images/homestay/sala_1.jpg" alt="Sala de estar familiar de la Familia Cejas en Sucre" loading="lazy" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.15)] border-[5px] border-white -rotate-1 h-[15rem] sm:h-[17rem] transition-transform duration-500 hover:rotate-0 hover:scale-[1.02]">
+                        <img src="images/homestay/sala_2.jpg" alt="Ambiente hogareño y acogedor en el departamento familiar" loading="lazy" class="w-full h-full object-cover object-center">
+                    </div>
+                </div>
+            </div>
+            <div class="reveal-element" data-delay="0.1">
+                <div class="andean-rule" aria-hidden="true"><div class="andean-rule__line"></div></div>
+                <p class="section-eyebrow">Our Homestay Philosophy</p>
+                <h2 class="font-display text-4xl sm:text-5xl font-bold text-negro mb-6 leading-tight">
+                    Not Just Lodging.<br><em class="text-guindo italic font-semibold">Live with a Bolivian Family.</em>
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-5">
+                    Our spacious family apartment on <strong>Calle Bernardo Bitti #9</strong> is an easy 10&ndash;15 minute walk from Plaza 25 de Mayo. Here, you are not renting an anonymous room &mdash; you are welcoming yourself into genuine family life.
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed mb-10">
+                    You sit together with Do&ntilde;a Marlene and her daughters for breakfast, lunch, and dinner at the family table. You share home-cooked meals, daily laughter, cultural stories, and natural Spanish conversation. That is why travelers from around the world leave so touched and write the beautiful notes in our guestbook &mdash; you arrive as a traveler and leave as family.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="value-chip flex items-center gap-3 p-3 bg-[#fdf9f1] border border-[#e8d5bb]/60 rounded-xl">
+                        <svg class="w-6 h-6 text-acento flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+                        <span class="font-semibold text-sm text-[#4a3728]">Meals with the family</span>
+                    </div>
+                    <div class="value-chip flex items-center gap-3 p-3 bg-[#fdf9f1] border border-[#e8d5bb]/60 rounded-xl">
+                        <svg class="w-6 h-6 text-acento flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        <span class="font-semibold text-sm text-[#4a3728]">Spacious family apartment</span>
+                    </div>
+                    <div class="value-chip flex items-center gap-3 p-3 bg-[#fdf9f1] border border-[#e8d5bb]/60 rounded-xl">
+                        <svg class="w-6 h-6 text-acento flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        <span class="font-semibold text-sm text-[#4a3728]">Private room &amp; bath</span>
+                    </div>
+                    <div class="value-chip flex items-center gap-3 p-3 bg-[#fdf9f1] border border-[#e8d5bb]/60 rounded-xl">
+                        <svg class="w-6 h-6 text-acento flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+                        <span class="font-semibold text-sm text-[#4a3728]">High-speed WiFi</span>
+                    </div>
+                    <div class="value-chip flex items-center gap-3 p-3 bg-[#fdf9f1] border border-[#e8d5bb]/60 rounded-xl">
+                        <svg class="w-6 h-6 text-acento flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        <span class="font-semibold text-sm text-[#4a3728]">Daily Spanish immersion</span>
+                    </div>
+                    <div class="value-chip flex items-center gap-3 p-3 bg-[#fdf9f1] border border-[#e8d5bb]/60 rounded-xl">
+                        <svg class="w-6 h-6 text-acento flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        <span class="font-semibold text-sm text-[#4a3728]">Authentic Bolivian cooking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ROOMS ===== -->
+<section id="rooms" class="py-24" style="background:linear-gradient(180deg,#f9f5ef 0%,#ffffff 100%);">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-14 reveal-element">
+            <div class="andean-rule mx-auto" aria-hidden="true"><div class="andean-rule__line"></div></div>
+            <p class="section-eyebrow">Accommodation</p>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-negro leading-tight">Two Private <em class="text-guindo italic font-semibold">Rooms</em></h2>
+            <p class="text-gray-500 mt-4 max-w-xl mx-auto">Each room is simple, clean and full of light &mdash; the way a traveler's room should be.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <article class="room-card reveal-element flex flex-col h-full" data-delay="0" aria-label="Habitación Doble">
+                <div class="room-card-img-wrap flex-shrink-0">
+                    <img src="images/homestay/habitacion_doble.jpg" alt="Habitación doble privada en la casa de la Familia Cejas en Sucre" loading="lazy" class="room-card-img">
+                    <div class="absolute top-4 right-4 bg-guindo text-white text-xs font-bold tracking-wide px-3 py-1.5 rounded-full shadow-md">Available</div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-5">
+                        <span class="font-display text-white text-2xl font-bold italic">Habitación Doble</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Spacious private bedroom with comfortable double bed, bright natural light and direct access to common areas. Peaceful retreat after studying or exploring Sucre.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="amenity-pill">Double bed</span>
+                            <span class="amenity-pill">Private bathroom</span>
+                            <span class="amenity-pill">High-speed WiFi</span>
+                            <span class="amenity-pill">Exterior view</span>
+                            <span class="amenity-pill">Towels &amp; linens</span>
+                            <span class="amenity-pill">Hot water 24h</span>
+                            <span class="amenity-pill">Wardrobe</span>
+                            <span class="amenity-pill">Study desk</span>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-100 pt-4 mt-auto">
+                        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                            <div>
+                                <div class="space-y-1">
+                                    <div class="flex items-baseline gap-1.5">
+                                        <span class="font-display text-2xl font-bold text-guindo leading-none">200 <span class="text-sm font-semibold text-gray-400">BOB</span></span>
+                                        <span class="text-xs text-gray-500 font-semibold">/ night &middot; 1 person</span>
+                                    </div>
+                                    <div class="flex items-baseline gap-1.5">
+                                        <span class="font-display text-xl font-bold text-guindo leading-none">180 <span class="text-xs font-semibold text-gray-400">BOB</span></span>
+                                        <span class="text-xs text-gray-500 font-semibold">/ person / night &middot; 2 persons</span>
+                                    </div>
+                                </div>
+                                <p class="text-gray-400 text-xs mt-1.5 font-medium">All meals with family included</p>
+                            </div>
+                            <a href="https://wa.me/59169686019?text=Hi!%20I%20would%20like%20to%20book%20the%20Double%20Room%20(Habitacion%20Doble)." target="_blank" rel="noopener noreferrer"
+                               class="self-start sm:self-center bg-guindo text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full hover:bg-guindodark transition-all shadow-md whitespace-nowrap">Ask &amp; Book</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="room-card reveal-element flex flex-col h-full" data-delay="0.12" aria-label="Habitación Simple">
+                <div class="room-card-img-wrap flex-shrink-0">
+                    <img src="images/homestay/habitacion_simple.jpg" alt="Habitación individual privada en el departamento de la Familia Cejas en Sucre" loading="lazy" class="room-card-img">
+                    <div class="absolute top-4 right-4 bg-verde text-white text-xs font-bold tracking-wide px-3 py-1.5 rounded-full shadow-md">Available</div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-5">
+                        <span class="font-display text-white text-2xl font-bold italic">Habitación Simple</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Cozy private room with single bed, quiet atmosphere, study desk and high-speed WiFi. Perfect for solo travelers and Spanish immersion students.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="amenity-pill">Single bed</span>
+                            <span class="amenity-pill">Private bathroom</span>
+                            <span class="amenity-pill">High-speed WiFi</span>
+                            <span class="amenity-pill">Bright &amp; quiet view</span>
+                            <span class="amenity-pill">Towels &amp; linens</span>
+                            <span class="amenity-pill">Hot water 24h</span>
+                            <span class="amenity-pill">Wardrobe</span>
+                            <span class="amenity-pill">Study desk</span>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-100 pt-4 mt-auto">
+                        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                            <div>
+                                <div class="space-y-1">
+                                    <div class="flex items-baseline gap-1.5">
+                                        <span class="font-display text-2xl font-bold text-verde leading-none">180 <span class="text-sm font-semibold text-gray-400">BOB</span></span>
+                                        <span class="text-xs text-gray-500 font-semibold">/ night &middot; 1 person</span>
+                                    </div>
+                                    <div class="flex items-baseline gap-1.5 text-xs text-gray-400 font-medium">
+                                        <span>Private room for solo traveler</span>
+                                    </div>
+                                </div>
+                                <p class="text-gray-400 text-xs mt-1.5 font-medium">All meals with family included</p>
+                            </div>
+                            <a href="https://wa.me/59169686019?text=Hi!%20I%20would%20like%20to%20book%20the%20Single%20Room%20(Habitacion%20Simple)." target="_blank" rel="noopener noreferrer"
+                               class="self-start sm:self-center bg-verde text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full hover:bg-green-800 transition-all shadow-md whitespace-nowrap">Ask &amp; Book</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+        <div class="mt-12 text-center reveal-element" data-delay="0.2">
+            <p class="text-gray-600 text-sm font-medium">All stays include: home-cooked breakfast, lunch &amp; dinner with the family &middot; private bathroom &middot; towels &amp; linens &middot; high-speed WiFi &middot; 24h hot water &middot; shared living room</p>
+            <p class="text-gray-400 text-xs mt-2">Special rates for weekly and monthly immersion stays available upon request on WhatsApp.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GUESTBOOK (LIBRO DE HUÉSPEDES REAL) ===== -->
+<section id="guestbook" class="py-24" style="background:linear-gradient(160deg,#f4eedf 0%,#fdf9f1 60%,#e8d5bb 100%);">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-10 reveal-element">
+            <div class="andean-rule mx-auto" aria-hidden="true"><div class="andean-rule__line"></div></div>
+            <p class="section-eyebrow">Guest Stories</p>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-negro leading-tight">The Guestbook</h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Authentic handwritten letters and heartfelt memories left by travelers from around the world who lived with our family in Sucre.</p>
+            <!-- Google Maps 5.0 Rating Badge -->
+            <div class="mt-6 inline-flex flex-wrap items-center justify-center gap-3 bg-white/95 border border-[#e8d5bb] rounded-full px-5 py-2 shadow-sm">
+                <span class="flex items-center text-amber-500 text-sm font-bold gap-1">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <span>5.0</span>
+                </span>
+                <span class="text-xs font-semibold text-gray-700">Google Rating (14 reviews)</span>
+                <span class="text-gray-300">&bull;</span>
+                <a href="https://share.google/aJRztQ3syixoUByUi" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-guindo hover:underline flex items-center gap-1">
+                    <span>Verified Google Reviews</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="guestbook-journal reveal-element" data-delay="0.1" role="region" aria-label="Virtual guestbook">
+            <!-- Header bar -->
+            <div class="flex items-center justify-between px-6 sm:px-10 py-4 border-b border-[rgba(133,94,64,0.18)] relative z-10 bg-[#fbf6ec]">
+                <div class="flex items-center gap-2.5">
+                    <svg class="w-5 h-5 text-acento flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    <span class="font-display font-bold text-base sm:text-lg text-guindo">Libro de Huéspedes &mdash; Familia Cejas</span>
+                </div>
+                <button id="gb-zoom-trigger" class="inline-flex items-center gap-1.5 text-xs font-semibold text-acento hover:text-guindo transition-colors py-1.5 px-3 rounded-full border border-acento/30 hover:border-guindo bg-white/60 shadow-sm" aria-label="Ampliar carta actual">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                    <span class="hidden sm:inline">Ampliar carta</span>
+                </button>
+            </div>
+
+            <!-- Page Display Area -->
+            <div class="p-6 sm:p-10 relative z-10 flex flex-col items-center">
+                <div class="relative group cursor-zoom-in max-w-2xl w-full flex justify-center py-2" id="gb-image-wrapper">
+                    <img id="gb-page-img"
+                         src="images/homestay/Libro_alumnos/pagina_1.jpg"
+                         alt="Carta manuscrita de huésped en el libro de la Familia Cejas - Página 1"
+                         class="max-h-[520px] w-auto max-w-full rounded-xl shadow-2xl border-4 border-white object-contain transition-all duration-300 group-hover:scale-[1.01]"
+                         loading="eager">
+                    <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl flex items-center justify-center pointer-events-none">
+                        <span class="bg-black/80 text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-xl backdrop-blur-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                            Clic para ver en pantalla completa
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Page navigation bar -->
+                <div class="w-full flex items-center justify-between mt-8 pt-6 border-t border-[rgba(133,94,64,0.18)]">
+                    <button id="gb-prev" aria-label="Previous page" class="inline-flex items-center gap-2 text-sm font-bold text-guindo hover:text-guindodark transition-all px-4 py-2 rounded-full border border-guindo/20 hover:border-guindo bg-white/70 shadow-sm disabled:opacity-30 disabled:cursor-not-allowed">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                        <span class="hidden sm:inline">Anterior</span>
+                    </button>
+
+                    <div class="flex flex-col items-center gap-1 text-center">
+                        <p class="font-display font-bold text-base sm:text-lg text-negro">
+                            Página <span id="gb-current-page" class="text-guindo">1</span> de <span id="gb-total-pages">18</span>
+                        </p>
+                        <span class="text-xs text-gray-500 font-medium">Cartas auténticas de estudiantes y viajeros</span>
+                    </div>
+
+                    <button id="gb-next" aria-label="Next page" class="inline-flex items-center gap-2 text-sm font-bold text-guindo hover:text-guindodark transition-all px-4 py-2 rounded-full border border-guindo/20 hover:border-guindo bg-white/70 shadow-sm disabled:opacity-30 disabled:cursor-not-allowed">
+                        <span class="hidden sm:inline">Siguiente</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+
+                <!-- Numbered page strip -->
+                <div class="mt-6 flex flex-wrap justify-center gap-1.5 max-w-2xl mx-auto" id="gb-thumbnails" role="tablist" aria-label="Páginas del libro de huéspedes">
+                    <!-- Buttons 1 to 18 generated by JS -->
+                </div>
+            </div>
+        </div>
+
+        <p class="text-center mt-6 text-sm text-gray-500">
+            Cada viajero que se hospeda con la Familia Cejas deja su huella. &iexcl;Te esperamos en Sucre para que escribas la tuya!
+        </p>
+    </div>
+</section>
+
+<!-- Lightbox Modal for Full View -->
+<div id="gb-lightbox" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Visualizador de cartas del libro de huéspedes">
+    <button id="gb-lightbox-close" class="absolute top-5 right-5 text-white/80 hover:text-white p-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-all z-20" aria-label="Cerrar ampliación">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <button id="gb-lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all z-20" aria-label="Página anterior">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button id="gb-lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all z-20" aria-label="Página siguiente">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <div class="max-w-4xl max-h-[92vh] flex flex-col items-center">
+        <img id="gb-lightbox-img" src="images/homestay/Libro_alumnos/pagina_1.jpg" alt="Carta manuscrita en tamaño grande" class="max-h-[82vh] w-auto max-w-full rounded-lg shadow-2xl object-contain">
+        <p id="gb-lightbox-caption" class="text-white/80 text-sm mt-3 font-semibold">Página 1 de 18 &middot; Familia Cejas Homestay</p>
+    </div>
+</div>
+
+<!-- ===== BOOKING CTA ===== -->
+<section class="py-20 relative overflow-hidden" style="background:linear-gradient(135deg,#141010 0%,#2A0A14 100%);">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background-image:repeating-linear-gradient(45deg,rgba(244,228,0,0.04) 0 2px,transparent 2px 30px),repeating-linear-gradient(-45deg,rgba(213,43,30,0.03) 0 2px,transparent 2px 30px);background-size:30px 30px;"></div>
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center relative">
+        <p class="text-acento text-xs font-bold tracking-widest uppercase mb-4 reveal-element">Ready to stay?</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4 reveal-element" data-delay="0.1">Write to us. <em class="text-acento italic">We'll keep your room.</em></h2>
+        <p class="text-white/65 text-lg max-w-2xl mx-auto mb-10 reveal-element" data-delay="0.2">Tell us your dates and which room interests you. Dona Marlene replies personally, usually within a few hours.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 reveal-element" data-delay="0.3">
+            <a href="https://wa.me/59169686019?text=Hi%20Familia%20Cejas!%20I%20want%20to%20book%20a%20homestay." target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white font-bold px-8 py-4 rounded-full hover:bg-[#1ebd5a] transition-all shadow-xl transform hover:-translate-y-1">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                Book on WhatsApp
+            </a>
+            <a href="contact.html" class="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/25 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all">Contact Form</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CROSS-PAGE PROMO ===== -->
+<section class="promo-banner py-16" aria-label="Other services">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+        <p class="text-acento text-xs font-bold tracking-widest uppercase mb-4 reveal-element">Complete the Experience</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8 reveal-element" data-delay="0.1">Stay. <em class="text-acento italic">Cook. Learn.</em></h2>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 reveal-element" data-delay="0.2">
+            <a href="index.html"          class="bg-white/10 border border-white/20 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/20 transition-all">Cooking Classes</a>
+            <a href="espanolconlolo.html" class="bg-white/10 border border-white/20 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/20 transition-all">Spanish Classes</a>
+            <a href="contact.html"        class="bg-acento text-negro font-bold px-7 py-3 rounded-full hover:bg-yellow-500 transition-all shadow-lg">Book Everything</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-negro text-white pt-16 pb-8">
+    <div class="bolivia-stripe mb-12 opacity-60" aria-hidden="true">
+        <span class="stripe-red"></span><span class="stripe-yellow"></span><span class="stripe-green"></span>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid md:grid-cols-4 gap-10 mb-12">
+            <div class="md:col-span-2">
+                <div class="font-display font-bold text-2xl text-guindo mb-1">Sabores de <span class="font-light italic text-acento">Bolivia</span></div>
+                <p class="text-white/55 text-sm leading-relaxed mb-4 max-w-xs">Sharing Bolivia's culinary heritage and welcoming travelers into our home &mdash; one recipe, one conversation at a time.</p>
+                <a href="https://wa.me/59169686019?text=Hi%20Familia%20Cejas!" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 bg-[#25D366] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-[#1aab52] transition-all shadow-md">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    WhatsApp Us
+                </a>
+            </div>
+            <div>
+                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-acento mb-4">Explore</h3>
+                <ul class="space-y-2.5">
+                    <li><a href="index.html"         class="footer-link">Cooking Classes</a></li>
+                    <li><a href="espanolconlolo.html" class="footer-link">Spanish Classes</a></li>
+                    <li><a href="homestay.html"       class="footer-link">Homestay</a></li>
+                    <li><a href="contact.html"        class="footer-link">Contact &amp; Book</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-body text-xs font-bold uppercase tracking-widest text-acento mb-4">Find Us</h3>
+                <address class="not-italic space-y-2.5 text-white/55 text-sm">
+                    <p><a href="https://maps.google.com/?cid=13271966205869375353" target="_blank" rel="noopener noreferrer" class="hover:text-acento transition-colors flex items-start gap-1.5">
+                        <svg class="w-4 h-4 mt-1 flex-shrink-0 text-acento" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span><strong class="text-white font-semibold">Bernardo Bitti #9</strong><br>A 10 min walk from Plaza 25 de Mayo,<br>Sucre, Bolivia</span>
+                    </a></p>
+                    <p>+591 69 686 019</p>
+                </address>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/35 text-xs">
+            <p>&copy; 2025 Sabores de Bolivia &middot; Sucre, Bolivia</p>
+            <p>Hecho con amor y aj&iacute; en Sucre, Bolivia</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/59169686019?text=Hi%20Familia%20Cejas!" target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp"
+   class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1ebd5a] hover:-translate-y-1 transition-transform flex items-center justify-center group"
+   style="box-shadow:0 10px 25px -5px rgba(37,211,102,0.5);">
+    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-negro text-white text-xs font-bold rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">Chat with us!</span>
+</a>
+
+<script src="script.js" defer></script>
+<script>
+(function () {
+    'use strict';
+    var TOTAL = 18;
+    var current = 1;
+    var imgEl = document.getElementById('gb-page-img');
+    var currentLbl = document.getElementById('gb-current-page');
+    var prevBtn = document.getElementById('gb-prev');
+    var nextBtn = document.getElementById('gb-next');
+    var thumbContainer = document.getElementById('gb-thumbnails');
+
+    // Lightbox elements
+    var lightbox = document.getElementById('gb-lightbox');
+    var lightboxImg = document.getElementById('gb-lightbox-img');
+    var lightboxCaption = document.getElementById('gb-lightbox-caption');
+    var lightboxClose = document.getElementById('gb-lightbox-close');
+    var lightboxPrev = document.getElementById('gb-lightbox-prev');
+    var lightboxNext = document.getElementById('gb-lightbox-next');
+    var zoomTrigger = document.getElementById('gb-zoom-trigger');
+    var imgWrapper = document.getElementById('gb-image-wrapper');
+
+    function getImgSrc(page) {
+        return 'images/homestay/Libro_alumnos/pagina_' + page + '.jpg';
+    }
+
+    if (thumbContainer) {
+        for (var i = 1; i <= TOTAL; i++) {
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.textContent = i;
+            btn.className = 'w-7 h-7 sm:w-8 sm:h-8 rounded-lg text-xs font-bold transition-all border ' +
+                (i === 1 ? 'bg-guindo text-white border-guindo shadow-sm scale-105' : 'bg-white/80 text-[#5c3d1f] border-[#c8a882]/40 hover:bg-white hover:border-guindo');
+            btn.dataset.page = i;
+            btn.setAttribute('aria-label', 'Página ' + i);
+            btn.addEventListener('click', function () {
+                goTo(parseInt(this.dataset.page, 10));
+            });
+            thumbContainer.appendChild(btn);
+        }
+    }
+
+    function updateThumbnails(page) {
+        if (!thumbContainer) return;
+        var buttons = thumbContainer.querySelectorAll('button');
+        buttons.forEach(function (b, idx) {
+            var p = idx + 1;
+            if (p === page) {
+                b.className = 'w-7 h-7 sm:w-8 sm:h-8 rounded-lg text-xs font-bold transition-all border bg-guindo text-white border-guindo shadow-sm scale-110 ring-2 ring-guindo/30';
+                b.setAttribute('aria-selected', 'true');
+            } else {
+                b.className = 'w-7 h-7 sm:w-8 sm:h-8 rounded-lg text-xs font-bold transition-all border bg-white/80 text-[#5c3d1f] border-[#c8a882]/40 hover:bg-white hover:border-guindo';
+                b.setAttribute('aria-selected', 'false');
+            }
+        });
+    }
+
+    function goTo(page) {
+        if (page < 1 || page > TOTAL) return;
+        current = page;
+        var src = getImgSrc(current);
+        if (imgEl) {
+            imgEl.style.opacity = '0.35';
+            var pre = new Image();
+            pre.onload = function () {
+                imgEl.src = src;
+                imgEl.alt = 'Carta manuscrita en el libro de huéspedes - Página ' + current;
+                imgEl.style.opacity = '1';
+            };
+            pre.src = src;
+        }
+        if (currentLbl) currentLbl.textContent = current;
+        if (prevBtn) prevBtn.disabled = current === 1;
+        if (nextBtn) nextBtn.disabled = current === TOTAL;
+        updateThumbnails(current);
+
+        if (lightbox && !lightbox.classList.contains('hidden')) {
+            lightboxImg.src = src;
+            lightboxCaption.textContent = 'Página ' + current + ' de ' + TOTAL + ' · Familia Cejas Homestay';
+            if (lightboxPrev) lightboxPrev.style.display = current === 1 ? 'none' : 'block';
+            if (lightboxNext) lightboxNext.style.display = current === TOTAL ? 'none' : 'block';
+        }
+
+        // Preload adjacent pages
+        if (current < TOTAL) { new Image().src = getImgSrc(current + 1); }
+        if (current > 1) { new Image().src = getImgSrc(current - 1); }
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); });
+
+    function openLightbox() {
+        if (!lightbox) return;
+        lightboxImg.src = getImgSrc(current);
+        lightboxCaption.textContent = 'Página ' + current + ' de ' + TOTAL + ' · Familia Cejas Homestay';
+        if (lightboxPrev) lightboxPrev.style.display = current === 1 ? 'none' : 'block';
+        if (lightboxNext) lightboxNext.style.display = current === TOTAL ? 'none' : 'block';
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+
+    if (zoomTrigger) zoomTrigger.addEventListener('click', openLightbox);
+    if (imgWrapper) imgWrapper.addEventListener('click', openLightbox);
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', function (e) { e.stopPropagation(); goTo(current - 1); });
+    if (lightboxNext) lightboxNext.addEventListener('click', function (e) { e.stopPropagation(); goTo(current + 1); });
+    if (lightbox) {
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox || e.target.id === 'gb-lightbox-img') return;
+            closeLightbox();
+        });
+    }
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox && !lightbox.classList.contains('hidden')) {
+            closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+            goTo(current - 1);
+        } else if (e.key === 'ArrowRight') {
+            goTo(current + 1);
+        }
+    });
+
+    goTo(1);
+})();
+</script>
+
+</body>
+</html>
